@@ -8,6 +8,7 @@
       ./programs
       ./base
       ./shell
+      ./system # wm, de, and or shell
       ./catppuccin.nix
     ];
 
