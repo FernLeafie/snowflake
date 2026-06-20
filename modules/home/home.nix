@@ -5,6 +5,7 @@
       ./niri
       ./noctalia
       ./apps
+      ./programs
       ./base
       ./shell
       ./catppuccin.nix
