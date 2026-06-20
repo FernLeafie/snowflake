@@ -20,10 +20,13 @@
 
     loader = {
       efi.canTouchEfiVariables = true;
-      systemd-boot.enable = true;
-      # grub.enable = true;
-      # grub.useOSProber = true;
-      # grub.device = "/dev/nvme0n1";
+      # systemd-boot.enable = true;
+      grub = {
+        enable = true;
+        useOSProber = true;
+        device = "nodev";
+        efiSupport = true;
+      };
     };
   };
 }
