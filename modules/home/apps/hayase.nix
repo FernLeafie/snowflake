@@ -1,0 +1,50 @@
+{ lib, pkgs, appimageTools, ... }:
+appimageTools.wrapType2 rec {
+  pname = "hayase";
+  version = "6.4.79";
+
+  src = pkgs.fetchurl {
+    url = "https://api.hayase.watch/files/linux-hayase-${version}-linux.AppImage";
+    # generate hash by downloading the file and running nix hash file <downloaded appimage>
+    hash = "sha256-s3+t5slPz6qNZ60FDyWMR/LJSYvFI3BmZtoOUPGEZm8=";
+  };
+
+  passthru.updateScript =
+    pkgs.writeScript "update-${pname}"
+      # bash
+      ''
+        #!/usr/bin/env nix-shell
+        #!nix-shell -i bash -p curl yq-go common-updater-scripts
+
+        set -eu -o pipefail
+
+        version="$(curl -s https://api.hayase.watch/files/latest-linux.yml | yq '.version')"
+        update-source-version ${pname} "$version"
+      '';
+
+  nativeBuildInputs = with pkgs; [
+    makeWrapper
+  ];
+
+  extraInstallCommands =
+    let
+      contents = pkgs.appimageTools.extractType2 { inherit pname version src; };
+    in
+    ''
+      mkdir -p "$out/share/applications"
+      mkdir -p "$out/share/lib/hayase"
+      cp -r ${contents}/{locales,resources} "$out/share/lib/hayase"
+      cp -r ${contents}/usr/share/* "$out/share"
+      cp "${contents}/${pname}.desktop" "$out/share/applications/"
+      wrapProgram $out/bin/hayase --add-flags "--ozone-platform=wayland"
+      substituteInPlace $out/share/applications/${pname}.desktop --replace-fail 'Exec=AppRun' 'Exec=${meta.mainProgram}'
+    '';
+
+  meta = {
+    description = "Hayase - Torrent streaming made simple";
+    homepage = "https://hayase.watch";
+    changelog = "https://hayase.watch/changelog";
+    license = lib.licenses.bsl11;
+    mainProgram = "hayase";
+  };
+}

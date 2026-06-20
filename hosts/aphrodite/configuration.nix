@@ -1,0 +1,19 @@
+{ config, lib, pkgs, ... }:
+{
+  imports =
+    [
+      ./hardware-configuration.nix
+      ./../../modules/base.nix
+    ];
+
+  # Define your hostname and location
+  networking.hostName = "aphrodite";
+  time.timeZone = "Europe/Stockholm";
+
+  # Define a user account. Don't forget to set a password with ‘passwd’
+  users.users.fern-snowleafie = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.fish;
+  };
+}
