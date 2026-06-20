@@ -2,12 +2,10 @@
 {
   imports =
     [
-      ./niri
-      ./noctalia
-      ./apps
-      ./programs
-      ./base
-      ./shell
+      ./apps # graphical applications
+      ./base # base system configurations
+      ./programs # terminal applications
+      ./shell # shell options and replacement terminal commands
       ./system # wm, de, and or shell
       ./catppuccin.nix
     ];
@@ -29,5 +27,6 @@
   };
   programs.git = {
     enable = true;
+    lfs.enable = true;
   };
 }
