@@ -9,4 +9,7 @@
     accent = "mauve";
     autoEnable = true;
   };
+  catppuccin = {
+    plymouth.enable = false;
+  };
 }
