@@ -13,6 +13,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’
   users.users.fern-snowleafie = {
     isNormalUser = true;
+    description = "Fern Snowleafie";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
