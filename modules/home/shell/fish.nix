@@ -24,6 +24,17 @@
       gc = "git commit";
       gp = "git push";
 
+      # nix
+      nfc = "nix flake check";
+      nfu = "nix flake update";
+      nd = "nix develop";
+      nr = "nix run";
+      ns = "nix shell";
+      nhs = "nh os switch --ask ~/snowflake";
+      nhsu = "nh os switch --ask --update ~/snowflake";
+      nrs = "sudo nixos-rebuild switch --flake ~/snowflake";
+      nrsu = "sudo nixos-rebuild switch --flake ~/snowflake --upgrade";
+
       # nvim
       nv = "nvim";
 

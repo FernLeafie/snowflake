@@ -55,10 +55,19 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 7d";
-    dates = "weekly";
+  # nix.gc = {
+  #   automatic = true;
+  #   options = "--delete-older-than 7d";
+  #   dates = "weekly";
+  # };
+
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--keep-since 4d --keep 3";
+      dates = "weekly";
+    };
   };
 
   # Enable flakes and nix command
