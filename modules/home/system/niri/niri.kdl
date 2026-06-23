@@ -103,13 +103,13 @@ input {
 output "eDP-1" {
   scale 1
 }
-output "HDMI-A-1" {
+output "LG Electronics LG TV SSCR2 0x01010101" { // ferns tv
   scale 2
 }
-output "DP-1" {
+output "ASUSTek COMPUTER INC VZ239 GCLMRS004048" { // ferns dp-1
   mode "1920x1080@74.998"
 }
-output "DP-2" {
+output "ASUSTek COMPUTER INC VZ239 GCLMRS004313" { // ferns dp-2
   mode "1920x1080@74.998"
 }
 output "winit" {
