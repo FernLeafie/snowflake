@@ -25,7 +25,7 @@
     };
     scripts = with pkgs.mpvScripts; [
       mpris
-      # thumbnail
+      thumbfast
       uosc
     ];
     scriptOpts =
