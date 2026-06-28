@@ -1,5 +1,5 @@
 <div align="center">
-    <img src=".github/assets/nix_kawaii.svg" width="1000">
+    <img src=".github/assets/nix_kawaii.svg" width="500">
     <h1>flake</h1>
     <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" />
 </div>
@@ -9,7 +9,7 @@
 ## Hosts
 
 ### Fern Snowleafie
-- **Aphrodites**: 
+- **Aphrodite**: 
 
 ### Lily Snowleafie
 - **Athena**: A thinkpad T440
