@@ -45,7 +45,10 @@
             useUserPackages = true;
             extraSpecialArgs =
               { inherit self inputs; };
-            users.fern-snowleafie = import ./modules/home/fern.nix;
+            sharedModules = [
+              ./modules/home/home.nix
+            ];
+            users.fern-snowleafie = import ./hosts/aphrodite/fern.nix;
             backupFileExtension = "backup";
           };
         }

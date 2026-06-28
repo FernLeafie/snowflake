@@ -1,10 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./home.nix
-    ];
-
   programs.git = {
     settings = {
       user = {
