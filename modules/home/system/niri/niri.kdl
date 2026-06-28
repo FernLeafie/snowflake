@@ -485,6 +485,15 @@ window-rule {
     xray true
   }
 }
+
+layer-rule {
+  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    // blur false
+  }
+}
+
 blur {
   // off
   passes 1

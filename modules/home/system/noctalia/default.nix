@@ -24,6 +24,7 @@
       shell = {
         font_family = "Maple Mono NF CN";
         screenshot.save_to_file = false;
+        panel.transparency = "soft"; 
       };
 
       audio.enable_sounds = true;
@@ -47,9 +48,9 @@
         margin_ends = 8;
         thickness = 30;
         widget_spacing = 10;
-
         border = "surface_variant";
         border_width = 2.0;
+        panel_overlap = 2;
       };
 
       widget = {
