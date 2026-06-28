@@ -6,7 +6,7 @@
 
 &nbsp;
 
-A simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Nocatlia](https://github.com/noctalia-dev/noctalia) for 2 Snowleafies
+A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Nocatlia](https://github.com/noctalia-dev/noctalia) for two Snowleafies
 
 ## Hosts
 
@@ -14,7 +14,7 @@ A simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Nocatlia](
 - **Aphrodite**: A HP Pro x360
 
 ### Lily Snowleafie
-- **Athena**: A thinkpad T440
+- **Athena**: A ThinkPad T440
 - **Apollo**: A FrameWork 16
 
 ## Credits
