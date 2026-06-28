@@ -2,7 +2,9 @@
 {
   options = {
     snow.tooling.nix.enable =
-      lib.mkEnableOption "nix tooling";
+      lib.mkEnableOption "nix tooling" // {
+        default = config.snow.tooling.enable;
+      };
   };
   config = lib.mkIf config.snow.tooling.nix.enable {
     home.packages = with pkgs; [
