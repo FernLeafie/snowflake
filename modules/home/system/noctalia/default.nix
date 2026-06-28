@@ -4,6 +4,8 @@
     inputs.noctalia.homeModules.default
   ];
 
+  xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text = builtins.readFile ./catppuccin-mocha-mauve.json;
+
   programs.noctalia = {
     enable = true;
 
@@ -11,8 +13,9 @@
       # This may also be a string or path to a .toml file.
       theme = {
         mode = "dark";
-        source = "builtin";
+        source = "custom";
         builtin = "Catppuccin";
+        custom_palette = "catppuccin-mocha-mauve";
         templates = {
           enable_builtin_templates = false;
           enable_community_templates = false;
@@ -41,8 +44,12 @@
           "control-center"
         ];
         margin_edge = 8;
-        margin_ends = 10;
-        widget_spacing = true;
+        margin_ends = 8;
+        thickness = 30;
+        widget_spacing = 10;
+
+        border = "surface_variant";
+        border_width = 2.0;
       };
 
       widget = {
