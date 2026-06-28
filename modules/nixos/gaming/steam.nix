@@ -16,4 +16,3 @@
     programs.gamemode.enable = true;
   };
 }
-
