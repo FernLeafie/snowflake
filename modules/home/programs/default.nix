@@ -1,5 +1,9 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
+  imports = [
+    ./fastfetch
+  ];
+
   programs = {
     lazygit = {
       enable = true;
