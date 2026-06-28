@@ -1,11 +1,12 @@
 <div align="center">
     <img src=".github/assets/nix_kawaii.svg" width="500">
     <h1>The Snowflake</h1>
-    <h2>A simple Nix Flake using Niri and Nocatlia for 2 Snowleafies</h2>
     <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" />
 </div>
 
 &nbsp;
+
+A simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Nocatlia](https://github.com/noctalia-dev/noctalia) for 2 Snowleafies
 
 ## Hosts
 
