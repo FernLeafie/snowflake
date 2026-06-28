@@ -25,6 +25,8 @@
     };
 
     nixcord.url = "github:FlameFlag/nixcord";
+
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
   nixConfig = {

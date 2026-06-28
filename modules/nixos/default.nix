@@ -7,6 +7,7 @@
       ./niri.nix
       ./noctalia.nix
       ./catppuccin.nix
+      ./gaming
     ];
 
   # Services

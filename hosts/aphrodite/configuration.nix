@@ -6,6 +6,8 @@
       ./../../modules/nixos
     ];
 
+  snow.gaming.steam.enable = true;
+
   # Define your hostname and location
   networking.hostName = "aphrodite";
   time.timeZone = "Europe/Stockholm";
