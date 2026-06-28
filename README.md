@@ -1,5 +1,5 @@
 <div align="center">
-    <img src=".github/assets/nix_kawaii.svg" width="100">
+    <img src=".github/assets/nix_kawaii.svg" width="1000">
     <h1>flake</h1>
     <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" />
 </div>
@@ -12,7 +12,7 @@
 - **Aphrodites**: 
 
 ### Lily Snowleafie
-- **Aphena**: A thinkpad T440
+- **Athena**: A thinkpad T440
 - **Apollo**: A FrameWork 16
 
 ## Credits
