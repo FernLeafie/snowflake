@@ -43,7 +43,7 @@ in
         favoriteGifSearch.enable = true;
         fixCodeblockGap.enable = true;
         fixYoutubeEmbeds.enable = true;
-        friendsSince.enable = true;
+        # friendsSince.enable = true; # seemingly a removed plugin
         gameActivityToggle.enable = true;
         gifPaste.enable = true;
         imageFilename.enable = true;
