@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-3147.3225 -2992.9838 511.99996 511.99999"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="nixos-logo-white-flat-white-regular-horizontal-recommended.svg"
+   width="512"
+   height="512"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.64448394"
+     inkscape:cx="469.36778"
+     inkscape:cy="355.32305"
+     inkscape:window-width="1215"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg10" />
+  <polygon
+     fill="#cbb6f4"
+     points="-576,997.66127 -640,886.81001 -448,554.25626 -624,249.41532 -496,27.712813 64,997.66127 -192,997.66127 -320,775.95876 -448,997.66127 "
+     id="polygon1"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+  <polygon
+     fill="#cbb6f4"
+     points="-1152,-1.7053026e-13 -1088,-110.85125 -704,-110.85125 -528,-415.69219 -272,-415.69219 -832,554.25626 -960,332.55376 -832,110.85125 -1088,110.85125 "
+     id="polygon2"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+  <polygon
+     fill="#cbb6f4"
+     points="-576,-997.66127 -448,-997.66127 -256,-665.10751 96,-665.10751 224,-443.40501 -896,-443.40501 -768,-665.10751 -512,-665.10751 -640,-886.81001 "
+     id="polygon3"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+  <polygon
+     fill="#cbb6f4"
+     points="576,-997.66127 640,-886.81001 448,-554.25626 624,-249.41532 496,-27.712813 -64,-997.66127 192,-997.66127 320,-775.95876 448,-997.66127 "
+     id="polygon4"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+  <polygon
+     fill="#cbb6f4"
+     points="1152,-2.8421709e-13 1088,110.85125 704,110.85125 528,415.69219 272,415.69219 832,-554.25626 960,-332.55376 832,-110.85125 1088,-110.85125 "
+     id="polygon5"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+  <polygon
+     fill="#cbb6f4"
+     points="576,997.66127 448,997.66127 256,665.10751 -96,665.10751 -224,443.40501 896,443.40501 768,665.10751 512,665.10751 640,886.81001 "
+     id="polygon6"
+     style="fill:#cbb6f4;fill-opacity:1"
+     transform="matrix(0.2222222,0,0,0.2222222,-2891.3225,-2736.9838)" />
+</svg>

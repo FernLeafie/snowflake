@@ -5,6 +5,9 @@
   ];
 
   xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text = builtins.readFile ./catppuccin-mocha-mauve.json;
+  xdg.configFile."noctalia/icons/nix.svg".text = builtins.readFile ./nix.svg;
+  xdg.configFile."noctalia/icons/nix-coloured.svg".text = builtins.readFile ./nix-coloured.svg;
+  xdg.configFile."noctalia/icons/nix-rainbow.svg".text = builtins.readFile ./nix-rainbow.svg;
 
   programs.noctalia = {
     enable = true;
@@ -24,7 +27,7 @@
       shell = {
         font_family = "Maple Mono NF CN";
         screenshot.save_to_file = false;
-        panel.transparency = "soft"; 
+        panel.transparency = "soft";
       };
 
       audio.enable_sounds = true;
@@ -54,7 +57,11 @@
       };
 
       widget = {
-        control-center.glyph = "apps";
+        control-center = {
+          glyph = "apps";
+          custom_image = "${config.xdg.configHome}/noctalia/icons/nix-coloured.svg";
+          scale = 1.25;
+        };
         media.hide_when_no_media = true;
         workspaces = {
           capsule = true;
