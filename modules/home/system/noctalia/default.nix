@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -66,7 +66,7 @@
         enabled = true;
         fill_color = "#000000";
         fill_mode = "fit";
-        directory = "/home/fern-snowleafie/dotfiles/Pictures/Wallpapers/";
+        directory = "${config.xdg.userDirs.pictures}/wallpapers/";
       };
 
       idle = {
