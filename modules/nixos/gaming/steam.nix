@@ -14,5 +14,8 @@
       remotePlay.openFirewall = true;
     };
     programs.gamemode.enable = true;
+    environment.systemPackages = [
+      pkgs.sgdboop
+    ];
   };
 }
