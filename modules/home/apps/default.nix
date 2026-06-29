@@ -5,6 +5,7 @@
       ./kitty.nix
       ./nixcord
       ./gaming
+      ./video
     ];
   home.packages = with pkgs; [
     krita
