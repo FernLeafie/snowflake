@@ -16,10 +16,8 @@
     ripgrep
     thunderbird
     cargo
-    discord
     # nil
     # nixpkgs-fmt
-    prismlauncher
   ];
 
   fonts.packages = with pkgs; [
