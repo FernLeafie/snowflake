@@ -25,7 +25,14 @@
       music = "${config.home.homeDirectory}/music";
       pictures = "${config.home.homeDirectory}/pictures";
       projects = "${config.home.homeDirectory}/projects";
+      publicShare = "${config.home.homeDirectory}/public";
+      templates = "${config.home.homeDirectory}/templates";
       videos = "${config.home.homeDirectory}/videos";
+      extraConfig =
+        {
+          GAMES = "${config.home.homeDirectory}/games";
+          LIBRARY = "${config.home.homeDirectory}/library";
+        };
       setSessionVariables = true;
     };
   };
