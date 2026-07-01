@@ -5,10 +5,10 @@
       ./kitty.nix
       ./nixcord
       ./gaming
+      ./graphical
       ./video
     ];
   home.packages = with pkgs; [
-    krita
     libreoffice-qt
 
     # custom
