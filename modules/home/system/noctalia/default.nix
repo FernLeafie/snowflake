@@ -27,7 +27,11 @@
       shell = {
         font_family = "Maple Mono NF CN";
         screenshot.save_to_file = false;
-        panel.transparency = "soft";
+        panel = {
+          open_near_click_control_center = true;
+          transparency = "soft";
+        };
+        polkit_agent = true;
       };
 
       audio.enable_sounds = true;
