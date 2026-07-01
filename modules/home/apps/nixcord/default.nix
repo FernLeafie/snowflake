@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 let
   theme-catppuccin = ./mocha-theme.css;
 in
@@ -21,13 +21,13 @@ in
       frameless = true;
 
       useQuickCss = true;
-      # themeLinks = [
-      #   "https://raw.githubusercontent.com/link/to/some/theme.css"
-      #   "https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css"
-      # ];
-      themes = {
-        mocha-theme = "${theme-catppuccin}";
-      };
+      themeLinks = [
+        # "https://raw.githubusercontent.com/link/to/some/theme.css"
+        "https://catppuccin.github.io/discord/dist/catppuccin-${config.catppuccin.flavor}-${config.catppuccin.accent}.theme.css"
+      ];
+      # themes = {
+      #   mocha-theme = "${theme-catppuccin}";
+      # };
       # enabledThemes = [
       #   "mocha-theme.css"
       # ];
