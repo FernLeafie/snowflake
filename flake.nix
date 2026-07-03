@@ -69,5 +69,27 @@
         }
       ];
     };
+    nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./hosts/artemis/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs =
+              { inherit self inputs; };
+            sharedModules = [
+              ./modules/home/home.nix
+            ];
+            users.fern-snowleafie = import ./hosts/artemis/fern.nix;
+            backupFileExtension = "backup";
+          };
+        }
+      ];
+    };
+
   };
 }

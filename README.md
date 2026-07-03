@@ -12,6 +12,7 @@ A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [N
 
 ### Fern Snowleafie
 - **Aphrodite**: A HP Pro x360
+- **Artemis**: A custom built desktop
 
 ### Lily Snowleafie
 - **Athena**: A ThinkPad T440
