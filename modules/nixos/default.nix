@@ -8,6 +8,7 @@
       ./noctalia.nix
       ./catppuccin.nix
       ./gaming
+      ./system
     ];
 
   # Services
@@ -16,9 +17,6 @@
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
