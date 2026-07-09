@@ -24,7 +24,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcord.url = "github:FlameFlag/nixcord";
+    nixcord.url = "github:4evy/nixcord";
 
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 

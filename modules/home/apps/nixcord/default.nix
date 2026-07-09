@@ -76,7 +76,20 @@ in
         };
         showHiddenThings.enable = true;
         spotifyCrack.enable = true;
-        textReplace.enable = true;
+        textReplace = {
+          enable = true;
+          stringRules = [
+            { find = "://tiktok.com/"; replace = "://tnktok.com/"; }
+            { find = "://vm.tiktok.com/"; replace = "://vm.tnktok.com/"; }
+            { find = "://www.tiktok.com/"; replace = "://www.tnktok.com/"; }
+            { find = "://twitter.com/"; replace = "://vxtwitter.com/"; }
+            { find = "://instagram.com/"; replace = "://vxinstagram.com/"; }
+            { find = "://www.instagram.com/"; replace = "://vxinstagram.com/"; }
+            { find = "://reddit.com/"; replace = "://vxreddit.com/"; }
+            { find = "://www.reddit.com/"; replace = "://vxreddit.com/"; }
+            { find = "://x.com/"; replace = "://girlcock.com/"; }
+          ];
+        };
         translate.enable = true;
         unlockedAvatarZoom.enable = true;
         userVoiceShow.enable = true;
@@ -88,14 +101,6 @@ in
         voiceMessages.enable = true;
         volumeBooster.enable = true;
         youtubeAdblock.enable = true;
-        # hideMedia.enable = true;
-        # ignoreActivities = {
-        #   enable = true;
-        #   ignorePlaying = true;
-        #   ignoredActivities = [
-        #     { id = "game-id"; name = "League of Legends"; type = 0; }
-        #   ];
-        # };
       };
     };
   };
