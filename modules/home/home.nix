@@ -40,4 +40,6 @@
     enable = true;
     lfs.enable = true;
   };
+
+  programs.home-manager.enable = true;
 }
