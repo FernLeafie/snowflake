@@ -8,9 +8,12 @@
   };
   config = lib.mkIf config.snow.tooling.rust.enable {
     home.packages = with pkgs; [
-      rust-bin
       rust-analyzer-unwrapped
       cargo
     ];
+    programs.nixvim = {
+      snow.debugging = true;
+      lsp.servers.rust_analyzer.enable = true;
+    };
   };
 }

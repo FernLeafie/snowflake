@@ -10,8 +10,6 @@
     fish
     jq
     neovim
-    tree-sitter
-    chafa
     gcc
     ripgrep
     thunderbird

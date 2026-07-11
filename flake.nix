@@ -34,6 +34,11 @@
       inputs.nix-gaming.follows = "nix-gaming";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # [NOTE] Saves space but might introduce bugs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {

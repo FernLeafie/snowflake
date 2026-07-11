@@ -8,8 +8,11 @@
   };
   config = lib.mkIf config.snow.tooling.nix.enable {
     home.packages = with pkgs; [
-      nil
+      # nil
       nixfmt
     ];
+    programs.nixvim = {
+      lsp.servers.nixd.enable = true;
+    };
   };
 }

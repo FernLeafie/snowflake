@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, ... }:
 {
   imports =
     [
@@ -69,11 +69,15 @@
     };
   };
 
-  # Enable flakes and nix command
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    # Enable flakes and nix command
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    # setting for nixd
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

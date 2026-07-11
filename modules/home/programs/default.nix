@@ -2,6 +2,7 @@
 {
   imports = [
     ./fastfetch
+    ./nixvim
   ];
 
   programs = {

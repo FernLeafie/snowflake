@@ -11,5 +11,6 @@
       typst
       tinymist
     ];
+    programs.nixvim.lsp.servers.tinymist.enable = true;
   };
 }

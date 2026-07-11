@@ -13,4 +13,7 @@
       jdt-language-server
     ];
   };
+  programs.nixvim = {
+    lsp.servers.jdtls.enable = true;
+  };
 }
