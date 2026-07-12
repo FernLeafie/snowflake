@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 let
   theme-catppuccin = ./mocha-theme.css;
 in
@@ -79,15 +84,42 @@ in
         textReplace = {
           enable = true;
           stringRules = [
-            { find = "://tiktok.com/"; replace = "://tnktok.com/"; }
-            { find = "://vm.tiktok.com/"; replace = "://vm.tnktok.com/"; }
-            { find = "://www.tiktok.com/"; replace = "://www.tnktok.com/"; }
-            { find = "://twitter.com/"; replace = "://vxtwitter.com/"; }
-            { find = "://instagram.com/"; replace = "://vxinstagram.com/"; }
-            { find = "://www.instagram.com/"; replace = "://vxinstagram.com/"; }
-            { find = "://reddit.com/"; replace = "://vxreddit.com/"; }
-            { find = "://www.reddit.com/"; replace = "://vxreddit.com/"; }
-            { find = "://x.com/"; replace = "://girlcock.com/"; }
+            {
+              find = "://tiktok.com/";
+              replace = "://tnktok.com/";
+            }
+            {
+              find = "://vm.tiktok.com/";
+              replace = "://vm.tnktok.com/";
+            }
+            {
+              find = "://www.tiktok.com/";
+              replace = "://www.tnktok.com/";
+            }
+            {
+              find = "://twitter.com/";
+              replace = "://vxtwitter.com/";
+            }
+            {
+              find = "://instagram.com/";
+              replace = "://vxinstagram.com/";
+            }
+            {
+              find = "://www.instagram.com/";
+              replace = "://vxinstagram.com/";
+            }
+            {
+              find = "://reddit.com/";
+              replace = "://vxreddit.com/";
+            }
+            {
+              find = "://www.reddit.com/";
+              replace = "://vxreddit.com/";
+            }
+            {
+              find = "://x.com/";
+              replace = "://girlcock.com/";
+            }
           ];
         };
         translate.enable = true;

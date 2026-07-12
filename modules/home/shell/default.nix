@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./fish.nix
-      ./utils.nix
-    ];
+  imports = [
+    ./fish.nix
+    ./utils.nix
+  ];
 }

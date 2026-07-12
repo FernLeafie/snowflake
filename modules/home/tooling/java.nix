@@ -1,4 +1,9 @@
-{ lib, pkgs, osConfig, ... }:
+{
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}:
 {
   config = lib.mkIf osConfig.snow.tooling.java.enable {
     home.packages = with pkgs; [

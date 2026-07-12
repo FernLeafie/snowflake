@@ -1,15 +1,20 @@
-{ inputs, config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./boot.nix
-      ./packages.nix
-      ./niri.nix
-      ./noctalia.nix
-      ./catppuccin.nix
-      ./gaming
-      ./system
-    ];
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./boot.nix
+    ./packages.nix
+    ./niri.nix
+    ./noctalia.nix
+    ./catppuccin.nix
+    ./gaming
+    ./system
+  ];
 
   # Services
   # Enable networking
@@ -87,4 +92,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
 }
-

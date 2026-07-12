@@ -1,9 +1,8 @@
 {
-  imports =
-    [
-      ./java.nix
-      ./nix.nix
-      ./rust.nix
-      ./typst.nix
-    ];
+  imports = [
+    ./java.nix
+    ./nix.nix
+    ./rust.nix
+    ./typst.nix
+  ];
 }

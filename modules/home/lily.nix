@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./home.nix
-    ];
+  imports = [
+    ./home.nix
+  ];
 
   programs.git = {
     settings = {

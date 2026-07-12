@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins = {
     blink-cmp = {
@@ -6,7 +11,10 @@
       settings = {
         keymap = {
           preset = "default";
-          "<CR>" = [ "accept" "fallback" ];
+          "<CR>" = [
+            "accept"
+            "fallback"
+          ];
         };
         signature = {
           enabled = true;

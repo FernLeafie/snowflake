@@ -1,27 +1,43 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins.alpha = {
     enable = true;
     settings = {
       layout = [
-        { type = "padding"; val = 1; }
+        {
+          type = "padding";
+          val = 1;
+        }
         {
           type = "terminal";
-          command = { __raw = ''"chafa --size=69x20 -f symbols --symbols all " .. vim.fn.stdpath('config') .. "/resources/NeovimShadowed_catppuccin-all.png"''; };
+          command = {
+            __raw = ''"chafa --size=69x20 -f symbols --symbols all " .. vim.fn.stdpath('config') .. "/resources/NeovimShadowed_catppuccin-all.png"'';
+          };
           width = 69;
           height = 19;
           opts.redraw = true;
         }
-        { type = "padding"; val = 1; }
+        {
+          type = "padding";
+          val = 1;
+        }
         {
           type = "text";
           opts = {
             hl = "AlphaFooter"; # Type
             position = "center";
           };
-          val = [{ __raw = ''greeting()''; }];
+          val = [ { __raw = "greeting()"; } ];
         }
-        { type = "padding"; val = 1; }
+        {
+          type = "padding";
+          val = 1;
+        }
         {
           type = "group";
           opts.spacing = 1;
@@ -31,7 +47,16 @@
               val = "  New file";
               on_press = "<Cmd>ene <BAR> startinsert <CR>";
               opts = {
-                keymap = [ "n" "e" "<Cmd>ene <BAR> startinsert <CR>" { noremap = true; silent = true; nowait = true; } ];
+                keymap = [
+                  "n"
+                  "e"
+                  "<Cmd>ene <BAR> startinsert <CR>"
+                  {
+                    noremap = true;
+                    silent = true;
+                    nowait = true;
+                  }
+                ];
                 position = "center";
                 shortcut = "e";
                 cursor = 3;
@@ -45,7 +70,16 @@
               val = "  Find file";
               on_press = "<Cmd>Telescope find_files<CR>";
               opts = {
-                keymap = [ "n" "f" "<Cmd>Telescope find_files<CR>" { noremap = true; silent = true; nowait = true; } ];
+                keymap = [
+                  "n"
+                  "f"
+                  "<Cmd>Telescope find_files<CR>"
+                  {
+                    noremap = true;
+                    silent = true;
+                    nowait = true;
+                  }
+                ];
                 position = "center";
                 shortcut = "f";
                 cursor = 3;
@@ -59,7 +93,16 @@
               val = "  Recently opened";
               on_press = "<Cmd>Telescope oldfiles<CR>";
               opts = {
-                keymap = [ "n" "r" "<Cmd>Telescope oldfiles<CR>" { noremap = true; silent = true; nowait = true; } ];
+                keymap = [
+                  "n"
+                  "r"
+                  "<Cmd>Telescope oldfiles<CR>"
+                  {
+                    noremap = true;
+                    silent = true;
+                    nowait = true;
+                  }
+                ];
                 position = "center";
                 shortcut = "r";
                 cursor = 3;
@@ -73,7 +116,16 @@
               val = "  Browse cwd";
               on_press = "<Cmd>NvimTreeOpen<CR>";
               opts = {
-                keymap = [ "n" "t" "<Cmd>NvimTreeOpen<CR>" { noremap = true; silent = true; nowait = true; } ];
+                keymap = [
+                  "n"
+                  "t"
+                  "<Cmd>NvimTreeOpen<CR>"
+                  {
+                    noremap = true;
+                    silent = true;
+                    nowait = true;
+                  }
+                ];
                 position = "center";
                 shortcut = "t";
                 cursor = 3;
@@ -87,7 +139,16 @@
               val = "  Quit";
               on_press = "<Cmd>q!<CR>";
               opts = {
-                keymap = [ "n" "q" "<Cmd>q!<CR>" { noremap = true; silent = true; nowait = true; } ];
+                keymap = [
+                  "n"
+                  "q"
+                  "<Cmd>q!<CR>"
+                  {
+                    noremap = true;
+                    silent = true;
+                    nowait = true;
+                  }
+                ];
                 position = "center";
                 shortcut = "q";
                 cursor = 3;
@@ -98,7 +159,10 @@
             }
           ];
         }
-        { type = "padding"; val = 1; }
+        {
+          type = "padding";
+          val = 1;
+        }
         {
           opts = {
             hl = "AlphaHeader";

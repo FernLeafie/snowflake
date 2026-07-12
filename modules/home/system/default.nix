@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./niri
-      ./noctalia
-    ];
+  imports = [
+    ./niri
+    ./noctalia
+  ];
 }

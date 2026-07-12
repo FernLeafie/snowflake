@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   keymaps = [
     # move block
@@ -36,9 +41,25 @@
       options.desc = "Replace word under cursor";
     }
     # move easier between splits
-    { mode = [ "n" ]; key = "<C-h>"; action = "<C-w>h"; }
-    { mode = [ "n" ]; key = "<C-j>"; action = "<C-w>j"; }
-    { mode = [ "n" ]; key = "<C-k>"; action = "<C-w>k"; }
-    { mode = [ "n" ]; key = "<C-l>"; action = "<C-w>l"; }
+    {
+      mode = [ "n" ];
+      key = "<C-h>";
+      action = "<C-w>h";
+    }
+    {
+      mode = [ "n" ];
+      key = "<C-j>";
+      action = "<C-w>j";
+    }
+    {
+      mode = [ "n" ];
+      key = "<C-k>";
+      action = "<C-w>k";
+    }
+    {
+      mode = [ "n" ];
+      key = "<C-l>";
+      action = "<C-w>l";
+    }
   ];
 }

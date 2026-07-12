@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./fish-functions.nix
-    ];
+  imports = [
+    ./fish-functions.nix
+  ];
   home.sessionVariables = {
     EDITOR = "nvim";
   };
@@ -64,4 +63,3 @@
     '';
   };
 }
-

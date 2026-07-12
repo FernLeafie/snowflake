@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./prism.nix
-    ];
+  imports = [
+    ./prism.nix
+  ];
 }

@@ -52,49 +52,57 @@
     ];
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, noctalia, niri-flake, catppuccin, ... }: {
-    nixosConfigurations.aphrodite = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/aphrodite/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs =
-              { inherit self inputs; };
-            sharedModules = [
-              ./modules/home/home.nix
-            ];
-            users.fern-snowleafie = import ./modules/home/fern.nix;
-            backupFileExtension = "backup";
-          };
-        }
-      ];
-    };
-    nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/artemis/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs =
-              { inherit self inputs; };
-            sharedModules = [
-              ./modules/home/home.nix
-            ];
-            users.fern-snowleafie = import ./modules/home/fern.nix;
-            backupFileExtension = "backup";
-          };
-        }
-      ];
-    };
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      noctalia,
+      niri-flake,
+      catppuccin,
+      ...
+    }:
+    {
+      nixosConfigurations.aphrodite = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/aphrodite/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit self inputs; };
+              sharedModules = [
+                ./modules/home/home.nix
+              ];
+              users.fern-snowleafie = import ./modules/home/fern.nix;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
+      nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/artemis/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit self inputs; };
+              sharedModules = [
+                ./modules/home/home.nix
+              ];
+              users.fern-snowleafie = import ./modules/home/fern.nix;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
 
-  };
+    };
 }

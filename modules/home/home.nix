@@ -1,16 +1,15 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./apps # graphical applications
-      ./base # base system configurations
-      ./programs # terminal applications
-      ./shell # shell options and replacement terminal commands
-      ./system # wm, de, and or shell
-      ./tooling # programming language specific configurations
+  imports = [
+    ./apps # graphical applications
+    ./base # base system configurations
+    ./programs # terminal applications
+    ./shell # shell options and replacement terminal commands
+    ./system # wm, de, and or shell
+    ./tooling # programming language specific configurations
 
-      ./catppuccin.nix
-    ];
+    ./catppuccin.nix
+  ];
 
   xdg = {
     enable = true;
@@ -28,11 +27,10 @@
       publicShare = "${config.home.homeDirectory}/public";
       templates = "${config.home.homeDirectory}/templates";
       videos = "${config.home.homeDirectory}/videos";
-      extraConfig =
-        {
-          GAMES = "${config.home.homeDirectory}/games";
-          LIBRARY = "${config.home.homeDirectory}/library";
-        };
+      extraConfig = {
+        GAMES = "${config.home.homeDirectory}/games";
+        LIBRARY = "${config.home.homeDirectory}/library";
+      };
       setSessionVariables = true;
     };
   };

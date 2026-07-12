@@ -1,4 +1,9 @@
-{ lib, pkgs, appimageTools, ... }:
+{
+  lib,
+  pkgs,
+  appimageTools,
+  ...
+}:
 appimageTools.wrapType2 rec {
   pname = "hayase";
   version = "6.4.79";

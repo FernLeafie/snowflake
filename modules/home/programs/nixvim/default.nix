@@ -1,4 +1,11 @@
-{ inputs, config, lib, pkgs, osConfig, ... }:
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}:
 {
   imports = [
     inputs.nixvim.homeModules.nixvim
@@ -18,5 +25,6 @@
 
     colorschemes.catppuccin.enable = true;
   };
-    xdg.configFile."nvim/resources/NeovimShadowed_catppuccin-all.png".source = ./resources/NeovimShadowed_catppuccin-all.png;
+  xdg.configFile."nvim/resources/NeovimShadowed_catppuccin-all.png".source =
+    ./resources/NeovimShadowed_catppuccin-all.png;
 }

@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./media.nix
-      ./theme.nix
-    ];
+  imports = [
+    ./media.nix
+    ./theme.nix
+  ];
 }

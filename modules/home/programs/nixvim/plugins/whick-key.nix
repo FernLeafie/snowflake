@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins.which-key = {
     enable = true;
@@ -25,12 +30,18 @@
         {
           __unkeyed-1 = "<leader>g";
           group = "Lsp actions";
-          icon = { icon = ""; color = "green"; };
+          icon = {
+            icon = "";
+            color = "green";
+          };
         }
         {
           __unkeyed-1 = "<leader>t";
           group = "Tabs";
-          icon = { icon = "󰓩 "; color = "purple"; };
+          icon = {
+            icon = "󰓩 ";
+            color = "purple";
+          };
         }
       ];
     };

@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins.nvim-ufo = {
     enable = true;
@@ -52,13 +57,17 @@
     {
       mode = [ "n" ];
       key = "zR";
-      action = { __raw = "require('ufo').openAllFolds"; };
+      action = {
+        __raw = "require('ufo').openAllFolds";
+      };
       options.desc = "Open all folds";
     }
     {
       mode = [ "n" ];
       key = "zM";
-      action = { __raw = "require('ufo').closeAllFolds"; };
+      action = {
+        __raw = "require('ufo').closeAllFolds";
+      };
       options.desc = "Close all folds";
     }
     {

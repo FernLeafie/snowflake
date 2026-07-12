@@ -1,13 +1,30 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   plugins.conform-nvim = {
     enable = true;
     autoInstall.enable = true;
     settings = {
       formatters_by_ft = {
-        css = { __unkeyed-1 = "prettierd"; __unkeyed-2 = "prettier"; stop_after_first = true; };
-        javascript = { __unkeyed-1 = "prettierd"; __unkeyed-2 = "prettier"; stop_after_first = true; };
-        json = { __unkeyed-1 = "prettierd"; __unkeyed-2 = "prettier"; stop_after_first = true; };
+        css = {
+          __unkeyed-1 = "prettierd";
+          __unkeyed-2 = "prettier";
+          stop_after_first = true;
+        };
+        javascript = {
+          __unkeyed-1 = "prettierd";
+          __unkeyed-2 = "prettier";
+          stop_after_first = true;
+        };
+        json = {
+          __unkeyed-1 = "prettierd";
+          __unkeyed-2 = "prettier";
+          stop_after_first = true;
+        };
         lua = [ "stylua" ];
         rust = [ "rustfmt" ];
         yaml = [ "yamlfix" ];
@@ -17,7 +34,10 @@
   };
   keymaps = [
     {
-      mode = [ "n" "v" ];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>gf";
       action = {
         __raw = ''

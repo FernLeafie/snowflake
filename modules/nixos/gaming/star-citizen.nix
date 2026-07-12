@@ -1,4 +1,10 @@
-{ inputs, config, lib, pkgs, ... }:
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   config = lib.mkIf config.snow.gaming.star-citizen.enable {
     environment.systemPackages = with pkgs; [
@@ -6,4 +12,3 @@
     ];
   };
 }
-

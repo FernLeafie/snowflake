@@ -1,11 +1,15 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./../../modules/nixos
-      ./../../modules/shared
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ./../../modules/nixos
+    ./../../modules/shared
+  ];
 
   snow = {
     gaming.enable = true;
@@ -25,7 +29,10 @@
   users.users.fern-snowleafie = {
     isNormalUser = true;
     description = "Fern Snowleafie";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
 }

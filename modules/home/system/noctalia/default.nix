@@ -4,7 +4,8 @@
     inputs.noctalia.homeModules.default
   ];
 
-  xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text = builtins.readFile ./catppuccin-mocha-mauve.json;
+  xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text =
+    builtins.readFile ./catppuccin-mocha-mauve.json;
   xdg.configFile."noctalia/icons/nix.svg".text = builtins.readFile ./nix.svg;
   xdg.configFile."noctalia/icons/nix-coloured.svg".text = builtins.readFile ./nix-coloured.svg;
   xdg.configFile."noctalia/icons/nix-rainbow.svg".text = builtins.readFile ./nix-rainbow.svg;
@@ -37,7 +38,12 @@
       audio.enable_sounds = true;
 
       bar.default = {
-        start = [ "cpu" "temp" "ram" "taskbar" ];
+        start = [
+          "cpu"
+          "temp"
+          "ram"
+          "taskbar"
+        ];
         center = [ "workspaces" ];
         end = [
           "media"
@@ -81,7 +87,11 @@
       };
 
       idle = {
-        behavior_order = [ "lock" "screen-off" "lock-and-suspend" ];
+        behavior_order = [
+          "lock"
+          "screen-off"
+          "lock-and-suspend"
+        ];
         behavior = {
           lock = {
             action = "lock";

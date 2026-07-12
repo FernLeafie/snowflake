@@ -1,13 +1,12 @@
 { config, pkgs, ... }:
 {
-  imports =
-    [
-      ./kitty.nix
-      ./nixcord
-      ./gaming
-      ./graphical
-      ./video
-    ];
+  imports = [
+    ./kitty.nix
+    ./nixcord
+    ./gaming
+    ./graphical
+    ./video
+  ];
   home.packages = with pkgs; [
     libreoffice-qt
 

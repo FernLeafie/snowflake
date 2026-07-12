@@ -1,8 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./printing.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./printing.nix
+  ];
 }
-

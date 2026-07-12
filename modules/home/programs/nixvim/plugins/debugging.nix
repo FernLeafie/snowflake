@@ -1,8 +1,12 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   options = {
-    snow.debugging =
-      lib.mkEnableOption "neovim debugging";
+    snow.debugging = lib.mkEnableOption "neovim debugging";
   };
   config = lib.mkIf config.snow.debugging {
     plugins = {
@@ -50,11 +54,36 @@
       };
     };
     keymaps = [
-      { mode = [ "n" ]; key = "<leader>dv"; action = "<Cmd>DapViewToggle<CR>"; options.desc = "Debug view"; }
-      { mode = [ "n" ]; key = "<leader>db"; action = "<Cmd>DapToggleBreakpoint<CR>"; options.desc = "Debug breakpoint"; }
-      { mode = [ "n" ]; key = "<leader>dc"; action = "<Cmd>DapContinue<CR>"; options.desc = "Debug continue"; }
-      { mode = [ "n" ]; key = "<leader>dx"; action = "<Cmd>DapTerminate<CR>"; options.desc = "Debug terminate"; }
-      { mode = [ "n" ]; key = "<leader>do"; action = "<Cmd>DapStepOver<CR>"; options.desc = "Debug step over"; }
+      {
+        mode = [ "n" ];
+        key = "<leader>dv";
+        action = "<Cmd>DapViewToggle<CR>";
+        options.desc = "Debug view";
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>db";
+        action = "<Cmd>DapToggleBreakpoint<CR>";
+        options.desc = "Debug breakpoint";
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>dc";
+        action = "<Cmd>DapContinue<CR>";
+        options.desc = "Debug continue";
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>dx";
+        action = "<Cmd>DapTerminate<CR>";
+        options.desc = "Debug terminate";
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>do";
+        action = "<Cmd>DapStepOver<CR>";
+        options.desc = "Debug step over";
+      }
     ];
   };
 }

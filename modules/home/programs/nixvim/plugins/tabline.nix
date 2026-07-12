@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   opts = {
     showtabline = 2;
@@ -125,23 +130,108 @@
 
   keymaps = [
     # buffers
-    { mode = [ "n" ]; key = "<leader>bn"; action = "<Cmd>bnext<CR>"; options.desc = "Next buffer"; }
-    { mode = [ "n" ]; key = "<leader>bp"; action = "<Cmd>bprevious<CR>"; options.desc = "Previous buffer"; }
-    { mode = [ "n" ]; key = "<leader>bq"; action = "<Cmd>BufferClose<CR>"; options.desc = "Close buffer"; }
-    { mode = [ "n" ]; key = "<leader>bQ"; action = "<Cmd>BufferClose!<CR>"; options.desc = "Force close buffer"; }
-    { mode = [ "n" ]; key = "<leader>bU"; action = "<Cmd>:bufdo bd<CR>"; options.desc = "Close all buffer"; }
-    { mode = [ "n" ]; key = "<leader>bvs"; action = "<Cmd>vsplit<CR><Cmd>bnext<CR>"; options.desc = "Open next buffer in vsplit"; }
+    {
+      mode = [ "n" ];
+      key = "<leader>bn";
+      action = "<Cmd>bnext<CR>";
+      options.desc = "Next buffer";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>bp";
+      action = "<Cmd>bprevious<CR>";
+      options.desc = "Previous buffer";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>bq";
+      action = "<Cmd>BufferClose<CR>";
+      options.desc = "Close buffer";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>bQ";
+      action = "<Cmd>BufferClose!<CR>";
+      options.desc = "Force close buffer";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>bU";
+      action = "<Cmd>:bufdo bd<CR>";
+      options.desc = "Close all buffer";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>bvs";
+      action = "<Cmd>vsplit<CR><Cmd>bnext<CR>";
+      options.desc = "Open next buffer in vsplit";
+    }
     # tabs
-    { mode = [ "n" ]; key = "<leader>ta"; action = "<Cmd>$tabnew<CR>"; options.desc = "New tab"; }
-    { mode = [ "n" ]; key = "<leader>tc"; action = "<Cmd>tabclose<CR>"; options.desc = "Close tab"; }
-    { mode = [ "n" ]; key = "<leader>tj"; action = "<Cmd>Tabby jump_to_tab<CR>"; options.desc = "Tab jump mode"; }
-    { mode = [ "n" ]; key = "<leader>tf"; action = "<Cmd>Tabby pick_window<CR>"; options.desc = "Find tab"; }
-    { mode = [ "n" ]; key = "<leader>to"; action = "<Cmd>tabonly<CR>"; options.desc = "Close all other tabs"; }
-    { mode = [ "n" ]; key = "<leader>tn"; action = "<Cmd>tabn<CR>"; options.desc = "Next tab"; }
-    { mode = [ "n" ]; key = "<leader>tp"; action = "<Cmd>tabp<CR>"; options.desc = "Previous tab"; }
-    { mode = [ "n" ]; key = "<S-l>"; action = "<Cmd>tabn<CR>"; options.desc = "Next tab"; }
-    { mode = [ "n" ]; key = "<S-h>"; action = "<Cmd>tabp<CR>"; options.desc = "previous tab"; }
-    { mode = [ "n" ]; key = "<leader>tmp"; action = "<Cmd>-tabmove<CR>"; options.desc = "Move tab back"; }
-    { mode = [ "n" ]; key = "<leader>tmn"; action = "<Cmd>+tabmove<CR>"; options.desc = "Move tab forward"; }
+    {
+      mode = [ "n" ];
+      key = "<leader>ta";
+      action = "<Cmd>$tabnew<CR>";
+      options.desc = "New tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tc";
+      action = "<Cmd>tabclose<CR>";
+      options.desc = "Close tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tj";
+      action = "<Cmd>Tabby jump_to_tab<CR>";
+      options.desc = "Tab jump mode";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tf";
+      action = "<Cmd>Tabby pick_window<CR>";
+      options.desc = "Find tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>to";
+      action = "<Cmd>tabonly<CR>";
+      options.desc = "Close all other tabs";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tn";
+      action = "<Cmd>tabn<CR>";
+      options.desc = "Next tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tp";
+      action = "<Cmd>tabp<CR>";
+      options.desc = "Previous tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<S-l>";
+      action = "<Cmd>tabn<CR>";
+      options.desc = "Next tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<S-h>";
+      action = "<Cmd>tabp<CR>";
+      options.desc = "previous tab";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tmp";
+      action = "<Cmd>-tabmove<CR>";
+      options.desc = "Move tab back";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>tmn";
+      action = "<Cmd>+tabmove<CR>";
+      options.desc = "Move tab forward";
+    }
   ];
 }
