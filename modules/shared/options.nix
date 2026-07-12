@@ -69,5 +69,17 @@ in
         default = cfg.tooling.enable;
       };
     };
+    
+    user-services = {
+      enable = mkEnableOption "Enable user related services";
+
+      kdeconnect.enable = mkEnableOption "Enable KDE Connect" // {
+        default = cfg.user-services.enable;
+      };
+
+      syncthing.enable = mkEnableOption "Enable Syncthing" // {
+        default = cfg.user-services.enable;
+      };
+    };
   };
 }

@@ -19,6 +19,7 @@
       nix.enable = true;
       rust.enable = false;
     };
+    user-services.enable = true;
   };
 
   # Define your hostname and location

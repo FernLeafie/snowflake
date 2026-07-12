@@ -13,6 +13,7 @@
     ./noctalia.nix
     ./catppuccin.nix
     ./gaming
+    ./services
     ./system
   ];
 
@@ -54,6 +55,17 @@
   console = {
     useXkbConfig = true; # use xkb.options in tty.
   };
+
+  # # firewall exception
+  # networking.firewall = rec {
+  #   allowedTCPPortRanges = [
+  #     {
+  #       from = 1714;
+  #       to = 1764;
+  #     } # KDE Connect
+  #   ];
+  #   allowedUDPPortRanges = allowedTCPPortRanges;
+  # };
 
   # Nix options
   # Allow unfree packages
