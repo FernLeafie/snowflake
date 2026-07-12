@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.graphical.gimp.enable =
-      lib.mkEnableOption "gimp" // {
-        default = config.snow.graphical.enable;
-      };
-  };
-  config = lib.mkIf config.snow.graphical.gimp.enable {
+  config = lib.mkIf osConfig.snow.graphical.gimp.enable {
     home.packages = with pkgs; [
       gimp
     ];

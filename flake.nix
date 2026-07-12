@@ -68,7 +68,7 @@
             sharedModules = [
               ./modules/home/home.nix
             ];
-            users.fern-snowleafie = import ./hosts/aphrodite/fern.nix;
+            users.fern-snowleafie = import ./modules/home/fern.nix;
             backupFileExtension = "backup";
           };
         }
@@ -89,7 +89,7 @@
             sharedModules = [
               ./modules/home/home.nix
             ];
-            users.fern-snowleafie = import ./hosts/artemis/fern.nix;
+            users.fern-snowleafie = import ./modules/home/fern.nix;
             backupFileExtension = "backup";
           };
         }

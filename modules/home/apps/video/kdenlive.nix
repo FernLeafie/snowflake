@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.video.kdenlive.enable =
-      lib.mkEnableOption "kdenlive" // {
-        default = config.snow.video.enable;
-      };
-  };
-  config = lib.mkIf config.snow.video.kdenlive.enable {
+  config = lib.mkIf osConfig.snow.video.kdenlive.enable {
     home.packages = with pkgs; [
       kdenlive
     ];

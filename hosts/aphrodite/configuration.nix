@@ -4,9 +4,18 @@
     [
       ./hardware-configuration.nix
       ./../../modules/nixos
+      ./../../modules/shared
     ];
 
-  snow.gaming.steam.enable = true;
+  snow = {
+    gaming.enable = true;
+    graphical.enable = true;
+    tooling = {
+      typst.enable = true;
+      nix.enable = true;
+      rust.enable = false;
+    };
+  };
 
   # Define your hostname and location
   networking.hostName = "aphrodite";

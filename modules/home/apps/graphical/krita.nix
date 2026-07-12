@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.graphical.krita.enable =
-      lib.mkEnableOption "krita" // {
-        default = config.snow.graphical.enable;
-      };
-  };
-  config = lib.mkIf config.snow.graphical.krita.enable {
+  config = lib.mkIf osConfig.snow.graphical.krita.enable {
     home.packages = with pkgs; [
       krita
     ];

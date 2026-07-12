@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.graphical.inkscape.enable =
-      lib.mkEnableOption "inkscape" // {
-        default = config.snow.graphical.enable;
-      };
-  };
-  config = lib.mkIf config.snow.graphical.inkscape.enable {
+  config = lib.mkIf osConfig.snow.graphical.inkscape.enable {
     home.packages = with pkgs; [
       inkscape
     ];

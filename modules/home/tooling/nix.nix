@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.tooling.nix.enable =
-      lib.mkEnableOption "nix tooling" // {
-        default = config.snow.tooling.enable;
-      };
-  };
-  config = lib.mkIf config.snow.tooling.nix.enable {
+  config = lib.mkIf osConfig.snow.tooling.nix.enable {
     home.packages = with pkgs; [
       # nil
       nixfmt

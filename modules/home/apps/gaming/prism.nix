@@ -1,12 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, osConfig, ... }:
 {
-  options = {
-    snow.gaming.prism.enable =
-      lib.mkEnableOption "prismlauncher" // {
-        default = true;
-      };
-  };
-  config = lib.mkIf config.snow.gaming.prism.enable {
+  config = lib.mkIf osConfig.snow.gaming.prism.enable {
     programs.prismlauncher = {
       enable = true;
       settings = {
@@ -15,4 +9,3 @@
     };
   };
 }
-

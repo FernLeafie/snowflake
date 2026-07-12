@@ -7,18 +7,9 @@
       ./krita.nix
     ];
 
-  options = {
-    snow.graphical.enable =
-      lib.mkEnableOption "all graphics editing software" // {
-        default = false;
-      };
-  };
-
-  config = {
-    home.packages = with pkgs; [
-      lutgen
-      lutgen-studio
-      imagemagick
-    ];
-  };
+  home.packages = with pkgs; [
+    lutgen
+    lutgen-studio
+    imagemagick
+  ];
 }
