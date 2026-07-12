@@ -34,7 +34,7 @@
           options = {
             nixos = {
               # expr = ''(builtins.getFlake "${config.home.homeDirectory}/snowflake").nixosConfigurations.${config.networking.hostName}.options'';
-              # [TODO] make  this actually use the right networking name
+              # [TODO] make this actually use the right networking name
               expr = ''${flake}.nixosConfigurations.aphrodite.options'';
             };
           };

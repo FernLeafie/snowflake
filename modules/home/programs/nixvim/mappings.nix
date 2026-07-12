@@ -5,13 +5,13 @@
     {
       mode = [ "v" ];
       key = "J";
-      action = ">+1<CR>gv=gv";
+      action = ":m '>+1<CR>gv=gv";
       options.desc = "Move visual block up";
     }
     {
       mode = [ "v" ];
       key = "K";
-      action = ">+1<CR>gv=gv";
+      action = ":m '<-2<CR>gv=gv";
       options.desc = "Move visual block up";
     }
     # Not sure what this does differently from usual
