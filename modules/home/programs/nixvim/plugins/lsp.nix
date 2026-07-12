@@ -51,13 +51,11 @@
     {
       mode = [ "n" ];
       key = "K";
-      action = {
-        __raw = ''
-          function()
-          	vim.lsp.buf.hover({ border = 'rounded' })
-          end
-        '';
-      };
+      action.__raw = ''
+        function()
+        	vim.lsp.buf.hover({ border = 'rounded' })
+        end
+      '';
       options.desc = "Show LSP hover information";
     }
   ];

@@ -21,9 +21,7 @@
     };
     tiny-devicons-auto-colors = {
       enable = true;
-      settings.colors = {
-        __raw = ''require("catppuccin.palettes").get_palette("mocha")'';
-      };
+      settings.colors.__raw = ''require("catppuccin.palettes").get_palette("mocha")'';
     };
   };
 }

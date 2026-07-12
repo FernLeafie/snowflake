@@ -15,9 +15,7 @@
         }
         {
           type = "terminal";
-          command = {
-            __raw = ''"chafa --size=69x20 -f symbols --symbols all " .. vim.fn.stdpath('config') .. "/resources/NeovimShadowed_catppuccin-all.png"'';
-          };
+          command.__raw = ''"chafa --size=69x20 -f symbols --symbols all " .. vim.fn.stdpath('config') .. "/resources/NeovimShadowed_catppuccin-all.png"'';
           width = 69;
           height = 19;
           opts.redraw = true;

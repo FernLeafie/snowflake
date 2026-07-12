@@ -40,9 +40,7 @@
           }
           {
             __unkeyed-1 = "filename";
-            separator = {
-              __raw = "nil";
-            };
+            separator.__raw = "nil";
             padding = {
               left = 0;
               right = 1;
@@ -84,13 +82,11 @@
             };
             colored = true;
             always_visible = true;
-            cond = {
-              __raw = ''
-                function()
-                  return vim.bo.filetype ~= 'markdown'
-                end
-              '';
-            };
+            cond.__raw = ''
+              function()
+                return vim.bo.filetype ~= 'markdown'
+              end
+            '';
           }
           "filetype"
         ];

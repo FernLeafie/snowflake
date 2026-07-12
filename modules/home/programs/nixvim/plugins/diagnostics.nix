@@ -36,13 +36,11 @@
     {
       mode = [ "n" ];
       key = "<leader>de";
-      action = {
-        __raw = ''
-          function()
-            require("tiny-inline-diagnostic").toggle()
-          end
-        '';
-      };
+      action.__raw = ''
+        function()
+          require("tiny-inline-diagnostic").toggle()
+        end
+      '';
       options.desc = "Toggle diagnostics";
     }
   ];

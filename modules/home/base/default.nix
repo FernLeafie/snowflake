@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 {
   imports = [
     ./media.nix

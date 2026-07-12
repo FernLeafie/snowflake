@@ -57,32 +57,26 @@
     {
       mode = [ "n" ];
       key = "zR";
-      action = {
-        __raw = "require('ufo').openAllFolds";
-      };
+      action.__raw = "require('ufo').openAllFolds";
       options.desc = "Open all folds";
     }
     {
       mode = [ "n" ];
       key = "zM";
-      action = {
-        __raw = "require('ufo').closeAllFolds";
-      };
+      action.__raw = "require('ufo').closeAllFolds";
       options.desc = "Close all folds";
     }
     {
       mode = [ "n" ];
       key = "zK";
-      action = {
-        __raw = ''
-          function()
-          	local winid = require('ufo').peekFoldedLinesUnderCursor()
-          	if not winid then
-          		vim.lsp.buf.hover()
-          	end
-          end
-        '';
-      };
+      action.__raw = ''
+        function()
+        	local winid = require('ufo').peekFoldedLinesUnderCursor()
+        	if not winid then
+        		vim.lsp.buf.hover()
+        	end
+        end
+      '';
       options.desc = "Peek fold";
     }
   ];

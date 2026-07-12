@@ -10,18 +10,16 @@
     float = {
       transparent = false;
     };
-    custom_highlights = {
-      __raw = ''
-        function(colors)
-          return {
-            FloatBorder = { fg = colors.mauve },
-            NotifyINFOBorder = { fg = colors.mauve },
-            BlinkCmpMenuBorder = { fg = colors.mauve },
-            HarpoonBorder = { fg = colors.mauve },
-          }
-        end
-      '';
-    };
+    custom_highlights.__raw = ''
+      function(colors)
+        return {
+          FloatBorder = { fg = colors.mauve },
+          NotifyINFOBorder = { fg = colors.mauve },
+          BlinkCmpMenuBorder = { fg = colors.mauve },
+          HarpoonBorder = { fg = colors.mauve },
+        }
+      end
+    '';
     integrations = {
       alpha = true;
       blink_cmp = {

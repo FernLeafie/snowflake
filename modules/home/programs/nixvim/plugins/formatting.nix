@@ -39,17 +39,15 @@
         "v"
       ];
       key = "<leader>gf";
-      action = {
-        __raw = ''
-          function()
-          	require('conform').format({
-          		lsp_format = 'fallback',
-          		async = true,
-          		timeout_ms = 1000,
-          	})
-          end
-        '';
-      };
+      action.__raw = ''
+        function()
+        	require('conform').format({
+        		lsp_format = 'fallback',
+        		async = true,
+        		timeout_ms = 1000,
+        	})
+        end
+      '';
       options.desc = "Format file or range";
     }
   ];
