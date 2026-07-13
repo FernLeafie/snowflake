@@ -10,7 +10,8 @@
     };
 
     niri-flake = {
-      url = "github:sodiboo/niri-flake";
+      # [NOTE] more up to date fork of sodiboo/niri-flake
+      url = "github:epireyn/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
