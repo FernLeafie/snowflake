@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, config, lib, ... }:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -33,6 +33,7 @@
           transparency = "soft";
         };
         polkit_agent = true;
+        corner_radius_scale = lib.mkIf (config.home.username == "lily-snowleafie") 0.0;
       };
 
       audio.enable_sounds = true;
@@ -64,6 +65,7 @@
         border = "surface_variant";
         border_width = 2.0;
         panel_overlap = 2;
+        radius = lib.mkIf (config.home.username == "lily-snowleafie") 0;
       };
 
       widget = {
