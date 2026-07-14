@@ -149,7 +149,7 @@
     prefer-no-csd = true;
     cursor = {
       size = 24;
-      theme = "breeze_cursors";
+      theme = "${config.home.pointerCursor.name}";
     };
 
     binds = {

@@ -21,4 +21,14 @@
       name = "Maple Mono NF CN";
     };
   };
+
+  home = {
+    pointerCursor = {
+      enable = true;
+      name = "breeze_cursors"; # or BreezeX-RosePine-Linux
+      package = pkgs.kdePackages.breeze; # or pkgs.rose-pine-cursor
+      gtk.enable = true;
+      x11.enable = true;
+    };
+  };
 }
