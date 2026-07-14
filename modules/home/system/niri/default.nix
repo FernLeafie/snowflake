@@ -72,6 +72,9 @@
       gaps = 8;
       background-color = "transparent";
 
+      default-column-width = {
+        proportion = 1. / 2.;
+      };
       preset-column-widths = [
         { proportion = 1. / 3.; }
         { proportion = 1. / 2.; }
@@ -168,7 +171,7 @@
         hotkey-overlay.title = "Open a File manager: Dolphin";
       };
       "Mod+B" = {
-        action.spawn-sh = "dolphin";
+        action.spawn-sh = "firefox";
         hotkey-overlay.title = "Open a Browser: Firefox";
       };
       "Mod+Alt+L" = {
@@ -419,5 +422,9 @@
         };
       }
     ];
+    debug = {
+      # fixes some notifications
+      honor-xdg-activation-with-invalid-serial = [ ];
+    };
   };
 }

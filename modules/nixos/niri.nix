@@ -20,6 +20,7 @@
     kitty
     kdePackages.dolphin
     kdePackages.dolphin-plugins
+    kdePackages.kservice
     kdePackages.qtsvg
     kdePackages.qt6ct
     catppuccin-qt5ct
@@ -27,9 +28,18 @@
     xwayland-satellite
   ];
 
+  # [HACK] fix for "open with" in dolphin, see https://github.com/NixOS/nixpkgs/issues/409986
+  environment.etc."xdg/menus/applications.menu".source = ./dolphin.menu;
+
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gnome
+      kdePackages.xdg-desktop-portal-kde
+    ];
+    config.niri = {
+      "org.freedesktop.impl.portal.FileChooser" = [ "kde" ]; # GTK or "KDE"
+    };
   };
 
   security.polkit.enable = true;
