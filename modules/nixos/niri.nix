@@ -18,14 +18,32 @@
 
   environment.systemPackages = with pkgs; [
     kitty
-    kdePackages.dolphin
-    kdePackages.dolphin-plugins
-    kdePackages.kservice
-    kdePackages.qtsvg
-    kdePackages.qt6ct
     catppuccin-qt5ct
     kdePackages.plasma-browser-integration
     xwayland-satellite
+
+    # dolphin
+    kdePackages.dolphin
+    # plugins
+    kdePackages.ark
+    kdePackages.audiocd-kio
+    kdePackages.baloo
+    kdePackages.dolphin-plugins
+    kdePackages.kio
+    kdePackages.kio-admin
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    # previews
+    kdePackages.ffmpegthumbs
+    icoutils
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.kimageformats
+    kdePackages.qtimageformats
+    kdePackages.taglib
+    kdePackages.qtsvg
+    # others
+    kdePackages.kservice
+    kdePackages.qt6ct
   ];
 
   # [HACK] fix for "open with" in dolphin, see https://github.com/NixOS/nixpkgs/issues/409986
