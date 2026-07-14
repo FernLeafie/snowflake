@@ -40,6 +40,11 @@
       # [NOTE] Saves space but might introduce bugs
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rmpc = {
+      url = "github:mierak/rmpc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {

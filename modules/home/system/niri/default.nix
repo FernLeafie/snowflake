@@ -132,6 +132,7 @@
     # Possibly make use of lib.getExe in the future
     spawn-at-startup = [
       { sh = "noctalia"; }
+      { sh = "rmpcd"; }
     ];
 
     # Move over to non niri specific environment variables
