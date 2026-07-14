@@ -15,8 +15,19 @@ in
     enable = true;
 
     discord = {
-      vencord.enable = true;
-      openASAR.enable = true;
+      enable = false;
+      vencord.enable = false;
+      openASAR.enable = false;
+    };
+
+    vesktop = {
+      enable = true;
+      autoscroll.enable = true;
+      settings = {
+        mimimizeToTray = true;
+        disableMinSize = true;
+        arRPC = true;
+      };
     };
 
     # Theming
