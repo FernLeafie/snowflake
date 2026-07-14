@@ -1,5 +1,5 @@
 {
   imports = [
-    ./theme.nix
+    ./media.nix
   ];
 }

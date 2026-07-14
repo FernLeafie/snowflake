@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./base
     ./kitty.nix
     ./nixcord
     ./gaming
