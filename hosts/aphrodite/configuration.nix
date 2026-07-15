@@ -14,6 +14,7 @@
   snow = {
     gaming.enable = true;
     graphical.enable = true;
+    writing.enable = true;
     tooling = {
       typst.enable = true;
       nix.enable = true;

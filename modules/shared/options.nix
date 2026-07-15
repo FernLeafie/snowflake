@@ -50,6 +50,18 @@ in
       };
     };
 
+    writing = {
+      enable = mkEnableOption "Enable writing software";
+
+      libreoffice.enable = mkEnableOption "Enable Libreoffice" // {
+        default = cfg.writing.enable;
+      };
+
+      obsidian.enable = mkEnableOption "Enable Obsidian" // {
+        default = cfg.writing.enable;
+      };
+    };
+
     tooling = {
       enable = mkEnableOption "Enable development tooling";
 
@@ -69,7 +81,7 @@ in
         default = cfg.tooling.enable;
       };
     };
-    
+
     user-services = {
       enable = mkEnableOption "Enable user related services";
 

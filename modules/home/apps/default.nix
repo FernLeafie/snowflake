@@ -7,10 +7,9 @@
     ./gaming
     ./graphical
     ./video
+    ./writing
   ];
   home.packages = with pkgs; [
-    libreoffice-qt
-
     # custom
     (callPackage ./hayase.nix {
       forceX11 = false;
