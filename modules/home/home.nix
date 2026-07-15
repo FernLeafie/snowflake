@@ -35,6 +35,15 @@
       setSessionVariables = true;
     };
   };
+  # Proper icons for the two custom directories
+  home.file."${config.xdg.userDirs.extraConfig.GAMES}/.directory".text = ''
+    [Desktop Entry]
+    Icon=folder-games
+  '';
+  home.file."${config.xdg.userDirs.extraConfig.LIBRARY}/.directory".text = ''
+    [Desktop Entry]
+    Icon=folder-books
+  '';
   programs.git = {
     enable = true;
     lfs.enable = true;
