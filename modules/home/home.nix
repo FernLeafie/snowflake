@@ -36,6 +36,10 @@
     };
   };
   # Proper icons for the two custom directories
+  home.file."${config.xdg.userDirs.projects}/.directory".text = ''
+    [Desktop Entry]
+    Icon=folder-projects
+  '';
   home.file."${config.xdg.userDirs.extraConfig.GAMES}/.directory".text = ''
     [Desktop Entry]
     Icon=folder-games
