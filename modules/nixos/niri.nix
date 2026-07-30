@@ -44,6 +44,7 @@
     # others
     kdePackages.kservice
     kdePackages.qt6ct
+    kdePackages.kde-cli-tools
   ];
 
   # [HACK] fix for "open with" in dolphin, see https://github.com/NixOS/nixpkgs/issues/409986
