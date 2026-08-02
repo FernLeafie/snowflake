@@ -22,6 +22,18 @@ in
       };
     };
 
+    gamedev = {
+      enable = mkEnableOption "Enable game development related software";
+
+      aseprite.enable = mkEnableOption "Enable Aseprite" // {
+        default = cfg.gamedev.enable;
+      };
+
+      blockbench.enable = mkEnableOption "Enable Blockbench" // {
+        default = cfg.gamedev.enable;
+      };
+    };
+
     video = {
       enable = mkEnableOption "Enable video editing software";
 

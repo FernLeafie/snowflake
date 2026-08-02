@@ -4,6 +4,7 @@
     ./base
     ./kitty.nix
     ./nixcord
+    ./gamedev
     ./gaming
     ./graphical
     ./video
