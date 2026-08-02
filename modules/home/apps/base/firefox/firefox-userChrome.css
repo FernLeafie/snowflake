@@ -1,0 +1,222 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_close_button_always_on_hover.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Always show tab close button on hover and never otherwise */
+.tabbrowser-tab .tab-close-button {
+  display: none;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/compact_extensions_panel.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* This style hides some information from the extensions-button panel, but makes it appear more compact. Might be useful for someone having lot of extensions */
+
+#unified-extensions-view {
+  --uei-icon-size: 16px;
+}
+
+.unified-extensions-item-menu-button.subviewbutton {
+  padding: 0px !important;
+  margin-inline-end: 0 !important;
+}
+
+.unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon {
+  padding: 2px !important;
+}
+
+.unified-extensions-item-message-deck {
+  display: none;
+}
+
+#unified-extensions-view > vbox > vbox > .unified-extensions-item {
+  padding-block: 0px !important;
+}
+
+#unified-extensions-panel .unified-extensions-item {
+  margin-block: 0 !important;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_closing_animation.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* This style simply makes the tab stay visible while it is being closed as well as makes the transition a bit slower */
+
+.tabbrowser-tab:not([pinned], [fadein]) {
+  transition-duration: 240ms, 240ms !important;
+  transition-timing-function: ease-out, ease-out !important;
+  visibility: visible !important;
+}
+
+.tab-content:not([fadein], [pinned]) .tab-icon-pending:not([fadein]),
+.tab-icon-image:not([fadein]),
+.tab-label:not([fadein]) {
+  visibility: visible !important;
+}
+
+.tab-label:not([fadein]) {
+  display: flex !important;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/page_action_buttons_on_urlbar_hover.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+.urlbar-page-action {
+  margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
+  opacity: 0;
+  transition:
+    margin-inline-end 100ms linear,
+    opacity 200ms linear;
+}
+
+#urlbar:hover .urlbar-page-action,
+.urlbar-page-action[open],
+.urlbar-page-action[open] ~ .urlbar-page-action {
+  opacity: 1;
+  margin-inline-end: 0px !important;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/urlbar_info_icons_on_hover.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Hides info icons (except remote control icon) on the left side of urlbar and shows them when urlbar is hovered. Also hides container name and shows it on hover*/
+
+#urlbar-search-button,
+#tracking-protection-icon-container,
+#identity-box,
+#identity-box.extensionPage #identity-icon-label {
+  max-width: 0px;
+  transition: max-width 100ms linear !important;
+  overflow: hidden;
+}
+
+#identity-box.extensionPage {
+  max-width: 32px;
+}
+
+#urlbar:hover .urlbar-input-container > box,
+#urlbar:hover #identity-box.extensionPage #identity-icon-label {
+  max-width: 300px;
+}
+
+#urlbar:not(:hover) #userContext-label {
+  display: none;
+}
+
+/*changes the context menu color*/
+
+/* menupopup {
+--panel-background: rgba(5, 5, 5, .95) !important;
+--panel-border-color: rgb(255, 255, 255) !important;
+--panel-color: white !important;
+}
+
+menuitem:hover {
+background-color: #2A4045 !important;
+}
+
+menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+background-color: #2A4045 !important;
+color: white !important;
+} */
+
+/*removing ublock icon*/
+/* image:is([src="moz-extension://0110d0d4-2153-4557-ae1b-ef87db9bbd5d/img/ublock.svg"]) {display:none !important;} */
+
+/*cleaning up regular context menu*/
+#context-viewsource,
+#context-take-screenshot,
+#context-inspect-a11y,
+#context-sep-screenshots,
+#shinigamieyes_shinigamieyes-menuitem-1,
+#jid1-93wyvpgvxzgatw_jetpack-menuitem-_translatePage,
+#ublock0_raymondhill_net-menuitem-_uBlock0-blockElement {
+  display: none !important;
+}
+
+/*search by image bs*/
+
+#_0b457caa-602d-484a-8fe7-c1d894a011ba_-menuitem-8,
+#_2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c_-menuitem-11,
+#_2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c_-menuitem-10 {
+  display: none !important;
+}
+
+/*fireshot bs*/
+
+#_0b457caa-602d-484a-8fe7-c1d894a011ba_-menuitem-9,
+#_0b457caa-602d-484a-8fe7-c1d894a011ba_-menuitem-10,
+#_0b457caa-602d-484a-8fe7-c1d894a011ba_-menuitem-11,
+#_0b457caa-602d-484a-8fe7-c1d894a011ba_-menuitem-12,
+#_2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c_-menuitem-12 {
+  display: none !important;
+}
+
+/*cleaning up link context menu*/
+
+#context-bookmarklink,
+#context-savelink,
+#context-searchselect,
+#_74145f27-f039-47ce-a470-a662b129930a_-menuitem-_copy-link-to-clipboard,
+#jid1-93wyvpgvxzgatw_jetpack-menuitem-10,
+#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-menuitem-_open-tab-then-discard,
+#simple-tab-groups_drive4ik-menuitem-_stg-open-link-parent,
+#frame-sep,
+#jid1-93wyvpgvxzgatw_jetpack-menuitem-8 {
+  display: none !important;
+}
+
+/*cleaning up tab context menu*/
+
+#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent,
+#context_bookmarkTab,
+.share-tab-url-item,
+#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-menuitem-9,
+#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-menuitem-10,
+#_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-menuitem-11 {
+  display: none !important;
+}
+
+/*cleaning up image context menu*/
+
+#context-sendimage,
+#context-setDesktopBackground,
+#context-sep-sharing,
+#jid1-93wyvpgvxzgatw_jetpack-menuitem-9,
+#context-sep-sharing {
+  display: none !important;
+}
+
+/* Make the collapsed Tab Groups' outline not look ugly with dark theme
+* https://www.reddit.com/r/FirefoxCSS/comments/1k1itvc/comment/mnnxnks/ */
+/* .tab-group-label { */
+/*   tab-group[collapsed] > .tab-group-label-container & { */
+/*     outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important; */
+/*   } */
+/* } */
+
+.tab-group-label {
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    width: 100% !important;
+    /* margin-left: 5px !important;
+/* Left-align the Tab Group Label text */
+    text-align: left !important;
+    padding-inline: 10px !important;
+  }
+}
+
+/* Tab Group Label (FF v144+) */
+.tab-group-label-hover-highlight {
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    margin-inline-end: 0 !important;
+  }
+
+  /* #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+margin-inline: 0 !important;
+} */
+}

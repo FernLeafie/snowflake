@@ -69,7 +69,12 @@
 
   # Nix options
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [
+      inputs.nur.overlays.default
+    ];
+  };
 
   # nix.gc = {
   #   automatic = true;

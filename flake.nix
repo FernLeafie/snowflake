@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     niri-flake = {
       # [NOTE] more up to date fork of sodiboo/niri-flake
       url = "github:epireyn/niri-flake";

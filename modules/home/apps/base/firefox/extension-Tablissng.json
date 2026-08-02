@@ -1,0 +1,183 @@
+{
+  "data/f5b7Vs5nnVh9": {
+    "showSummary": true,
+    "showDetails": false,
+    "showForecast": false,
+    "showCity": true,
+    "units": "si",
+    "name": "Fern",
+  },
+  "widget/gCYPT2Lgm8QK": {
+    "id": "gCYPT2Lgm8QK",
+    "key": "widget/weather",
+    "order": 5,
+    "display": { "position": "bottomLeft", "fontFamily": "" }
+  },
+  "widget/default-time": null,
+  "widget/default-greeting": {
+    "id": "default-greeting",
+    "key": "widget/greeting",
+    "order": 2,
+    "display": {
+      "position": "topCentre",
+      "fontFamily": "",
+      "isEditingPosition": false
+    }
+  },
+  "focus": false,
+  "locale": "en-GB",
+  "timeZone": null,
+  "widget/SF_m8b1GS7M5": {
+    "id": "SF_m8b1GS7M5",
+    "key": "widget/time",
+    "order": 0,
+    "display": {
+      "position": "middleCentre",
+      "fontFamily": "",
+      "textOutline": false,
+      "isEditingPosition": false
+    }
+  },
+  "widget/d7ZBFh8xTxa6": null,
+  "data/default-greeting": { "name": "Fern" },
+  "widget/Af2x7KxLwbwt": null,
+  "widget/fipoOsZqlTdJ": null,
+  "widget/b4ASpXrqcO01": null,
+  "widget/jR5Qqhyi9i0P": null,
+  "widget/_M1UHLmfVJss": null,
+  "data/gCYPT2Lgm8QK": {
+    "showSummary": true,
+    "showDetails": false,
+    "showForecast": false,
+    "showCity": true,
+    "units": "si",
+    "name": "Lily",
+  },
+  "widget/y-S8hVNOQ6mG": null,
+  "widget/RDY7weVGFy0z": null,
+  "widget/f5b7Vs5nnVh9": {
+    "id": "f5b7Vs5nnVh9",
+    "key": "widget/weather",
+    "order": 4,
+    "display": { "position": "bottomLeft", "fontFamily": "" }
+  },
+  "widget/REPNohFHDfO_": null,
+  "widget/Atrvob474TlE": null,
+  "autoHideSettings": false,
+  "highlightingEnabled": true,
+  "widget/WxaA1Tj-46HW": null,
+  "widget/ccA8Rpay3AQy": null,
+  "widget/PSos097uBYE1": null,
+  "data/qx4ceSmwFduP": {
+    "mode": "digital",
+    "hour12": false,
+    "showDate": false,
+    "showMinutes": true,
+    "showSeconds": false,
+    "showDayPeriod": true,
+    "timeZone": "Europe/London"
+  },
+  "widget/CvJ4a4n_wcDo": null,
+  "data/SF_m8b1GS7M5": {
+    "mode": "digital",
+    "hour12": false,
+    "showDate": true,
+    "hideTime": false,
+    "showHours": true,
+    "showMinutes": true,
+    "showSeconds": false,
+    "showDayPeriod": true,
+    "showSeparator": true,
+    "timeZone": null,
+    "colorCircles": true,
+    "name": ""
+  },
+  "data/gfHjCqsEhGd3": {
+    "input": ".shortcuts {\nbackground: #1e1e2e99;\nborder-radius: 8px;\npadding: 6px;\n}\n\n.shortcuts .Links i {\n  margin-right: 2px;\n  margin-left: 2px;\n}\n.shortcuts .Links {\n  column-gap: 0em;\n}"
+  },
+  "widget/qx4ceSmwFduP": {
+    "id": "qx4ceSmwFduP",
+    "key": "widget/time",
+    "order": 8,
+    "display": {
+      "position": "bottomLeft",
+      "fontSize": 6,
+      "fontWeight": 400,
+      "fontFamily": ""
+    }
+  },
+  "hideSettingsIcon": true,
+  "background": {
+    "id": "rQxhDGkZ9N63",
+    "key": "background/image",
+    "display": {
+      "blur": 0,
+      "luminosity": -0.2,
+      "nightDim": true,
+      "scale": true,
+      "nightStart": "21:00",
+      "nightEnd": "05:00"
+    }
+  },
+  "widget/RDg3X94VyVOP": {
+    "id": "RDg3X94VyVOP",
+    "key": "widget/links",
+    "order": 7,
+    "display": {
+      "position": "bottomRight",
+      "textDecoration": "none",
+      "rotation": 0,
+      "customClass": "shortcuts"
+    }
+  },
+  "widget/gfHjCqsEhGd3": {
+    "id": "gfHjCqsEhGd3",
+    "key": "widget/css",
+    "order": 9,
+    "display": { "position": "middleCentre" }
+  },
+  "widget/D_UmZ78QV5mY": null,
+  "data/rQxhDGkZ9N63": { "paused": false, "timeout": 900 },
+  "widget/6NSC8pGPlR9g": null,
+  "data/RDg3X94VyVOP": {
+    "columns": 1,
+    "links": [
+      {
+        "url": "https://anilist.co/home",
+        "name": "",
+        "icon": "_favicon_duckduckgo",
+        "id": "mhp3v402y2x6xk0kuk0",
+        "iconifyValue": "tv",
+        "iconifyIdentifier": "feather:",
+        "lastUsed": 1785354674312
+      },
+      {
+        "id": "mju1z6a5a07vm2sgp7v",
+        "url": "https://hardcover.app",
+        "icon": "_favicon_duckduckgo",
+        "name": "",
+        "lastUsed": 1781518277197
+      },
+      {
+        "id": "mjyugn0grolwg9sp3jb",
+        "url": "https://bsky.app/",
+        "icon": "_favicon_google",
+        "lastUsed": 1773905889577,
+        "name": ""
+      }
+    ],
+    "visible": true,
+    "linkOpenStyle": false,
+    "linksNumbered": false,
+    "sortBy": "none",
+    "customWidth": 24,
+    "customHeight": 24,
+    "iconifyIdentifier": "feather:",
+    "conserveAspectRatio": false
+  },
+  "settingsIconPosition": "topLeft",
+  "themePreference": "system",
+  "favicon": { "mode": "default", "url": "", "data": null },
+  "accent": "#cba6f7",
+  "version": 3
+}
