@@ -8,14 +8,38 @@
   # imports = [
   #   inputs.catppuccin.homeModules.catppuccin
   # ];
-  qt = {
-    enable = true;
-    platformTheme.name = "kvantum";
-    style.name = "kvantum";
+  catppuccin = {
+    kvantum.enable = false;
+    qt5ct.enable = true;
   };
-  catppuccin.kvantum.apply = true;
+  qt = rec {
+    enable = true;
+    platformTheme.name = "qtct";
+    qt5ctSettings = qt6ctSettings;
+    qt6ctSettings = {
+      Appearance = {
+        icon_theme = "Papirus-Dark";
+        standard_dialogs = "default"; #xdgdesktopportal
+        style = "Darkly";
+      };
+      Fonts = {
+        fixed = "\"Maple Mono NF CN,10\"";
+        general = "\"Maple Mono NF CN,10\"";
+      };
+    };
+    style = {
+      name = "qt6ct";
+      package = pkgs.darkly; # kdePackages.breeze
+    };
+  };
+
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
   gtk = {
     enable = true;
+    colorScheme = "dark";
     font = {
       package = pkgs.maple-mono.NF-CN;
       name = "Maple Mono NF CN";
