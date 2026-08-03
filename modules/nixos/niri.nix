@@ -48,7 +48,9 @@
   ];
 
   # [HACK] fix for "open with" in dolphin, see https://github.com/NixOS/nixpkgs/issues/409986
-  environment.etc."xdg/menus/applications.menu".source = ./dolphin.menu;
+  environment.etc."xdg/menus/applications.menu".source = pkgs.runCommand "applications.menu" { } ''
+    cp ${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu $out
+  '';
 
   xdg.portal = {
     enable = true;
