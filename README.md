@@ -19,6 +19,12 @@ A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [N
 - **Apollo**: A FrameWork 16
 
 ## Credits
+This flake is largely inspired by the lovely works of:
+- [uncenter/flake](https://github.com/uncenter/flake)
+- [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles)
+- [raindropaurora.bsky.social/snowflake](https://tangled.org/raindropaurora.bsky.social/snowflake)
+- [holly/fur](https://git.gay/holly/fur)
+as well as many others in the nix community
 
 ## License
 
