@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -28,5 +28,9 @@
     keybindings = {
       "ctrl+c" = "copy_or_interrupt";
     };
+  };
+  qt.kde.settings.kdeglobals.General = {
+    TerminalApplication = lib.getExe pkgs.kitty;
+    TerminalService = "kitty.service";
   };
 }

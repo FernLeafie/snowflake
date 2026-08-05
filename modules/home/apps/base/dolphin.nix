@@ -1,146 +1,136 @@
 { config, pkgs, ... }:
 {
-  # [HACK] not pretty, but works for now
-  # preferably rewrite to use qt.kde.settings in the future
-  xdg.configFile."kdeglobals".text = ''
-    [ColorEffects:Disabled]
-    ChangeSelectionColor=
-    Color=30, 30, 46
-    ColorAmount=0.30000000000000004
-    ColorEffect=2
-    ContrastAmount=0.1
-    ContrastEffect=0
-    Enable=
-    IntensityAmount=-1
-    IntensityEffect=0
+  qt.kde.settings = {
+    kdeglobals = {
+      Icons.Theme = "Papirus-Dark";
+      KDE.widgetStyle = "qt6ct-style";
+      UiSettings.ColorScheme = "*";
 
-    [ColorEffects:Inactive]
-    ChangeSelectionColor=true
-    Color=30, 30, 46
-    ColorAmount=0.5
-    ColorEffect=3
-    ContrastAmount=0
-    ContrastEffect=0
-    Enable=true
-    IntensityAmount=0
-    IntensityEffect=0
-
-    [Colors:Button]
-    BackgroundAlternate=203,166,247
-    BackgroundNormal=49, 50, 68
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:Complementary]
-    BackgroundAlternate=17, 17, 27
-    BackgroundNormal=24, 24, 37
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:Header]
-    BackgroundAlternate=17, 17, 27
-    BackgroundNormal=24, 24, 37
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:Selection]
-    BackgroundAlternate=203,166,247
-    BackgroundNormal=203,166,247
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=24, 24, 37
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=17, 17, 27
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:Tooltip]
-    BackgroundAlternate=27,25,35
-    BackgroundNormal=30, 30, 46
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:View]
-    BackgroundAlternate=24, 24, 37
-    BackgroundNormal=30, 30, 46
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [Colors:Window]
-    BackgroundAlternate=17, 17, 27
-    BackgroundNormal=24, 24, 37
-    DecorationFocus=203,166,247
-    DecorationHover=49, 50, 68
-    ForegroundActive=250, 179, 135
-    ForegroundInactive=166, 173, 200
-    ForegroundLink=203,166,247
-    ForegroundNegative=243, 139, 168
-    ForegroundNeutral=249, 226, 175
-    ForegroundNormal=205, 214, 244
-    ForegroundPositive=166, 227, 161
-    ForegroundVisited=203, 166, 247
-
-    [General]
-    TerminalApplication=kitty
-    TerminalService=kitty.desktop
-
-    [Icons]
-    Theme=Papirus-Dark
-
-    [KDE]
-    widgetStyle=qt6ct-style
-
-    [UiSettings]
-    ColorScheme=*
-  '';
-  xdg.configFile."dolphinrc".text = ''
-    [UiSettings]
-    ColorScheme=*
-
-    [PlacesPanel]
-    IconSize=16
-  '';
+      # [HACK] stupid theme fixes, pls improve in the future
+      "ColorEffects:Disabled" = {
+        ChangeSelectionColor = "";
+        Color = "30, 30, 46";
+        ColorAmount = 0.30000000000000004;
+        ColorEffect = 2;
+        ContrastAmount = 0.1;
+        ContrastEffect = 0;
+        Enable = "";
+        IntensityAmount = -1;
+        IntensityEffect = 0;
+      };
+      "ColorEffects:Inactive" = {
+        ChangeSelectionColor = true;
+        Color = "30, 30, 46";
+        ColorAmount = 0.5;
+        ColorEffect = 3;
+        ContrastAmount = 0;
+        ContrastEffect = 0;
+        Enable = true;
+        IntensityAmount = 0;
+        IntensityEffect = 0;
+      };
+      "Colors:Button" = {
+        BackgroundAlternate = "203,166,247";
+        BackgroundNormal = "49, 50, 68";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:Complementary" = {
+        BackgroundAlternate = "17, 17, 27";
+        BackgroundNormal = "24, 24, 37";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:Header" = {
+        BackgroundAlternate = "17, 17, 27";
+        BackgroundNormal = "24, 24, 37";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:Selection" = {
+        BackgroundAlternate = "203,166,247";
+        BackgroundNormal = "203,166,247";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "24, 24, 37";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "17, 17, 27";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:Tooltip" = {
+        BackgroundAlternate = "27,25,35";
+        BackgroundNormal = "30, 30, 46";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:View" = {
+        BackgroundAlternate = "24, 24, 37";
+        BackgroundNormal = "30, 30, 46";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+      "Colors:Window" = {
+        BackgroundAlternate = "17, 17, 27";
+        BackgroundNormal = "24, 24, 37";
+        DecorationFocus = "203,166,247";
+        DecorationHover = "49, 50, 68";
+        ForegroundActive = "250, 179, 135";
+        ForegroundInactive = "166, 173, 200";
+        ForegroundLink = "203,166,247";
+        ForegroundNegative = "243, 139, 168";
+        ForegroundNeutral = "249, 226, 175";
+        ForegroundNormal = "205, 214, 244";
+        ForegroundPositive = "166, 227, 161";
+        ForegroundVisited = "203, 166, 247";
+      };
+    };
+    dolphinrc = {
+      UiSettings.ColorScheme = "*";
+      PlacesPanel.IconSize = 16;
+    };
+  };
 }
