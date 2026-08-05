@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   # [HACK] not pretty, but works for now
+  # preferably rewrite to use qt.kde.settings in the future
   xdg.configFile."kdeglobals".text = ''
     [ColorEffects:Disabled]
     ChangeSelectionColor=
