@@ -7,6 +7,7 @@
 {
   imports = [
     ./fastfetch
+    ./hyfetch
     ./nixvim
   ];
 

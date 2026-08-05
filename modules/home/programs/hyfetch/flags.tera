@@ -1,0 +1,74 @@
+---
+whiskers:
+  version: "^2.9.0"
+  filename: "flags.json"
+  hex_format: "#{{r}}{{g}}{{b}}"
+---
+{
+  {%- for id, flavor in flavors %}
+  "{{id}}": {
+    "aroace": [
+      "{{flavor.colors.peach.hex}}",
+      "{{flavor.colors.yellow.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.text.hex)}}",
+      "{{flavor.colors.sky.hex}}",
+      "{{flavor.colors.blue.hex}}"
+    ],
+    "aromantic": [
+      "{{flavor.colors.green.hex}}",
+      "{{flavor.colors.teal.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.text.hex)}}",
+      "{{flavor.colors.overlay0.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.text.hex, f=flavor.colors.crust.hex)}}"
+    ],
+    "asexual": [
+      "{{if(cond=flavor.light, t=flavor.colors.text.hex, f=flavor.colors.crust.hex)}}",
+      "{{flavor.colors.overlay0.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.text.hex)}}",
+      "{{flavor.colors.mauve.hex}}"
+    ],
+    "bisexual": [
+      "{{flavor.colors.pink.hex}}",
+      "{{flavor.colors.pink.hex}}",
+      "{{flavor.colors.mauve.hex}}",
+      "{{flavor.colors.blue.hex}}",
+      "{{flavor.colors.blue.hex}}"
+    ],
+    "lesbian": [
+      "{{flavor.colors.red.hex}}",
+      "{{flavor.colors.peach.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.rosewater.hex)}}",
+      "{{flavor.colors.mauve | mix(color=flavor.colors.red, amount=0.5) | get(key="hex")}}",
+      "{{flavor.colors.mauve | mix(color=flavor.colors.red, amount=0.5) | sub(lightness=10) | get(key="hex")}}"
+    ],
+    "nonbinary": [
+      "{{flavor.colors.yellow.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.text.hex)}}",
+      "{{flavor.colors.mauve.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.text.hex, f=flavor.colors.crust.hex)}}"
+    ],
+    "rainbow": [
+      "{{flavor.colors.red.hex}}",
+      "{{flavor.colors.peach.hex}}",
+      "{{flavor.colors.yellow.hex}}",
+      "{{flavor.colors.green.hex}}",
+      "{{flavor.colors.sky.hex}}",
+      "{{flavor.colors.blue.hex}}"
+    ],
+    "transbian": [
+      "{{flavor.colors.sapphire.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.rosewater.hex, f=flavor.colors.maroon.hex)}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.rosewater.hex)}}",
+      "{{flavor.colors.peach.hex}}",
+      "{{flavor.colors.mauve | mix(color=flavor.colors.red, amount=0.5) | sub(lightness=10) | get(key="hex")}}"
+    ],
+    "transgender": [
+      "{{flavor.colors.sapphire.hex}}",
+      "{{if(cond=flavor.light, t=flavor.colors.rosewater.hex, f=flavor.colors.maroon.hex)}}",
+      "{{if(cond=flavor.light, t=flavor.colors.crust.hex, f=flavor.colors.rosewater.hex)}}",
+      "{{if(cond=flavor.light, t=flavor.colors.rosewater.hex, f=flavor.colors.maroon.hex)}}",
+      "{{flavor.colors.sapphire.hex}}"
+    ]
+  }{% if not loop.last %},{% endif %}
+  {%- endfor %}
+}

@@ -1,0 +1,258 @@
+{
+  "latte": {
+    "aroace": [
+      "#fe640b",
+      "#df8e1d",
+      "#dce0e8",
+      "#04a5e5",
+      "#1e66f5"
+    ],
+    "aromantic": [
+      "#40a02b",
+      "#179299",
+      "#dce0e8",
+      "#9ca0b0",
+      "#4c4f69"
+    ],
+    "asexual": [
+      "#4c4f69",
+      "#9ca0b0",
+      "#dce0e8",
+      "#8839ef"
+    ],
+    "bisexual": [
+      "#ea76cb",
+      "#ea76cb",
+      "#8839ef",
+      "#1e66f5",
+      "#1e66f5"
+    ],
+    "lesbian": [
+      "#d20f39",
+      "#fe640b",
+      "#dce0e8",
+      "#ad2494",
+      "#831b70"
+    ],
+    "nonbinary": [
+      "#df8e1d",
+      "#dce0e8",
+      "#8839ef",
+      "#4c4f69"
+    ],
+    "rainbow": [
+      "#d20f39",
+      "#fe640b",
+      "#df8e1d",
+      "#40a02b",
+      "#04a5e5",
+      "#1e66f5"
+    ],
+    "transbian": [
+      "#209fb5",
+      "#dc8a78",
+      "#dce0e8",
+      "#fe640b",
+      "#831b70"
+    ],
+    "transgender": [
+      "#209fb5",
+      "#dc8a78",
+      "#dce0e8",
+      "#dc8a78",
+      "#209fb5"
+    ]
+  },
+  "frappe": {
+    "aroace": [
+      "#ef9f76",
+      "#e5c890",
+      "#c6d0f5",
+      "#99d1db",
+      "#8caaee"
+    ],
+    "aromantic": [
+      "#a6d189",
+      "#81c8be",
+      "#c6d0f5",
+      "#737994",
+      "#232634"
+    ],
+    "asexual": [
+      "#232634",
+      "#737994",
+      "#c6d0f5",
+      "#ca9ee6"
+    ],
+    "bisexual": [
+      "#f4b8e4",
+      "#f4b8e4",
+      "#ca9ee6",
+      "#8caaee",
+      "#8caaee"
+    ],
+    "lesbian": [
+      "#e78284",
+      "#ef9f76",
+      "#f2d5cf",
+      "#d890b5",
+      "#ca6a9c"
+    ],
+    "nonbinary": [
+      "#e5c890",
+      "#c6d0f5",
+      "#ca9ee6",
+      "#232634"
+    ],
+    "rainbow": [
+      "#e78284",
+      "#ef9f76",
+      "#e5c890",
+      "#a6d189",
+      "#99d1db",
+      "#8caaee"
+    ],
+    "transbian": [
+      "#85c1dc",
+      "#ea999c",
+      "#f2d5cf",
+      "#ef9f76",
+      "#ca6a9c"
+    ],
+    "transgender": [
+      "#85c1dc",
+      "#ea999c",
+      "#f2d5cf",
+      "#ea999c",
+      "#85c1dc"
+    ]
+  },
+  "macchiato": {
+    "aroace": [
+      "#f5a97f",
+      "#eed49f",
+      "#cad3f5",
+      "#91d7e3",
+      "#8aadf4"
+    ],
+    "aromantic": [
+      "#a6da95",
+      "#8bd5ca",
+      "#cad3f5",
+      "#6e738d",
+      "#181926"
+    ],
+    "asexual": [
+      "#181926",
+      "#6e738d",
+      "#cad3f5",
+      "#c6a0f6"
+    ],
+    "bisexual": [
+      "#f5bde6",
+      "#f5bde6",
+      "#c6a0f6",
+      "#8aadf4",
+      "#8aadf4"
+    ],
+    "lesbian": [
+      "#ed8796",
+      "#f5a97f",
+      "#f4dbd6",
+      "#d993c6",
+      "#cb6db2"
+    ],
+    "nonbinary": [
+      "#eed49f",
+      "#cad3f5",
+      "#c6a0f6",
+      "#181926"
+    ],
+    "rainbow": [
+      "#ed8796",
+      "#f5a97f",
+      "#eed49f",
+      "#a6da95",
+      "#91d7e3",
+      "#8aadf4"
+    ],
+    "transbian": [
+      "#7dc4e4",
+      "#ee99a0",
+      "#f4dbd6",
+      "#f5a97f",
+      "#cb6db2"
+    ],
+    "transgender": [
+      "#7dc4e4",
+      "#ee99a0",
+      "#f4dbd6",
+      "#ee99a0",
+      "#7dc4e4"
+    ]
+  },
+  "mocha": {
+    "aroace": [
+      "#fab387",
+      "#f9e2af",
+      "#cdd6f4",
+      "#89dceb",
+      "#89b4fa"
+    ],
+    "aromantic": [
+      "#a6e3a1",
+      "#94e2d5",
+      "#cdd6f4",
+      "#6c7086",
+      "#11111b"
+    ],
+    "asexual": [
+      "#11111b",
+      "#6c7086",
+      "#cdd6f4",
+      "#cba6f7"
+    ],
+    "bisexual": [
+      "#f5c2e7",
+      "#f5c2e7",
+      "#cba6f7",
+      "#89b4fa",
+      "#89b4fa"
+    ],
+    "lesbian": [
+      "#f38ba8",
+      "#fab387",
+      "#f5e0dc",
+      "#df98d0",
+      "#d371be"
+    ],
+    "nonbinary": [
+      "#f9e2af",
+      "#cdd6f4",
+      "#cba6f7",
+      "#11111b"
+    ],
+    "rainbow": [
+      "#f38ba8",
+      "#fab387",
+      "#f9e2af",
+      "#a6e3a1",
+      "#89dceb",
+      "#89b4fa"
+    ],
+    "transbian": [
+      "#74c7ec",
+      "#eba0ac",
+      "#f5e0dc",
+      "#fab387",
+      "#d371be"
+    ],
+    "transgender": [
+      "#74c7ec",
+      "#eba0ac",
+      "#f5e0dc",
+      "#eba0ac",
+      "#74c7ec"
+    ]
+  }
+}
