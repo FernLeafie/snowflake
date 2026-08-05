@@ -24,6 +24,7 @@ This flake is largely inspired by the lovely works of:
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles)
 - [raindropaurora.bsky.social/snowflake](https://tangled.org/raindropaurora.bsky.social/snowflake)
 - [holly/fur](https://git.gay/holly/fur)
+
 as well as many others in the nix community
 
 ## License
