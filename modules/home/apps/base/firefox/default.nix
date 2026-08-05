@@ -166,7 +166,7 @@
       search = {
         force = true;
         default = "Startpage";
-        privateDefault = "DuckDuckGo";
+        privateDefault = "ddg";
 
         engines = {
           "Startpage" = {
