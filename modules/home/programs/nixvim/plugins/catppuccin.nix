@@ -8,7 +8,7 @@
   colorschemes.catppuccin.settings = {
     transparent_background = true;
     float = {
-      transparent = false;
+      transparent = true;
     };
     custom_highlights.__raw = ''
       function(colors)
@@ -17,6 +17,13 @@
           NotifyINFOBorder = { fg = colors.mauve },
           BlinkCmpMenuBorder = { fg = colors.mauve },
           HarpoonBorder = { fg = colors.mauve },
+
+          -- fixes the inverted color of the maple mono badges, possibly change to the regular overlay 2 comment colour if the non colored caps look too out of place
+          ["@comment.warning.comment"] = { fg = colors.yellow },
+          ["@comment.error.comment"] = { fg = colors.red },
+          ["@comment.todo.comment"] = { fg = colors.flamingo },
+          ["@comment.note.comment"] = { fg = colors.blue },
+          ["@comment.hint.comment"] = { fg = colors.blue },
         }
       end
     '';
