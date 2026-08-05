@@ -11,6 +11,7 @@
     ./writing
   ];
   home.packages = with pkgs; [
+    libqalculate
     # custom
     (callPackage ./hayase.nix {
       forceX11 = false;
