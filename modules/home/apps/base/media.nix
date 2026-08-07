@@ -53,6 +53,7 @@
   home.packages = with pkgs; [
     qimgv
     kdePackages.gwenview
+    wl-clipboard # for clipshot
   ];
   qt.kde.settings."qimgv/qimgv.conf" = {
     General = {
@@ -77,4 +78,5 @@
       '';
     };
   };
+  xdg.configFile."mpv/scripts/clipshot.lua".source = ./mpv-clipshot.lua;
 }
