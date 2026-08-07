@@ -6,7 +6,7 @@
 
 &nbsp;
 
-A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Nocatlia](https://github.com/noctalia-dev/noctalia) for two Snowleafies
+A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Noctalia](https://github.com/noctalia-dev/noctalia) for two Snowleafies
 
 ## Hosts
 
