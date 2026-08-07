@@ -21,6 +21,7 @@
     cargo
     # nil
     # nixpkgs-fmt
+    nfs-utils
   ];
 
   fonts.packages = with pkgs; [

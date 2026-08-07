@@ -47,6 +47,8 @@
     kdePackages.kde-cli-tools
   ];
 
+  services.udisks2.enable = true; # makes dolphin able to mount and manage filesystems
+
   # [HACK] fix for "open with" in dolphin, see https://github.com/NixOS/nixpkgs/issues/409986
   environment.etc."xdg/menus/applications.menu".source = pkgs.runCommand "applications.menu" { } ''
     cp ${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu $out
