@@ -139,12 +139,16 @@
     environment = {
       QT_QPA_PLATFORM = "wayland";
       # XDG_MENU_PREFIX = "plasma-";
-      DISPLAY = null;
       # Should cause electron 28 applications and above to prefer Wayland
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
       # sets awww transition type
       AWWW_TRANSITION = "wipe";
       AWWW_TRANSITION_FPS = "60";
+    };
+
+    xwayland-satellite = {
+      enable = true;
+      path = lib.getExe pkgs.xwayland-satellite;
     };
 
     prefer-no-csd = true;
@@ -406,8 +410,22 @@
         open-floating = true;
       }
       {
-        matches = [ { app-id = "discord"; } ];
+        matches = [ { app-id = "(discord|vesktop)"; } ];
         open-on-output = "DP-2";
+      }
+      {
+        matches = [
+          {
+            app-id = "steam";
+            title = "^notificationtoasts";
+          }
+        ];
+        default-floating-position = {
+          x = 10;
+          y = 10;
+          relative-to = "bottom-right";
+        };
+        open-focused = false;
       }
       {
         geometry-corner-radius = lib.mkIf (config.home.username == "fern-snowleafie") {
