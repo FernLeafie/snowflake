@@ -66,6 +66,7 @@ in
         imageZoom = {
           enable = true;
           nearestNeighbour = true;
+          size = 350.0;
           square = true;
         };
         memberCount.enable = true;
