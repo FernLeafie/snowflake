@@ -6,11 +6,22 @@
 }:
 {
   imports = [
-    # ./hardware-configuration.nix
+    ./hardware-configuration.nix
     ./../../modules/nixos
+    ./../../modules/shared
   ];
 
-  snow.gaming.steam.enable = true;
+  snow = {
+    gaming.enable = true;
+    graphical.enable = true;
+    writing.enable = true;
+    tooling = {
+      typst.enable = true;
+      nix.enable = true;
+      rust.enable = false;
+    };
+    user-services.enable = true;
+  };
 
   # Define your hostname and location
   networking.hostName = "artemis";
