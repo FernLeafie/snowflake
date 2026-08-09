@@ -10,6 +10,7 @@
       gradle
       jetbrains.idea
       jdt-language-server
+      jdk21
     ];
     programs.nixvim = {
       lsp.servers.jdtls.enable = true;
