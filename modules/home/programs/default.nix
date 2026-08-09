@@ -15,9 +15,9 @@
     lazygit = {
       enable = true;
       settings = {
-        git.pagers = [
+        git.diffRenderers = [
           {
-            pager = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format='lazygit-edit://{path}:{line}'";
+            command = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format='lazygit-edit://{path}:{line}'";
           }
         ];
       };
