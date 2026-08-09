@@ -66,8 +66,20 @@
           width = 1920;
         };
       };
+      "Sony SONY TV 0x01010101" = {
+      # lilys DP-2
+      position = {
+        x = -1707;
+        y = 0;
+      };
+      focus-at-startup = true;
+      mode = {
+          height = 1080;
+          refresh = 60.0;
+          width = 1920;
+        };
+      };
     };
-
     layout = {
       gaps = 8;
       background-color = "transparent";
