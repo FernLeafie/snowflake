@@ -40,4 +40,7 @@
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
+
+  # Device specific settings
+  hardware.ckb-next.enable = true;
 }
