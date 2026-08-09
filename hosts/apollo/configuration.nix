@@ -11,6 +11,8 @@
     ./../../modules/shared
   ];
 
+  environment.systemPackages = [ pkgs.proton-vpn ];
+
   snow = {
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
