@@ -24,6 +24,7 @@
       typst.enable = true;
       nix.enable = true;
       rust.enable = false;
+      java.enable = true;
     };
     user-services.enable = true;
   };
