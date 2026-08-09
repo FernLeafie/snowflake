@@ -114,6 +114,26 @@
           }
         ];
       };
+      nixosConfigurations.apollo = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/apollo/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit self inputs; };
+              sharedModules = [
+                ./modules/home/home.nix
+              ];
+              users.lily-snowleafie = import ./modules/home/lily.nix;
+              backupFileExtension = "backup";
+            };
+          }
+        ];
+      };
 
     };
 }
