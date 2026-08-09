@@ -1,11 +1,19 @@
 { lib, config, ... }:
 let
-  inherit (lib) mkEnableOption;
+  inherit (lib.options) mkEnableOption mkOption;
+  inherit (lib.types) lazyAttrsOf listOf package;
 
   cfg = config.snow;
 in
 {
   options.snow = {
+    programs.firefox.extraExtensions = mkOption {
+      type = listOf package;
+      default = { };
+      description = ''
+        Packages to be installed as firefox extensions
+      '';
+    };
     graphical = {
       enable = mkEnableOption "Enable graphics editing software";
 

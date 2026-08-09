@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  osConfig,
   ...
 }:
 {
@@ -39,27 +40,30 @@
         "sidebar.visibility" = "always-show";
       };
 
-      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-        adnauseam
-        sponsorblock
-        return-youtube-dislikes
-        consent-o-matic
-        bitwarden
+      extensions.packages =
+        (with pkgs.nur.repos.rycee.firefox-addons; [
+          adnauseam
+          sponsorblock
+          return-youtube-dislikes
+          consent-o-matic
+          bitwarden
+          startpage-private-search
 
-        plasma-integration
-        facebook-container
-        private-grammar-checker-harper
-        shinigami-eyes
+          plasma-integration
+          facebook-container
+          private-grammar-checker-harper
+          shinigami-eyes
 
-        mal-sync
-        indie-wiki-buddy
-        modrinthify
+          mal-sync
+          indie-wiki-buddy
+          modrinthify
 
-        catppuccin-web-file-icons
-        firefox-color
-        stylus
-        tablissng
-      ];
+          catppuccin-web-file-icons
+          firefox-color
+          stylus
+          tablissng
+        ])
+        ++ osConfig.snow.programs.firefox.extraExtensions;
 
       # "3rdparty".Extensions = {
       #   "adnauseam@rednoise.org" = {
@@ -155,12 +159,12 @@
         #     ];
         #   };
         # };
-        "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = {
-          force = true;
-          settings = {
-            dbInChromeStorage = true; # required for Stylus
-          };
-        };
+        # "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = {
+        #   force = true;
+        #   settings = {
+        #     dbInChromeStorage = true; # required for Stylus
+        #   };
+        # };
       };
 
       search = {

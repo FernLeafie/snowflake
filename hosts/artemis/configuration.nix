@@ -12,6 +12,9 @@
   ];
 
   snow = {
+    programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      scriptcat
+    ];
     gaming.enable = true;
     graphical.enable = true;
     writing.enable = true;
