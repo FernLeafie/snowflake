@@ -9,7 +9,7 @@ in
   options.snow = {
     programs.firefox.extraExtensions = mkOption {
       type = listOf package;
-      default = { };
+      default = [ ];
       description = ''
         Packages to be installed as firefox extensions
       '';
