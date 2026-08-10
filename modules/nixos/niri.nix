@@ -4,12 +4,6 @@
     inputs.niri-flake.nixosModules.niri
   ];
 
-  services.displayManager.ly = {
-    enable = true;
-    settings = {
-      session_log = ".local/state/ly-session.log";
-    };
-  };
 
   programs.niri = {
     enable = true;
