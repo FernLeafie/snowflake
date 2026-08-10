@@ -1,4 +1,9 @@
-{ inputs, config, lib, ... }:
+{
+  inputs,
+  config,
+  lib,
+  ...
+}:
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -30,7 +35,7 @@
         screenshot.save_to_file = false;
         panel = {
           open_near_click_control_center = true;
-          transparency = "soft";
+          transparency_mode = "soft";
         };
         polkit_agent = true;
         corner_radius_scale = lib.mkIf (config.home.username == "lily-snowleafie") 0.0;
@@ -66,6 +71,11 @@
         border_width = 2.0;
         panel_overlap = 2;
         radius = lib.mkIf (config.home.username == "lily-snowleafie") 0;
+        dead_zone.actions = {
+
+          scroll_down = "workspace-switch next";
+          scroll_up = "workspace-switch prev";
+        };
       };
 
       widget = {
@@ -77,7 +87,16 @@
         media.hide_when_no_media = true;
         workspaces = {
           capsule = true;
-          display = "none";
+          show_labels = false;
+        };
+        network.show_label = false;
+        nix-monitor = {
+          show_text = false;
+          type = "avivbintangaringga/nix-monitor:nix-monitor";
+          up_to_date_glyph = "package";
+          up_to_date_color = "#A6E3A1";
+          checking_color = "secondary";
+          update_available_color = "error";
         };
       };
 
@@ -89,6 +108,7 @@
       };
 
       idle = {
+        pre_action_fade_seconds = 10;
         behavior_order = [
           "lock"
           "screen-off"
@@ -116,6 +136,11 @@
       nightlight = {
         enabled = true;
         temperature_night = 2700;
+      };
+      plugins.enabled = [ "avivbintangaringga/nix-monitor" ];
+
+      plugin_settings."avivbintangaringga/nix-monitor" = {
+        update_command = "nh os switch --ask ~/snowflake --update";
       };
     };
   };
