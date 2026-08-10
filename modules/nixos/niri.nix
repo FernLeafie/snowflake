@@ -4,6 +4,8 @@
     inputs.niri-flake.nixosModules.niri
   ];
 
+  # disable the built in polkit agent, to let noctalias polkit agent take president instead
+  systemd.user.services.niri-flake-polkit.enable = false;
 
   programs.niri = {
     enable = true;
