@@ -75,7 +75,7 @@
       focus-at-startup = true;
       mode = {
           height = 1440;
-          refresh = 359.979;
+          refresh = 179.960;
           width = 2560;
         };
       };
