@@ -66,17 +66,29 @@
           width = 1920;
         };
       };
-      "Sony SONY TV 0x01010101" = {
-      # lilys DP-2
+      "ASUSTek COMPUTER INC XG27ACDNG W1LMAS0194930" = {
+      # lilys DP-3
       position = {
-        x = -1707;
+        x = 1707;
         y = 0;
       };
       focus-at-startup = true;
       mode = {
-          height = 1080;
-          refresh = 60.0;
-          width = 1920;
+          height = 1440;
+          refresh = 359.979;
+          width = 2560;
+        };
+      };
+      "BOE 0x0BC9 Unknown" = {
+        # lily's eDP-2 (Apollos internal display)
+        position = {
+          x = 0;
+          y = 0;
+        };
+        mode = {
+          height = 1600;
+          refresh = 165.000;
+          width = 2560;
         };
       };
     };
