@@ -42,5 +42,12 @@
   };
 
   # Device specific settings
-  hardware.ckb-next.enable = true;
+  hardware.ckb-next.enable = true; # Corsair keyboard driver
+  environment.systemPackages = with pkgs; [
+    (makeAutostartItem {
+      name = "ckb-next";
+      package = pkgs.ckb-next;
+      appendExtraArgs = [ "--background" ];
+    }) # also starts ckb-next, since without it lights dont apply
+  ];
 }
