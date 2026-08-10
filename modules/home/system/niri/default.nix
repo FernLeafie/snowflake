@@ -66,11 +66,11 @@
           width = 1920;
         };
       };
-      "ASUSTek COMPUTER INC XG27ACDNG W1LMAS0194930" = {
+      "ASUSTek COMPUTER INC XG27ACDNG W1LMAS019493" = {
       # lilys DP-3
       position = {
         x = 1707;
-        y = 0;
+        y = -374;
       };
       focus-at-startup = true;
       mode = {
