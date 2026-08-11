@@ -27,6 +27,7 @@
       java.enable = true;
     };
     user-services.enable = true;
+    gaming.star-citizen.enable = true;
   };
 
   # Define your hostname and location
