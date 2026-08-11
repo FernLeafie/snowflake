@@ -57,16 +57,17 @@
     };
   };
 
-  nixConfig = {
-    extra-substituters = [
-      "https://noctalia.cachix.org"
-      "https://nix-citizen.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-      "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
-    ];
-  };
+  # [NOTE] honestly no idea how this works, a bit unnecessary with nix-settings substitutors i would think
+  # nixConfig = {
+  #   extra-substituters = [
+  #     "https://noctalia.cachix.org"
+  #     "https://nix-citizen.cachix.org"
+  #   ];
+  #   extra-trusted-public-keys = [
+  #     "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+  #     "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
+  #   ];
+  # };
 
   outputs =
     inputs@{
