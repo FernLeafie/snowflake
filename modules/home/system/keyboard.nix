@@ -20,8 +20,12 @@
           "Hotkey/TriggerKeys" = {
             "0" = "Control+Alt+space";
           };
+          "Hotkey/AltTriggerKeys" = {
+            "0" = "";
+          };
           Behavior = {
             ShareInputState = "All";
+            ShowInputMethodInformation = false;
           };
         };
         inputMethod = {
