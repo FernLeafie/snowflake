@@ -151,6 +151,36 @@
             end
         '';
       };
+      ns = {
+        description = "A quick nix shell wrapper";
+        # [WARN] fucks up flag value pairs, to be addressed by just remembering the argument before was a flag
+        # or possibly just force the user to pass packages first, and flags last, and then ignore strings passed after the first flag.
+        # [FIXME] improvement handle custom flake links
+        body = ''
+          for i in (seq (count $argv))
+            if echo $argv[$i] | grep --quiet "-"
+            else
+              set argv[$i] "nixpkgs#$argv[$i]"
+            end
+          end
+          eval "nix shell $argv"
+        '';
+      };
+      nr = {
+        description = "A quick nix run wrapper";
+        # [NOTE] technically overbuilt since you cant pass multiple packages to nix run
+        # to be addressed when not lazy
+        # [WARN] likely doesn't handle arguments passed to run programme very well
+        body = ''
+          for i in (seq (count $argv))
+            if echo $argv[$i] | grep --quiet "-"
+            else
+              set argv[$i] "nixpkgs#$argv[$i]"
+            end
+          end
+          eval "nix run $argv"
+        '';
+      };
     };
   };
 }
