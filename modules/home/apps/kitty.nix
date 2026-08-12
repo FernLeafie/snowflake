@@ -1,12 +1,22 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.kitty = {
     enable = true;
 
-    font = {
-      name = "Maple Mono NF CN";
-      size = 11;
-    };
+    # font = {
+    #   name = "Maple Mono NF CN";
+    #   size = 11;
+    # };
+
+    # [FIXME] pls upstream a font.features config <3
+    extraConfig = ''
+      font_family family="Maple Mono NF CN" size=11 features="+cv09 +cv10 +cv42 +cv43 +ss03 +ss09 +ss10"
+    ''; # stroked 7, z, stroked italic 7, z, lowercase badge, ~=, =~
 
     shellIntegration.enableFishIntegration = true;
 
