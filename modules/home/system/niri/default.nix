@@ -5,24 +5,11 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkMerge mkIf;
+  inherit (lib.meta) getExe;
+in
 {
-  # # [HACK] Currently a bit hacky solution since the config field doesn't support line concatenation
-  # # hopefully the settings field will support all needed parameters in the future
-  # programs.niri = lib.mkMerge [
-  #   (lib.mkIf (config.home.username != "fern-snowleafie") {
-  #     config = builtins.readFile ./niri.kdl;
-  #   })
-  #   (lib.mkIf (config.home.username == "fern-snowleafie") {
-  #     config = builtins.readFile ./niri.kdl + ''
-  #       // Example: enable rounded corners for all windows.
-  #       // (This example rule is commented out with a "/-" in front.)
-  #       window-rule {
-  #         geometry-corner-radius 10
-  #         clip-to-geometry true
-  #       }
-  #     '';
-  #   })
-  # ];
   programs.niri.settings = {
     input = {
       keyboard = {
@@ -67,13 +54,13 @@
         };
       };
       "ASUSTek COMPUTER INC XG27ACDNG W1LMAS019493" = {
-      # lilys DP-3
-      position = {
-        x = 1707;
-        y = -374;
-      };
-      focus-at-startup = true;
-      mode = {
+        # lilys DP-3
+        position = {
+          x = 1707;
+          y = -374;
+        };
+        focus-at-startup = true;
+        mode = {
           height = 1440;
           refresh = 179.960;
           width = 2560;
@@ -126,7 +113,7 @@
         gap = 4;
         width = 4;
         gaps-between-tabs = 6;
-        corner-radius = lib.mkIf (config.home.username == "fern-snowleafie") 8;
+        corner-radius = mkIf (config.home.username == "fern-snowleafie") 8;
         position = "right";
         length.total-proportion = 1.0; # Amount of window height taken up
         active.color = "#cba6f7";
@@ -140,7 +127,7 @@
         active-color = "#cba6f7ff";
         urgent-color = "#f38ba8ff";
         padding = 10;
-        corner-radius = lib.mkIf (config.home.username == "fern-snowleafie") 10;
+        corner-radius = mkIf (config.home.username == "fern-snowleafie") 10;
       };
     };
     blur = {
@@ -172,7 +159,7 @@
 
     xwayland-satellite = {
       enable = true;
-      path = lib.getExe pkgs.xwayland-satellite;
+      path = getExe pkgs.xwayland-satellite;
     };
 
     prefer-no-csd = true;
@@ -435,11 +422,11 @@
       }
       {
         matches = [ { app-id = "(discord|vesktop)"; } ];
-        open-on-output = lib.mkMerge [
-          (lib.mkIf (config.home.username == "fern-snowleafie") "DP-2")
-          (lib.mkIf (config.home.username == "lily-snowleafie") "eDP-2")
+        open-on-output = mkMerge [
+          (mkIf (config.home.username == "fern-snowleafie") "DP-2")
+          (mkIf (config.home.username == "lily-snowleafie") "eDP-2")
         ];
-        open-maximized-to-edges = lib.mkIf (config.home.username == "lily-snowleafie") true;
+        open-maximized-to-edges = mkIf (config.home.username == "lily-snowleafie") true;
       }
       {
         matches = [
@@ -456,7 +443,7 @@
         open-focused = false;
       }
       {
-        geometry-corner-radius = lib.mkIf (config.home.username == "fern-snowleafie") {
+        geometry-corner-radius = mkIf (config.home.username == "fern-snowleafie") {
           bottom-left = 10.0;
           bottom-right = 10.0;
           top-left = 10.0;
