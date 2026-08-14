@@ -423,8 +423,8 @@ in
       {
         matches = [ { app-id = "(discord|vesktop)"; } ];
         open-on-output = mkMerge [
-          (mkIf (config.home.username == "fern-snowleafie") "DP-2")
-          (mkIf (config.home.username == "lily-snowleafie") "eDP-2")
+          (mkIf (osConfig.networking.hostName == "artemis") "DP-2")
+          (mkIf (osConfig.networking.hostName == "apollo") "eDP-2")
         ];
         open-maximized-to-edges = mkIf (config.home.username == "lily-snowleafie") true;
       }
