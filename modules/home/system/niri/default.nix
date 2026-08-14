@@ -374,7 +374,7 @@
       "Mod+F".action.maximize-column = { };
       "Mod+Shift+F".action.fullscreen-window = { };
 
-      "Mod+Ctrl+F".action.expand-column-to-available-width = { };
+      "Mod+Ctrl+F".action.maximize-window-to-edges = { };
 
       "Mod+C".action.center-column = { };
 
@@ -435,7 +435,11 @@
       }
       {
         matches = [ { app-id = "(discord|vesktop)"; } ];
-        open-on-output = "DP-2";
+        open-on-output = lib.mkMerge [
+          (lib.mkIf (config.home.username == "fern-snowleafie") "DP-2")
+          (lib.mkIf (config.home.username == "lily-snowleafie") "eDP-2")
+        ];
+        open-maximized-to-edges = lib.mkIf (config.home.username == "lily-snowleafie") true;
       }
       {
         matches = [
