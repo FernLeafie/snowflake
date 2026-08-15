@@ -11,7 +11,7 @@
     ./../../modules/shared
   ];
 
-  environment.systemPackages = [ pkgs.proton-vpn pkgs.wine64 ];
+  environment.systemPackages = [ pkgs.proton-vpn pkgs.wine64 pkgs.keychron-udev-rules ];
 
   snow = {
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
