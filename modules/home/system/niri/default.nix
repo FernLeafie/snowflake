@@ -426,6 +426,7 @@ in
           (mkIf (osConfig.networking.hostName == "artemis") "DP-2")
           (mkIf (osConfig.networking.hostName == "apollo") "eDP-2")
         ];
+        open-focused = false;
         open-maximized-to-edges = mkIf (config.home.username == "lily-snowleafie") true;
       }
       {
