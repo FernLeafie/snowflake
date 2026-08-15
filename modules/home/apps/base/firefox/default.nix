@@ -318,6 +318,19 @@
               "https://stardewvalleywiki.com/mediawiki/extensions/StardewValley/images/favicon.png";
             definedAliases = [ "@sv" ];
           };
+          "Warframe Wiki" = {
+            name =  "Warframe Wiki";
+            urls = [ {template = "https://wiki.warframe.com/?search={searchTerms}"; } ];
+            iconMapObj."16" = "https://wiki.warframe.com/images/Wiki.png";
+            definedAliases = [ "@ww" ];
+          };
+          "Star Citizen Tools (Wiki)" = {
+            name = "Star Citizen Tools (Wiki)";
+            urls = [ {template = "https://starcitizen.tools/index.php?title=Special:Search&search={searchTerms}"; } ];
+            iconMapObj."16" = "https://starcitizen.tools/resources/assets/sitelogo.svg";
+            definedAliases = [ "@sc"];
+          };
+
 
           "Searchix Combined" = {
             urls = [ { template = "https://searchix.ovh/?query={searchTerms}"; } ];
