@@ -158,7 +158,7 @@
         # [FIXME] improvement handle custom flake links
         body = ''
           for i in (seq (count $argv))
-            if echo $argv[$i] | grep --quiet "-"
+            if echo $argv[$i] | grep --quiet "^-"
             else
               set argv[$i] "nixpkgs#$argv[$i]"
             end
@@ -173,7 +173,7 @@
         # [WARN] likely doesn't handle arguments passed to run programme very well
         body = ''
           for i in (seq (count $argv))
-            if echo $argv[$i] | grep --quiet "-"
+            if echo $argv[$i] | grep --quiet "^-"
             else
               set argv[$i] "nixpkgs#$argv[$i]"
             end
