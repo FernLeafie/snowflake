@@ -41,6 +41,6 @@
   };
   qt.kde.settings.kdeglobals.General = {
     TerminalApplication = lib.getExe pkgs.kitty;
-    TerminalService = "kitty.service";
+    TerminalService = "kitty.desktop";
   };
 }
