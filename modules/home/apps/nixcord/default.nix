@@ -129,7 +129,15 @@ in
             }
             {
               find = "://x.com/";
-              replace = "://girlcock.com/";
+              replace = "://girlcockx.com/";
+            }
+            {
+              find = "://pixiv.net/";
+              replace = "://phixiv.net/";
+            }
+            {
+              find = "://www.pixiv.net/";
+              replace = "://www.phixiv.net/";
             }
           ];
         };
