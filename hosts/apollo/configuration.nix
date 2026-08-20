@@ -28,6 +28,7 @@
     };
     user-services.enable = true;
     gaming.star-citizen.enable = true;
+    gamedev.enable = true;
   };
 
   # Define your hostname and location

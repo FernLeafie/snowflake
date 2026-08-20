@@ -40,6 +40,9 @@ in
       blockbench.enable = mkEnableOption "Enable Blockbench" // {
         default = cfg.gamedev.enable;
       };
+      blender.enable = mkEnableOption "Enable Blender" // {
+        default = cfg.gamedev.enable;
+      };
     };
 
     video = {
