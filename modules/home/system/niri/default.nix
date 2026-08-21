@@ -20,7 +20,7 @@ in
         numlock = true;
       };
       touchpad.dwt = true;
-      # tablet.map-to-focused-output = true; # supposedly accepts a string?
+      tablet.map-to-focused-output = true;
       warp-mouse-to-focus.enable = true;
       focus-follows-mouse = {
         enable = true;
