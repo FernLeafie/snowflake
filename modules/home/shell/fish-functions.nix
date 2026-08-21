@@ -1,4 +1,13 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  osConfig,
+  lib,
+  ...
+}:
+let
+  inherit (lib.modules) mkIf;
+in
 {
   programs.fish = {
     functions = {
@@ -181,6 +190,22 @@
           eval "nix run $argv"
         '';
       };
+      noctalia-wallpaper = mkIf (osConfig.networking.hostName == "artemis") {
+        description = "A lil script that makes noctalia handle my silly double monitor wallpapers";
+        body = ''
+          set -l location (echo $argv | sed 's![^/]*$!!g')
+          set -l wallpaper (echo $argv | sed "s!$location!!g; s/\.[^.]*\$//g; s/-[0-9]\$//g")
+          if not noctalia msg wallpaper-get DP-1 | grep "$wallpaper-1"; or not noctalia msg wallpaper-get DP-2 | grep "$wallpaper-2"
+              set -l multiScreenWallpaper (ls $location | sed 's/\.[^.]*$//g' | grep "$wallpaper-[0-9]")
+              if string length -q $multiScreenWallpaper
+                  noctalia msg wallpaper-set DP-1 (find $location -name "$multiScreenWallpaper[1]*")
+                  noctalia msg wallpaper-set DP-2 (find $location -name "$multiScreenWallpaper[2]*")
+              else
+              end
+          end
+        '';
+      };
+
     };
   };
 }

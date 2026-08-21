@@ -2,8 +2,12 @@
   inputs,
   config,
   lib,
+  osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+in
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -38,7 +42,7 @@
           transparency_mode = "soft";
         };
         polkit_agent = true;
-        corner_radius_scale = lib.mkIf (config.home.username == "lily-snowleafie") 0.0;
+        corner_radius_scale = mkIf (config.home.username == "lily-snowleafie") 0.0;
       };
 
       audio.enable_sounds = true;
@@ -70,7 +74,7 @@
         border = "surface_variant";
         border_width = 2.0;
         panel_overlap = 2;
-        radius = lib.mkIf (config.home.username == "lily-snowleafie") 0;
+        radius = mkIf (config.home.username == "lily-snowleafie") 0;
         dead_zone.actions = {
 
           scroll_down = "workspace-switch next";
@@ -142,6 +146,9 @@
       plugin_settings."avivbintangaringga/nix-monitor" = {
         update_command = "nh os switch --ask ~/snowflake --update";
       };
+      hooks.wallpaper_changed = mkIf (
+        osConfig.networking.hostName == "artemis"
+      ) "fish -c \"noctalia-wallpaper $NOCTALIA_WALLPAPER_PATH\"";
     };
   };
 }
