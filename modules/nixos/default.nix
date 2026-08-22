@@ -104,6 +104,9 @@
       # accepting nix configuration from a flake without asking, security risk
       accept-flake-config = false;
 
+      # automatically optimises the store by replacing identical files with hardlinks
+      auto-optimise-store = true;
+
       # unneeded as it mostly comes up when working on a flake
       warn-dirty = false;
 
