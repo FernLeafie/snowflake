@@ -5,6 +5,7 @@
   ...
 }:
 let
+  inherit (lib.meta) getExe;
   fzf-preview =
     let
       src = pkgs.fetchurl {
@@ -37,16 +38,10 @@ in
       "FZF_COMPLETION_OPTS" = "--border=rounded --border-label='Completion' --border-label-pos=3";
     };
     fish.shellAliases = {
-      fzd = "fzf --preview '${lib.getExe fzf-preview} {}'";
+      fzd = "fzf --preview '${getExe fzf-preview} {}'";
     };
     fzf = {
       enable = true;
-      # [NOTE] Works but requires building fzf
-      # package = pkgs.fzf.overrideAttrs (oldAttrs: {
-      #   postInstall = oldAttrs.postInstall + ''
-      #     install bin/fzf-preview.sh $out/bin
-      #   '';
-      # });
       defaultOptions = [ "--border" ];
       # Equivalent to FZF_ALT_C_OPTS
       changeDirWidget.fish.options = [
@@ -61,7 +56,7 @@ in
         "--border=rounded"
         "--border-label='Select File'"
         "--border-label-pos=3"
-        "--preview '${lib.getExe fzf-preview} {}'"
+        "--preview '${getExe fzf-preview} {}'"
         "--bind '?:toggle-preview'"
       ];
       # Equivalent to FZF_CTRL_R_OPTS
