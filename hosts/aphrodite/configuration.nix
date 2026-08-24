@@ -37,4 +37,8 @@
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
+  # Device specific settings
+  fonts.packages = with pkgs; [
+    vollkorn
+  ];
 }

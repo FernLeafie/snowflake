@@ -15,7 +15,11 @@
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
-    gaming.enable = true;
+    gamedev.enable = true;
+    gaming = {
+      enable = true;
+      star-citizen.enable = true;
+    };
     graphical.enable = true;
     writing.enable = true;
     tooling = {
@@ -49,5 +53,8 @@
       package = pkgs.ckb-next;
       appendExtraArgs = [ "--background" ];
     }) # also starts ckb-next, since without it lights dont apply
+  ];
+  fonts.packages = with pkgs; [
+    vollkorn
   ];
 }
