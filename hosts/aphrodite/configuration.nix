@@ -38,6 +38,9 @@
     shell = pkgs.fish;
   };
   # Device specific settings
+  environment.systemPackages = with pkgs; [
+    geteduroam
+  ];
   fonts.packages = with pkgs; [
     vollkorn
   ];
