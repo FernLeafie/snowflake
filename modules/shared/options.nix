@@ -36,11 +36,13 @@ in
       aseprite.enable = mkEnableOption "Enable Aseprite" // {
         default = cfg.gamedev.enable;
       };
-
       blockbench.enable = mkEnableOption "Enable Blockbench" // {
         default = cfg.gamedev.enable;
       };
       blender.enable = mkEnableOption "Enable Blender" // {
+        default = cfg.gamedev.enable;
+      };
+      godot.enable = mkEnableOption "Enable Godot" // {
         default = cfg.gamedev.enable;
       };
     };
