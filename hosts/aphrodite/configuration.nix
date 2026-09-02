@@ -39,7 +39,7 @@
   };
   # Device specific settings
   environment.systemPackages = with pkgs; [
-    geteduroam
+    geogebra6
   ];
   fonts.packages = with pkgs; [
     vollkorn
