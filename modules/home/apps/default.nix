@@ -7,7 +7,7 @@
     ./gamedev
     ./gaming
     ./graphical
-    ./video
+    ./content-creation
     ./writing
   ];
   home.packages = with pkgs; [
