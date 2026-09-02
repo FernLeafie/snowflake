@@ -47,15 +47,19 @@ in
       };
     };
 
-    video = {
+    content-creation = {
       enable = mkEnableOption "Enable video editing software";
 
       kdenlive.enable = mkEnableOption "Enable Kdenlive" // {
-        default = cfg.video.enable;
+        default = cfg.content-creation.enable;
       };
 
       obs.enable = mkEnableOption "Enable OBS-Studio" // {
-        default = cfg.video.enable;
+        default = cfg.content-creation.enable;
+      };
+
+      audacity.enable = mkEnableOption "Enable Audacity" // {
+        default = cfg.content-creation.enable;
       };
     };
 
