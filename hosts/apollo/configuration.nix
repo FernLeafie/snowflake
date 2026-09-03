@@ -28,6 +28,7 @@
     };
     user-services.enable = true;
     gaming.star-citizen.enable = true;
+    gaming.osu-lazer.enable = true;
     gamedev.enable = true;
     content-creation.enable = true;
   };

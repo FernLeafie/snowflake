@@ -1,13 +1,11 @@
 {
   lib,
   pkgs,
-  osConfig,
+  config,
   ...
 }:
 {
-  config = lib.mkIf osConfig.snow.gaming.osu-lazer.enable {
-    home.packages = with pkgs; [
-      osu-lazer
-    ];
+  config = lib.mkIf config.snow.gaming.osu-lazer.enable {
+    environment.systemPackages = [ pkgs.osu-lazer-bin ];
   };
 }
