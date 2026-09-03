@@ -77,6 +77,9 @@ in
       prism.enable = mkEnableOption "Enable Prism Launcher" // {
         default = cfg.gaming.enable;
       };
+      osu-lazer.enable = mkEnableOption "Enable Osu Lazer" // {
+        default = false;
+      };
     };
 
     writing = {
