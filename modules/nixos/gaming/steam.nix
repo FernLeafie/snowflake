@@ -5,12 +5,19 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+in
 {
-  config = lib.mkIf config.snow.gaming.steam.enable {
-    nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+  config = mkIf config.snow.gaming.steam.enable {
+    # Only enable if millennium is enabled
+    nixpkgs.overlays = mkIf config.snow.gaming.steam.millennium.enable [
+      inputs.millennium.overlays.default
+    ];
     programs.steam = {
       enable = true;
-      package = pkgs.millennium-steam;
+      # Only switch package if millennium is enabled
+      package = mkIf config.snow.gaming.steam.millennium.enable pkgs.millennium-steam;
       remotePlay.openFirewall = true;
     };
     programs.gamemode.enable = true;

@@ -70,8 +70,13 @@ in
         default = false;
       };
 
-      steam.enable = mkEnableOption "Enable Steam" // {
-        default = cfg.gaming.enable;
+      steam = {
+        enable = mkEnableOption "Enable Steam" // {
+          default = cfg.gaming.enable;
+        };
+        millennium.enable = mkEnableOption "Enable Millenium Steam Client" // {
+          default = cfg.gaming.steam.enable;
+        };
       };
 
       prism.enable = mkEnableOption "Enable Prism Launcher" // {

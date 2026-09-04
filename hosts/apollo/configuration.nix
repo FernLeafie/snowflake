@@ -11,23 +11,19 @@
     ./../../modules/shared
   ];
 
-  environment.systemPackages = [ pkgs.proton-vpn pkgs.wine64 pkgs.keychron-udev-rules ];
+  environment.systemPackages = [
+    pkgs.proton-vpn
+    pkgs.wine64
+    pkgs.keychron-udev-rules
+  ];
 
   snow = {
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
-    gaming.enable = true;
-    graphical.enable = true;
-    writing.enable = true;
-    tooling = {
-      typst.enable = true;
-      nix.enable = true;
-      rust.enable = false;
-      java.enable = true;
-    };
-    user-services.enable = true;
     gaming = {
+      enable = true;
+      steam.millennium.enable = false;
       star-citizen.enable = true;
       osu-lazer.enable = true;
     };
