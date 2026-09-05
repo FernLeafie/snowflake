@@ -17,10 +17,15 @@
     pkgs.keychron-udev-rules
   ];
 
+
+  # PURGE THE HELL SOFTWARE
+  programs.nano.enable = false;
+
   snow = {
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
+    user-services.enable = true;
     tooling = {
       typst.enable = true;
       nix.enable = true;
@@ -35,6 +40,8 @@
     };
     gamedev.enable = true;
     content-creation.enable = true;
+    graphical.enable = true;
+    writing.enable = true;
   };
 
   # Define your hostname and location
