@@ -21,6 +21,12 @@
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
+    tooling = {
+      typst.enable = true;
+      nix.enable = true;
+      rust.enable = false;
+      java.enable = true;
+    };
     gaming = {
       enable = true;
       steam.millennium.enable = false;
