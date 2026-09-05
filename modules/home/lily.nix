@@ -4,7 +4,7 @@
     settings = {
       user = {
         name = "CodedKyoko";
-        email = "129420497+CodedKyoko@users/noreply.github.com";
+        email = "ohamsnow@gmail.com";
       };
     };
   };
