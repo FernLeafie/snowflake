@@ -16,6 +16,7 @@
     graphical.enable = true;
     writing.enable = true;
     tooling = {
+      latex.enable = true;
       typst.enable = true;
       nix.enable = true;
       rust.enable = false;

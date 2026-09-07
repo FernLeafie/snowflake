@@ -106,6 +106,10 @@ in
         default = cfg.tooling.enable;
       };
 
+      latex.enable = mkEnableOption "Enable Latex tooling" // {
+        default = cfg.tooling.enable;
+      };
+
       nix.enable = mkEnableOption "Enable Nix tooling" // {
         default = cfg.tooling.enable;
       };
