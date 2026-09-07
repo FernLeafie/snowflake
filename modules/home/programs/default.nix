@@ -11,6 +11,11 @@
     ./nixvim
   ];
 
+  # Cute terminal PDF reader
+  home.packages = with pkgs; [
+    tdf
+  ];
+
   programs = {
     lazygit = {
       enable = true;
