@@ -18,9 +18,6 @@
     gcc
     ripgrep
     thunderbird
-    cargo
-    # nil
-    # nixpkgs-fmt
     nfs-utils
   ];
 
