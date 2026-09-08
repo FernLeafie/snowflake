@@ -18,6 +18,7 @@
     gamedev.enable = true;
     gaming = {
       enable = true;
+      # steam.millennium.enable = false;
       star-citizen.enable = true;
     };
     graphical.enable = true;
@@ -25,7 +26,7 @@
     tooling = {
       typst.enable = true;
       nix.enable = true;
-      rust.enable = false;
+      rust.enable = true;
     };
     user-services.enable = true;
   };

@@ -19,7 +19,7 @@
       latex.enable = true;
       typst.enable = true;
       nix.enable = true;
-      rust.enable = false;
+      rust.enable = true;
     };
     user-services.enable = true;
   };
