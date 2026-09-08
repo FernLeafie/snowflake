@@ -7,7 +7,8 @@
 {
   config = lib.mkIf osConfig.snow.tooling.rust.enable {
     home.packages = with pkgs; [
-      rust-analyzer-unwrapped
+      rust-analyzer
+      rustc
       cargo
     ];
     programs.nixvim = {
