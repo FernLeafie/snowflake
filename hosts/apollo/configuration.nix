@@ -29,7 +29,7 @@
     tooling = {
       typst.enable = true;
       nix.enable = true;
-      rust.enable = false;
+      rust.enable = true;
       java.enable = true;
     };
     gaming = {
@@ -37,6 +37,7 @@
       steam.millennium.enable = false;
       star-citizen.enable = true;
       osu-lazer.enable = true;
+      emulation.enable = true;
     };
     gamedev.enable = true;
     content-creation.enable = true;

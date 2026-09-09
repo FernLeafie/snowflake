@@ -85,6 +85,16 @@ in
       osu-lazer.enable = mkEnableOption "Enable Osu Lazer" // {
         default = false;
       };
+
+      emulation = {
+        enable = mkEnableOption "Enable emulation software";
+
+        azahar.enable = mkEnableOption "Enable Azahar (3DS Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
+
+      };
+
     };
 
     writing = {
