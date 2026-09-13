@@ -26,6 +26,7 @@
     tooling = {
       typst.enable = true;
       nix.enable = true;
+      python.enable = true;
       rust.enable = true;
     };
     user-services.enable = true;

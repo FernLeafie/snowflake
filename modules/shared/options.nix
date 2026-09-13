@@ -124,6 +124,10 @@ in
         default = cfg.tooling.enable;
       };
 
+      python.enable = mkEnableOption "Enable Python tooling" // {
+        default = cfg.tooling.enable;
+      };
+
       rust.enable = mkEnableOption "Enable Rust tooling" // {
         default = cfg.tooling.enable;
       };
