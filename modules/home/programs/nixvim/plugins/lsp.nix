@@ -21,10 +21,14 @@
     harper_ls = {
       enable = true;
       config = {
-        linters = {
-          SentenceCapitalization = false;
+        settings = {
+          "harper-ls" = {
+            linters = {
+              SentenceCapitalization = false;
+            };
+            dialect = "British";
+          };
         };
-        dialect = "British";
       };
     };
     nixd = {
