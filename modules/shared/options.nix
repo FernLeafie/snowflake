@@ -92,6 +92,10 @@ in
         azahar.enable = mkEnableOption "Enable Azahar (3DS Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
+        
+        cemu.enable = mkEnableOption "Enable Cemu (Wii U Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
 
       };
 
