@@ -148,6 +148,10 @@ in
         default = cfg.user-services.enable;
       };
 
+      proton-vpn.enable = mkEnableOption "Enable Proton VPN" // {
+        default = false;
+      };
+
       syncthing.enable = mkEnableOption "Enable Syncthing" // {
         default = cfg.user-services.enable;
       };

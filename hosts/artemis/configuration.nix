@@ -29,7 +29,10 @@
       python.enable = true;
       rust.enable = true;
     };
-    user-services.enable = true;
+    user-services = {
+      enable = true;
+      proton-vpn.enable = true;
+    };
   };
 
   # Define your hostname and location

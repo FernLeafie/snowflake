@@ -12,16 +12,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    proton-vpn
-    (makeAutostartItem {
-      name = "proton.vpn.app.gtk";
-      package = pkgs.proton-vpn;
-      appendExtraArgs = [ "--start-minimized" ];
-    })
     wine64
     keychron-udev-rules
   ];
-
 
   # PURGE THE HELL SOFTWARE
   programs.nano.enable = false;
@@ -30,7 +23,10 @@
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
-    user-services.enable = true;
+    user-services = {
+      enable = true;
+      proton-vpn.enable = true;
+    };
     tooling = {
       typst.enable = true;
       nix.enable = true;
