@@ -11,10 +11,15 @@
     ./../../modules/shared
   ];
 
-  environment.systemPackages = [
-    pkgs.proton-vpn
-    pkgs.wine64
-    pkgs.keychron-udev-rules
+  environment.systemPackages = with pkgs; [
+    proton-vpn
+    (makeAutostartItem {
+      name = "proton.vpn.app.gtk";
+      package = pkgs.proton-vpn;
+      appendExtraArgs = [ "--start-minimized" ];
+    })
+    wine64
+    keychron-udev-rules
   ];
 
 
