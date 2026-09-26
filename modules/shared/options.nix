@@ -139,6 +139,10 @@ in
       typst.enable = mkEnableOption "Enable Typst tooling" // {
         default = cfg.tooling.enable;
       };
+
+      c-sharp.enable = mkEnableOption "Enable C# tooling" // {
+        defualt = cfg.tooling.enable;
+      };
     };
 
     user-services = {

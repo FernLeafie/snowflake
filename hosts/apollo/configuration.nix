@@ -28,10 +28,22 @@
       proton-vpn.enable = true;
     };
     tooling = {
+      # Waifi Loves it <3
       typst.enable = true;
+
+      # Its a nix configuration tf did u expect.
       nix.enable = true;
+
+      # Actually good language.
       rust.enable = true;
+
+      # MC-Mods
       java.enable = true;
+
+      # Uni-Langs
+      c-sharp.enable = true;
+      python.enable = true;
+      
     };
     gaming = {
       enable = true;
