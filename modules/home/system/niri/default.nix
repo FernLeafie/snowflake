@@ -56,7 +56,7 @@ in
       "ASUSTek COMPUTER INC XG27ACDNG W1LMAS019493" = {
         # lilys DP-3
         position = {
-          x = 1707;
+          x = -1707;
           y = -374;
         };
         focus-at-startup = true;
