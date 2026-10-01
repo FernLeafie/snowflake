@@ -17,9 +17,10 @@
     writing.enable = true;
     tooling = {
       latex.enable = true;
-      typst.enable = true;
       nix.enable = true;
+      python.enable = true;
       rust.enable = true;
+      typst.enable = true;
     };
     user-services.enable = true;
   };
