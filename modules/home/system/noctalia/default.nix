@@ -9,10 +9,6 @@ let
   inherit (lib.modules) mkIf;
 in
 {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
-
   xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text =
     builtins.readFile ./catppuccin-mocha-mauve.json;
   xdg.configFile."noctalia/icons/nix.svg".text = builtins.readFile ./nix.svg;
