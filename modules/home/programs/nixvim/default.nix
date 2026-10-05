@@ -21,6 +21,8 @@
     globals = {
       mapleader = " ";
       maplocalleader = " ";
+
+      rust_recommended_style = 0;
     };
 
     colorschemes.catppuccin.enable = true;

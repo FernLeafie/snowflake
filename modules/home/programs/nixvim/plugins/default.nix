@@ -35,9 +35,10 @@
   ];
 
   plugins = {
-    comment.enable = true;
     blink-indent.enable = true;
+    comment.enable = true;
     gitsigns.enable = true;
+    indent-o-matic.enable = true;
   };
   extraPlugins = with pkgs.vimPlugins; [
     nvim-numbertoggle
