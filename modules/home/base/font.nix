@@ -13,6 +13,6 @@
 
   home.packages = with pkgs; [
     # Fonts
-    twemoji-color-font
+    twitter-color-emoji
   ];
 }
