@@ -300,6 +300,20 @@
             definedAliases = [ "@sgdb" ];
           };
 
+          "Crates.io" = {
+            name = "Crates.io";
+            urls = [ { template = "https://crates.io/search?q={searchTerms}"; } ];
+            iconMapObj."16" = "https://crates.io/favicon.ico";
+            definedAliases = [ "@rc" ];
+          };
+
+          "Docs.rs" = {
+            name = "Docs.rs";
+            urls = [ { template = "https://docs.rs/releases/search?query={searchTerms}"; } ];
+            iconMapObj."16" = "https://docs.rs/-/static/favicon.ico";
+            definedAliases = [ "@rd" ];
+          };
+
           # Game wikis
           "Minecraft Wiki" = {
             name = "Minecraft Wiki";
@@ -331,7 +345,7 @@
             definedAliases = [ "@sc"];
           };
 
-
+          # Nix resources
           "Searchix Combined" = {
             urls = [ { template = "https://searchix.ovh/?query={searchTerms}"; } ];
             iconMapObj."16" = "https://searchix.ovh/favicon.ico";
