@@ -116,6 +116,14 @@ in
     tooling = {
       enable = mkEnableOption "Enable development tooling";
 
+      c.enable = mkEnableOption "Enable C tooling" // {
+        defualt = cfg.tooling.enable;
+      };
+
+      c-sharp.enable = mkEnableOption "Enable C# tooling" // {
+        defualt = cfg.tooling.enable;
+      };
+      
       java.enable = mkEnableOption "Enable Java tooling" // {
         default = cfg.tooling.enable;
       };
@@ -138,10 +146,6 @@ in
 
       typst.enable = mkEnableOption "Enable Typst tooling" // {
         default = cfg.tooling.enable;
-      };
-
-      c-sharp.enable = mkEnableOption "Enable C# tooling" // {
-        defualt = cfg.tooling.enable;
       };
     };
 
