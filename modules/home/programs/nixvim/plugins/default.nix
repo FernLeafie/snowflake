@@ -17,7 +17,7 @@
     ./lsp.nix
     # UI
     ./catppuccin.nix
-    ./filetree.nix
+    ./filetree
     ./greeter.nix
     ./notifications.nix
     ./statusline.nix

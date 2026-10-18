@@ -112,12 +112,14 @@
             {
               type = "button";
               val = "  Browse cwd";
-              on_press = "<Cmd>NvimTreeOpen<CR>";
+              # on_press = "<Cmd>NvimTreeOpen<CR>";
+              on_press = "<Cmd>Fyler kind=floating<CR>";
               opts = {
                 keymap = [
                   "n"
                   "t"
-                  "<Cmd>NvimTreeOpen<CR>"
+                  # "<Cmd>NvimTreeOpen<CR>"
+                  "<Cmd>Fyler kind=floating<CR>"
                   {
                     noremap = true;
                     silent = true;
