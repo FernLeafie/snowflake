@@ -13,105 +13,105 @@
     nvim-web-devicons
   ];
   extraConfigLua = ''
-    require('fyler').setup({
-      extensions = {
-        git = {
-          enabled = true,
-          -- inline = false, -- cute, but goes outside the screen
-        },
-        watcher = { enabled = true }
-      },
-      integrations = {
-        icon = 'nvim_web_devicons'
-      },
-      kind_presets = {
-				floating = {
-					border = "rounded",
-				},
-        split_left_most = { width = 28 },
-			},
-      win_opts = {
-				cursorline = true,
-			},
-      mappings = {
-        n = {
-          ['-'] = {
-            action = 'visit',
-            args = { parent = true },
-            desc = 'Go to parent directory',
+        require('fyler').setup({
+          extensions = {
+            git = {
+              enabled = true,
+              -- inline = false, -- cute, but goes outside the screen
+            },
+            watcher = { enabled = true }
           },
-          ['.'] = {
-            action = 'visit',
-            args = { cursor = true },
-            desc = 'Enter directory under cursor',
+          integrations = {
+            icon = 'nvim_web_devicons'
           },
-          ['<BS>'] = {
-            action = 'shrink',
-            args = { parent = true },
-            desc = 'Collapse parent directory',
+          kind_presets = {
+    				floating = {
+    					border = "rounded",
+    				},
+            split_left_most = { width = 28 },
+    			},
+          win_opts = {
+    				cursorline = true,
+    			},
+          mappings = {
+            n = {
+              ['-'] = {
+                action = 'visit',
+                args = { parent = true },
+                desc = 'Go to parent directory',
+              },
+              ['.'] = {
+                action = 'visit',
+                args = { cursor = true },
+                desc = 'Enter directory under cursor',
+              },
+              ['<BS>'] = {
+                action = 'shrink',
+                args = { parent = true },
+                desc = 'Collapse parent directory',
+              },
+              ['<C-R>'] = {
+                action = 'refresh',
+                args = { recursive = true, force = true },
+                desc = 'Force refresh tree',
+              },
+              ['<C-S>'] = {
+                action = 'select',
+                args = { split = true },
+                desc = 'Open in horizontal split',
+              },
+              ['<C-T>'] = {
+                action = 'select',
+                args = { tabedit = true },
+                desc = 'Open in new tab',
+              },
+              ['<C-V>'] = {
+                action = 'select',
+                args = { vsplit = true },
+                desc = 'Open in vertical split',
+              },
+              ['<CR>'] = {
+                action = 'select',
+                args = { pick = true },
+                desc = 'Open with window picker',
+              },
+              -- ['<space>'] = { -- really nice, but conflicts with leader
+              --   action = 'select',
+              --   args = { pick = true },
+              --   desc = 'Open with window picker',
+              -- },
+              ['<2-LeftMouse>'] = {
+                action = 'select',
+                args = { pick = true },
+                desc = 'Open with window picker',
+              },
+              ['='] = {
+                action = 'visit',
+                desc = 'Go to root directory',
+              },
+              ['g.'] = {
+                action = 'toggle_ui',
+                args = { 'hidden_items' },
+                desc = 'Toggle hidden files',
+              },
+              ['gi'] = {
+                action = 'toggle_ui',
+                args = { 'indent_guides' },
+                desc = 'Toggle indent guides',
+              },
+              ['q'] = {
+                action = 'close',
+                desc = 'Close finder',
+              },
+            },
           },
-          ['<C-R>'] = {
-            action = 'refresh',
-            args = { recursive = true, force = true },
-            desc = 'Force refresh tree',
-          },
-          ['<C-S>'] = {
-            action = 'select',
-            args = { split = true },
-            desc = 'Open in horizontal split',
-          },
-          ['<C-T>'] = {
-            action = 'select',
-            args = { tabedit = true },
-            desc = 'Open in new tab',
-          },
-          ['<C-V>'] = {
-            action = 'select',
-            args = { vsplit = true },
-            desc = 'Open in vertical split',
-          },
-          ['<CR>'] = {
-            action = 'select',
-            args = { pick = true },
-            desc = 'Open with window picker',
-          },
-          -- ['<space>'] = { -- really nice, but conflicts with leader
-          --   action = 'select',
-          --   args = { pick = true },
-          --   desc = 'Open with window picker',
-          -- },
-          ['<2-LeftMouse>'] = {
-            action = 'select',
-            args = { pick = true },
-            desc = 'Open with window picker',
-          },
-          ['='] = {
-            action = 'visit',
-            desc = 'Go to root directory',
-          },
-          ['g.'] = {
-            action = 'toggle_ui',
-            args = { 'hidden_items' },
-            desc = 'Toggle hidden files',
-          },
-          ['gi'] = {
-            action = 'toggle_ui',
-            args = { 'indent_guides' },
-            desc = 'Toggle indent guides',
-          },
-          ['q'] = {
-            action = 'close',
-            desc = 'Close finder',
-          },
-        },
-      },
-      ui = {
-        hidden_items = {
-          always_hidden = { ".git" }
-        },
-        indent_guides = true,
-      }
-    })
+          ui = {
+            hidden_items = {
+              always_hidden = { ".git" }
+            },
+            indent_guides = true,
+          }
+        })
   '';
 
   keymaps = [
@@ -139,7 +139,7 @@
             fyler.open({ kind = 'split_left_most' })
         	end
         end
-        '';
+      '';
       options.desc = "Toggle Explorer (Side panel)";
     }
   ];

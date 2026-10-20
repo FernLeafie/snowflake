@@ -7,7 +7,7 @@
 {
   config = lib.mkIf osConfig.snow.tooling.c-sharp.enable {
     home.packages = with pkgs; [
-        dotnet-sdk_10
+      dotnet-sdk_10
     ];
     programs.nixvim = {
       lsp.servers.csharp_ls.enable = true;

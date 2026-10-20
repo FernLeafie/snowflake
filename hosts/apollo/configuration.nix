@@ -43,7 +43,7 @@
       # Uni-Langs
       c-sharp.enable = true;
       python.enable = true;
-      
+
     };
     gaming = {
       enable = true;

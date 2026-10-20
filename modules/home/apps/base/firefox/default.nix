@@ -333,16 +333,18 @@
             definedAliases = [ "@sv" ];
           };
           "Warframe Wiki" = {
-            name =  "Warframe Wiki";
-            urls = [ {template = "https://wiki.warframe.com/?search={searchTerms}"; } ];
+            name = "Warframe Wiki";
+            urls = [ { template = "https://wiki.warframe.com/?search={searchTerms}"; } ];
             iconMapObj."16" = "https://wiki.warframe.com/images/Wiki.png";
             definedAliases = [ "@ww" ];
           };
           "Star Citizen Tools (Wiki)" = {
             name = "Star Citizen Tools (Wiki)";
-            urls = [ {template = "https://starcitizen.tools/index.php?title=Special:Search&search={searchTerms}"; } ];
+            urls = [
+              { template = "https://starcitizen.tools/index.php?title=Special:Search&search={searchTerms}"; }
+            ];
             iconMapObj."16" = "https://starcitizen.tools/resources/assets/sitelogo.svg";
-            definedAliases = [ "@sc"];
+            definedAliases = [ "@sc" ];
           };
 
           # Nix resources
