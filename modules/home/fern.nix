@@ -4,7 +4,7 @@
     settings = {
       user = {
         name = "Fernleafie";
-        email = "fernleafie@gmail.com";
+        email = "fernleafie" + "@" + "gmail" + "." + "com"; # those scrapers better not use regex/j
       };
     };
   };

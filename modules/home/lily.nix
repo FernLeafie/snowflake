@@ -3,8 +3,8 @@
   programs.git = {
     settings = {
       user = {
-        name = "CodedKyoko";
-        email = "ohamsnow@gmail.com";
+        name = "Kyoko";
+        email = "ohamsnow" + "@" + "gmail" + "." + "com"; # those scrapers better not use regex/j
       };
     };
   };
