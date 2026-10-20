@@ -31,5 +31,6 @@ as well as many others in the nix community
 
 [Apache 2.0](LICENSE)
 <div align ="center>
+    <img src="https://count.getloli.com/@:name" alt=":name" />
     <img src="https://count.getloli.com/@snowleafieSnowflake?theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=autoto" alt=":snowleafieSnowflake" />
 </div>
