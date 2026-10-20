@@ -4,11 +4,7 @@
     <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" />
 </div>
 
-![:snowleafieSnowflake](https://count.getloli.com/@snowleafieSnowflake?theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=1)
-
-
 &nbsp;
-
 
 A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [Noctalia](https://github.com/noctalia-dev/noctalia) for two Snowleafies
 
@@ -34,3 +30,6 @@ as well as many others in the nix community
 ## License
 
 [Apache 2.0](LICENSE)
+<div align = "center>
+    ![:snowleafieSnowflake](https://count.getloli.com/@snowleafieSnowflake?theme=moebooru&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=autoto)
+<\div>
