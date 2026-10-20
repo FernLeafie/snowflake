@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  gitcfg = config.programs.git;
+in
 {
   imports = [
     ./apps # graphical applications
@@ -18,6 +21,20 @@
     enable = true;
     lfs.enable = true;
   };
+
+  programs.jujutsu = {
+    inherit (gitcfg) enable;
+
+    settings = {
+      user = {
+        inherit (gitcfg.settings.user) name email;
+      };
+    };
+  };
+
+  home.packages = with pkgs; [
+    lazyjj
+  ];
 
   programs.home-manager.enable = true;
 }
