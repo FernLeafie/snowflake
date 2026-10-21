@@ -12,6 +12,7 @@
     ./niri.nix
     ./noctalia.nix
     ./catppuccin.nix
+    ./security.nix
     ./gaming
     ./services
     ./system
