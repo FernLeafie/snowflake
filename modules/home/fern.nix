@@ -1,4 +1,12 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+let
+  ferns-wallpapers = (pkgs.callPackage ./wallpapers/fern.nix);
+in
 {
   programs.git = {
     settings = {
@@ -14,4 +22,8 @@
     homeDirectory = "/home/fern-snowleafie";
     stateVersion = "26.05";
   };
+
+  home.file."${config.xdg.userDirs.pictures}/wallpapers".source = "${
+    (pkgs.callPackage ./wallpapers/fern.nix { })
+  }";
 }
