@@ -20,6 +20,11 @@ in
   programs.git = {
     enable = true;
     lfs.enable = true;
+    settings = {
+      diff = {
+        algorithm = "histogram";
+      };
+    };
   };
 
   programs.jujutsu = {
@@ -29,11 +34,21 @@ in
       user = {
         inherit (gitcfg.settings.user) name email;
       };
+      ui = {
+        editor = "nvim";
+        diff-formatter = [
+          "${pkgs.delta}/bin/delta"
+          # "--paging=never" # alternatively auto
+          "--line-numbers"
+          "$left"
+          "$right"
+        ];
+      };
     };
   };
 
   home.packages = with pkgs; [
-    lazyjj
+    jjui
   ];
 
   programs.home-manager.enable = true;

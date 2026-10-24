@@ -30,6 +30,18 @@
     delta = {
       enable = true;
       enableGitIntegration = true;
+      # enableJujutsuIntegration = true;
+      options = {
+        tabs = 2;
+        delta = {
+          line-numbers = true;
+        };
+        "line-numbers" = {
+          line-numbers-minus-style = "bold '#f38ba8'";
+          line-numbers-plus-style = "bold '#a6e3a1'";
+          line-numbers-left-format = "{nm:^4}┊";
+        };
+      };
     };
     bottom = {
       enable = true;
