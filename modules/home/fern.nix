@@ -4,9 +4,6 @@
   inputs,
   ...
 }:
-let
-  ferns-wallpapers = (pkgs.callPackage ./wallpapers/fern.nix);
-in
 {
   programs.git = {
     settings = {
