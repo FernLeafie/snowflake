@@ -6,7 +6,6 @@
 }:
 {
   programs.starship = {
-    # do, status
     enable = true;
     enableFishIntegration = true;
     enableTransience = true;
@@ -35,7 +34,7 @@
         format = "\\[elapsed: [$duration]($style)\\] ";
       };
       status = {
-        format = "[$status]($style)"; # remove lil x
+        format = "[$status]($style)"; # removes lil x
         pipestatus_format = "$pipestatus => [$common_meaning$signal_name$maybe_int]($style)";
         success_style = "bold green"; # make success not red
         disabled = false;
