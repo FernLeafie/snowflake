@@ -10,3 +10,5 @@ result-*
 
 # personal terminal workspace
 workspace.kitty-session
+
+**/.directory
