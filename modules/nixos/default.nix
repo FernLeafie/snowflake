@@ -93,6 +93,7 @@
   };
 
   nix = {
+    package = pkgs.lixPackageSets.latest.lix;
     # [NOTE] consider breaking out
     settings = {
       # Enable flakes and nix command
