@@ -37,7 +37,8 @@
     {
       mode = [ "n" ];
       key = "<leader>s";
-      action = ":%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>";
+      # \<\> is sed regex for matching exact string, the I make it case-sensitive
+      action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
       options.desc = "Replace word under cursor";
     }
     # move easier between splits
