@@ -26,6 +26,7 @@
         "$java"
         "$rust"
         "$typst"
+        "$custom"
         "$character"
       ];
       add_newline = false;
@@ -111,6 +112,13 @@
       };
       nix_shell = {
         format = "[$symbol(\($name\))]($style) ";
+      };
+      custom.nix = {
+        detect_files = ["flake.nix" "default.nix" "shell.nix"];
+        detect_extensions = ["nix"];
+        symbol = " ";
+        format = "[$symbol($output )]($style)";
+        style = "bold blue";
       };
       typst = {
         format = "[$symbol($version )]($style)";

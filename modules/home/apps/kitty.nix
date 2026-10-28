@@ -11,7 +11,7 @@
     # font = {
     #   name = "Maple Mono NF CN";
     #   size = 11;
-    # };
+    # }; 
 
     # [FIXME] pls upstream a font.features config <3
     extraConfig = ''

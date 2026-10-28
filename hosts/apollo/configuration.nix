@@ -31,7 +31,7 @@
       # Waifi Loves it <3
       typst.enable = true;
 
-      # Its a nix configuration tf did u expect.
+      # Its a nix system tf did u expect.
       nix.enable = true;
 
       # Actually good language.
