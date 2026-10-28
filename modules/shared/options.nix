@@ -96,7 +96,9 @@ in
         cemu.enable = mkEnableOption "Enable Cemu (Wii U Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
-
+        shadps4.enable = mkEnableOption "Enable Shadps4 (PS4 Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
       };
 
     };
