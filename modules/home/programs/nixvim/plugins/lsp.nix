@@ -62,5 +62,22 @@
       '';
       options.desc = "Show LSP hover information";
     }
+
+    {
+      mode = [ "n" ];
+      key = "<leader>gs";
+      action.__raw = "vim.lsp.buf.rename";
+      options.desc = "Rename variable across workspace, concider :wa";
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>gh";
+      action.__raw = ''
+        function()
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+        end
+      '';
+      options.desc = "Toggle inline hints";
+    }
   ];
 }
