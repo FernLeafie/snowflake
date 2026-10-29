@@ -21,6 +21,7 @@
   xdg.configFile."rmpcd/init.lua".text = builtins.readFile ./rmpcd-init.lua;
 
   services = {
+    mpd-discord-rpc.enable = true; 
     playerctld.enable = true;
     mpd = {
       enable = true;
