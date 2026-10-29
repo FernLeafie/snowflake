@@ -101,6 +101,9 @@ in
         mgba.enable = mkEnableOption "Enable mbga (Game Boy Advanced Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
+        eden.enable = mkEnableOption "Enable eden (Switch 1 Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
       };
 
     };
