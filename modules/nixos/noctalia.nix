@@ -15,7 +15,7 @@
   ];
   hardware.i2c.enable = true; # needed for ferns monitors
 
-  programs.noctalia-greeter = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
 
     settings = {
