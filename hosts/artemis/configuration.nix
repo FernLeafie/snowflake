@@ -11,6 +11,9 @@
     ./../../modules/shared
   ];
 
+  # gift
+  programs.nano.enable = false;
+
   snow = {
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
@@ -52,7 +55,9 @@
 
   # Device specific settings
   hardware.ckb-next.enable = true; # Corsair keyboard driver
+  services.hardware.openrgb.enable = true; # YIPPIE NO MORE RGB
   environment.systemPackages = with pkgs; [
+    wine64
     (makeAutostartItem {
       name = "ckb-next";
       package = pkgs.ckb-next;
