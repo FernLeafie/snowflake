@@ -92,11 +92,13 @@ in
         azahar.enable = mkEnableOption "Enable Azahar (3DS Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
-
         cemu.enable = mkEnableOption "Enable Cemu (Wii U Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
         shadps4.enable = mkEnableOption "Enable Shadps4 (PS4 Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
+        mgba.enable = mkEnableOption "Enable mbga (Game Boy Advanced Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
       };
