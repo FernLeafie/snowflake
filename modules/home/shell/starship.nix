@@ -111,7 +111,7 @@
         style = "mauve";
       };
       nix_shell = {
-        format = "[$symbol(\($name\))]($style) ";
+        format = "[$symbol(\\($name\\))]($style) ";
       };
       custom.nix = {
         detect_files = ["flake.nix" "default.nix" "shell.nix"];
