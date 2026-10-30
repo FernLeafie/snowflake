@@ -123,6 +123,7 @@ in
       insert-hint.display.color = "#cba6f780";
     };
     recent-windows = {
+      enable = false;
       highlight = {
         active-color = "#cba6f7ff";
         urgent-color = "#f38ba8ff";

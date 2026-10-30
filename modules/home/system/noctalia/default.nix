@@ -39,6 +39,7 @@ in
         };
         polkit_agent = true;
         corner_radius_scale = mkIf (config.home.username == "lily-snowleafie") 0.0;
+        launcher.default_view = "all";
       };
 
       audio.enable_sounds = true;
@@ -67,16 +68,18 @@ in
         margin_ends = 8;
         thickness = 30;
         widget_spacing = 10;
-        border = "surface_variant";
+        border = "surface_container";
         border_width = 2.0;
         panel_overlap = 2;
         radius = mkIf (config.home.username == "lily-snowleafie") 0;
-        dead_zone.actions = {
 
+        dead_zone.actions = {
           scroll_down = "workspace-switch next";
           scroll_up = "workspace-switch prev";
         };
       };
+
+      control_center.calendar.show_week_numbers = mkIf (config.home.username == "fern-snowleafie") true;
 
       widget = {
         control-center = {
@@ -97,6 +100,12 @@ in
           up_to_date_color = "#A6E3A1";
           checking_color = "secondary";
           update_available_color = "error";
+        };
+        taskbar = {
+          group_by_workspace = true;
+          group_single_icon_per_app = true;
+          hide_empty_workspaces = true;
+          show_workspace_label = false;
         };
       };
 
