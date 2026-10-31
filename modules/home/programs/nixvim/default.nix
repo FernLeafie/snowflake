@@ -18,6 +18,9 @@
       ./options.nix
     ];
 
+    # nixvim doesnt like this, buuuut, no need for more nixpkgs
+    nixpkgs.source = inputs.nixpkgs;
+
     globals = {
       mapleader = " ";
       maplocalleader = " ";
