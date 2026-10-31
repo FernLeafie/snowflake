@@ -35,6 +35,9 @@ in
         inherit (gitcfg.settings.user) name email;
       };
       ui = {
+         # removes the hint
+        default-command = [ "log" ];
+
         editor = "nvim";
         diff-formatter = [
           "${pkgs.delta}/bin/delta"
