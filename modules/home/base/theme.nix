@@ -67,7 +67,7 @@
       };
       colorScheme = "dark";
       font = {
-        package = pkgs.maple-mono.NF-CN;
+        package = pkgs.maple-mono.NF-CN-unhinted;
         name = "Maple Mono NF CN";
       };
 
