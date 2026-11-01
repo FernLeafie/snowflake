@@ -104,6 +104,9 @@ in
         eden.enable = mkEnableOption "Enable eden (Switch 1 Emulation)" // {
           default = cfg.gaming.emulation.enable;
         };
+        melonds.enable = mkEnableOption "Enable MelonDS (DS Emulation)" // {
+          default = cfg.gaming.emulation.enable;
+        };
       };
 
     };

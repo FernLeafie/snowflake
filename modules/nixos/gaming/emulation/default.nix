@@ -5,5 +5,6 @@
     ./shadps4.nix
     ./mgba.nix
     ./eden.nix
+    ./melonds.nix
   ];
 }
