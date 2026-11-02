@@ -11,10 +11,11 @@
     ./pairs.nix
     # LSP
     ./completions.nix
-    ./formatting.nix
     ./debugging.nix
     ./diagnostics.nix
+    ./formatting.nix
     ./lsp.nix
+    ./schema.nix
     # UI
     ./catppuccin.nix
     ./filetree

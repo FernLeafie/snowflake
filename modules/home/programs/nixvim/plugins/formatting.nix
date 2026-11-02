@@ -28,7 +28,8 @@
         lua = [ "stylua" ];
         rust = [ "rustfmt" ];
         yaml = [ "yamlfix" ];
-        toml = [ "taplo" ];
+        # [NOTE] called from lsp fallback to tombi instead
+        # toml = [ "tombi" ];
       };
       default_format_opts.lsp_format = "fallback";
     };
