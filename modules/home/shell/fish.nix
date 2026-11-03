@@ -55,6 +55,18 @@
         position = "anywhere";
         regex = "--help$";
       };
+
+      # Epic Jujutsu Moves frfr 
+      jn = "jj new";
+      jl = "jj log";
+      jst = "jj status";
+      jr = "jj rebase";
+      jd = "jj describe";
+      jsq = "jj squash --interactive";
+      jba = "jj bookmark advance";
+      jf = "jj git fetch";
+      jp = "jj git push";
+
     };
     interactiveShellInit = ''
       set -g fish_greeting
