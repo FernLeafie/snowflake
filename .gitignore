@@ -12,3 +12,6 @@ result-*
 workspace.kitty-session
 
 **/.directory
+
+# Virtual machine files
+*.qcow2
