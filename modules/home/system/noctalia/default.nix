@@ -114,6 +114,11 @@ in
         fill_color = "#000000";
         fill_mode = "fit";
         directory = "${config.xdg.userDirs.pictures}/wallpapers/";
+        default.path = lib.mkMerge [
+          (lib.mkIf (
+            config.home.username == "fern-snowleafie"
+          ) "/home/fern-snowleafie/pictures/wallpapers/catppuccin/t-5-arknights-ptilopsis_catppuccin-all.png")
+        ];
       };
 
       idle = {
