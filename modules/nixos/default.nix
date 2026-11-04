@@ -68,6 +68,17 @@
   #   allowedUDPPortRanges = allowedTCPPortRanges;
   # };
 
+  # [NOTE] fern pls figure out where to put this
+  # idk how this works really, nixpkgs#390897
+  virtualisation.vmVariant = {
+    # needed for niri to work, made obsolete when nixpkgs#279009 is merged
+    virtualisation.qemu.options = [
+      "-device virtio-vga-gl"
+      "-display gtk,gl=on"
+      "-vga none"
+    ];
+  };
+
   # Nix options
   # Allow unfree packages
   nixpkgs = {
