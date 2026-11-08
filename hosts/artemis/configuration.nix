@@ -27,10 +27,10 @@
     graphical.enable = true;
     writing.enable = true;
     tooling = {
-      typst.enable = true;
+      c.enable = true;
       nix.enable = true;
-      python.enable = true;
       rust.enable = true;
+      typst.enable = true;
     };
     user-services = {
       enable = true;

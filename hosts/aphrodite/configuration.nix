@@ -16,9 +16,9 @@
     graphical.enable = true;
     writing.enable = true;
     tooling = {
+      c.enable = true;
       latex.enable = true;
       nix.enable = true;
-      python.enable = true;
       rust.enable = true;
       typst.enable = true;
     };
