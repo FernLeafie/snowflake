@@ -21,6 +21,9 @@
   # Services
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.firewall.enable = true; # true either way
+  networking.nftables.enable = true; # as opposed to using iptables for filtering
+  # [NOTE] fern this is getting kinda long, and this file is messy, u should organise it
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
