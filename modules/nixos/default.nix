@@ -9,6 +9,7 @@
   imports = [
     ./boot.nix
     ./packages.nix
+    ./networking.nix
     ./niri.nix
     ./noctalia.nix
     ./catppuccin.nix
@@ -19,12 +20,6 @@
   ];
 
   # Services
-  # Enable networking
-  networking.networkmanager.enable = true;
-  networking.firewall.enable = true; # true either way
-  networking.nftables.enable = true; # as opposed to using iptables for filtering
-  # [NOTE] fern this is getting kinda long, and this file is messy, u should organise it
-
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
@@ -59,17 +54,6 @@
   console = {
     useXkbConfig = true; # use xkb.options in tty.
   };
-
-  # # firewall exception
-  # networking.firewall = rec {
-  #   allowedTCPPortRanges = [
-  #     {
-  #       from = 1714;
-  #       to = 1764;
-  #     } # KDE Connect
-  #   ];
-  #   allowedUDPPortRanges = allowedTCPPortRanges;
-  # };
 
   # [NOTE] fern pls figure out where to put this
   # idk how this works really, nixpkgs#390897

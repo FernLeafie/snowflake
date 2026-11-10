@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+in
 {
   config = lib.mkIf config.snow.services.tailscale.enable {
     # 1. Enable the service and the firewall
@@ -15,9 +18,10 @@
       allowedUDPPorts = [ config.services.tailscale.port ];
     };
 
+    # <https://wiki.nixos.org/wiki/Tailscale#Native_nftables_Support_(Modern_Setup)>
     # 2. Force tailscaled to use nftables (Critical for clean nftables-only systems)
     # This avoids the "iptables-compat" translation layer issues.
-    systemd.services.tailscaled.serviceConfig.Environment = [
+    systemd.services.tailscaled.serviceConfig.Environment = mkIf config.networking.nftables.enable [
       "TS_DEBUG_FIREWALL_MODE=nftables"
     ];
 
