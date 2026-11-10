@@ -36,6 +36,7 @@
       enable = true;
       proton-vpn.enable = true;
     };
+    services.tailscale.enable = true;
   };
 
   # Define your hostname and location

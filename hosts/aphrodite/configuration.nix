@@ -23,6 +23,7 @@
       typst.enable = true;
     };
     user-services.enable = true;
+    services.tailscale.enable = true;
   };
 
   # Define your hostname and location

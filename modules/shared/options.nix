@@ -159,6 +159,14 @@ in
       };
     };
 
+    services = {
+      enable = mkEnableOption "Enable all services";
+
+      tailscale.enable = mkEnableOption "Enable Tailscale" // {
+        default = cfg.services.enable;
+      };
+    };
+
     user-services = {
       enable = mkEnableOption "Enable user related services";
 
