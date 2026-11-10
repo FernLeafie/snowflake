@@ -17,6 +17,11 @@
           NotifyINFOBorder = { fg = colors.mauve },
           BlinkCmpMenuBorder = { fg = colors.mauve },
           HarpoonBorder = { fg = colors.mauve },
+          -- Fyler colours
+          FylerGitConflict = { fg = colors.red },
+          FylerGitDeleted = { fg = colors.red },
+          FylerGitModified = { fg = colors.peach },
+          FylerGitStaged = { fg = colors.green },
 
           -- fixes the inverted color of the maple mono badges, possibly change to the regular overlay 2 comment colour if the non colored caps look too out of place
           ["@comment.warning.comment"] = { fg = colors.yellow },
