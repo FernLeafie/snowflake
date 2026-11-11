@@ -15,6 +15,8 @@
   programs.nano.enable = false;
 
   snow = {
+    profiles.desktop.enable = true;
+
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
@@ -27,7 +29,6 @@
       star-citizen.enable = true;
     };
     graphical.enable = true;
-    writing.enable = true;
     tooling = {
       c.enable = true;
       nix.enable = true;
@@ -35,10 +36,8 @@
       typst.enable = true;
     };
     user-services = {
-      enable = true;
       proton-vpn.enable = true;
     };
-    services.tailscale.enable = true;
   };
 
   # Define your hostname and location

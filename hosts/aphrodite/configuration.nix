@@ -15,6 +15,8 @@
   programs.nano.enable = false;
 
   snow = {
+    profiles.laptop.enable = true;
+
     gaming = {
       enable = true;
       # [NOTE] Disable millennium as the nov 11 steam update broke it
@@ -22,7 +24,6 @@
       steam.millennium.enable = false;
     };
     graphical.enable = true;
-    writing.enable = true;
     tooling = {
       c.enable = true;
       latex.enable = true;
@@ -30,8 +31,6 @@
       rust.enable = true;
       typst.enable = true;
     };
-    user-services.enable = true;
-    services.tailscale.enable = true;
   };
 
   # Define your hostname and location
