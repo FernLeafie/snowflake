@@ -58,6 +58,8 @@
     writing.enable = true;
   };
 
+  services.tailscale.enable = true;
+
   # Define your hostname and location
   networking.hostName = "apollo";
   time.timeZone = "Europe/London";
@@ -76,6 +78,15 @@
     initialHashedPassword = "$6$r7QyEAiR$LJe8XE2OfbpS8lJ.qGSSuQbjomvN8RLz/JovUpqmi77bd/29o3vMkYEMBd94mi2VWLKbtkbXcM96sbh0r/eKt1";
   };
   
+  # # firewall exception
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 25565 ];
+    allowedUDPPorts = [ 4445 24454 ];
+
+    checkReversePath = "loose";
+  };
+
   # [NOTE] fixes weird framework bluetooth issues
   hardware.bluetooth = {
     enable = true;

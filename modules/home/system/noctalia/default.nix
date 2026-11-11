@@ -118,6 +118,9 @@ in
           (lib.mkIf (
             config.home.username == "fern-snowleafie"
           ) "/home/fern-snowleafie/pictures/wallpapers/catppuccin/t-5-arknights-ptilopsis_catppuccin-all.png")
+          (lib.mkIf (
+            config.home.username == "lily-snowleafie"
+          ) "/home/lily-snowleafie/pictures/wallpapers/Nyx 3_catppuccin-mocha.png")
         ];
       };
 

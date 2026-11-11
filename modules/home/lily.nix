@@ -14,4 +14,8 @@
     homeDirectory = "/home/lily-snowleafie";
     stateVersion = "26.05";
   };
+
+  home.file."${config.xdg.userDirs.pictures}/wallpapers".source = "${
+    (pkgs.callPackage ./wallpapers/lily.nix { })
+  }";
 }
