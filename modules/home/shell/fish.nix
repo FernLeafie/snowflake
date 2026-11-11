@@ -61,11 +61,13 @@
       jl = "jj log";
       jst = "jj status";
       jr = "jj rebase";
+      jro = "jj rebase --onto";
       jd = "jj describe";
       jsq = "jj squash --interactive";
       jba = "jj bookmark advance";
       jf = "jj git fetch";
       jp = "jj git push";
+      je = "jj edit";
 
     };
     interactiveShellInit = ''
