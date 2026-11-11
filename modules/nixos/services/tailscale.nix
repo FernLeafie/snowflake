@@ -10,7 +10,10 @@ in
 {
   config = lib.mkIf config.snow.services.tailscale.enable {
     # 1. Enable the service and the firewall
-    services.tailscale.enable = true;
+    services.tailscale = {
+      enable = true;
+      openFirewall = true; # hopefully open firewall to Tailscale
+    };
     networking.firewall = {
       # Always allow traffic from your Tailscale network
       trustedInterfaces = [ config.services.tailscale.interfaceName ];
