@@ -12,9 +12,10 @@
   ];
 
   snow = {
+    profiles.laptop.enable = true;
+
     gaming.enable = true;
     graphical.enable = true;
-    writing.enable = true;
     tooling = {
       c.enable = true;
       latex.enable = true;
@@ -22,8 +23,6 @@
       rust.enable = true;
       typst.enable = true;
     };
-    user-services.enable = true;
-    services.tailscale.enable = true;
   };
 
   # Define your hostname and location

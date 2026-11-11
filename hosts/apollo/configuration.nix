@@ -20,11 +20,12 @@
   programs.nano.enable = false;
 
   snow = {
+    profiles.laptop.enable = true;
+
     programs.firefox.extraExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
       scriptcat
     ];
     user-services = {
-      enable = true;
       proton-vpn.enable = true;
     };
     tooling = {
@@ -55,7 +56,6 @@
     gamedev.enable = true;
     content-creation.enable = true;
     graphical.enable = true;
-    writing.enable = true;
   };
 
   # Define your hostname and location

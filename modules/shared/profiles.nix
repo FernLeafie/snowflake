@@ -18,4 +18,27 @@ in
     headless.enable = mkEnableOption "Headless system";
     graphical.enable = mkEnableOption "Graphical system";
   };
+
+  config.snow = mkMerge [
+    {
+      profiles = {
+        # If server, normally headless
+        headless.enable = mkIf (cfgprof.server.enable == true) mkDefault true;
+        # If laptop or desktop, normally graphical
+        graphical.enable = mkIf (
+          cfgprof.laptop.enable == true || cfgprof.desktop.enable == true
+        ) mkDefault true;
+      };
+    }
+    (mkIf (cfgprof.laptop.enable == true || cfgprof.desktop.enable == true) {
+      user-services.enable = mkDefault true;
+      writing.enable = mkDefault true;
+    })
+    (mkIf
+      (cfgprof.laptop.enable == true || cfgprof.desktop.enable == true || cfgprof.server.enable == true)
+      {
+        services.tailscale.enable = mkDefault true;
+      }
+    )
+  ];
 }
