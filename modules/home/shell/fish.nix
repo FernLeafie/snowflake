@@ -43,7 +43,7 @@
       hf = "hyfetch";
       
       # lsies
-      ltd = "lt --depth";
+      ltd = "lt --level";
 
       "-h" = {
         expansion = "-h | bat -Pplhelp";
@@ -57,17 +57,20 @@
       };
 
       # Epic Jujutsu Moves frfr 
-      jn = "jj new";
       jl = "jj log";
       jst = "jj status";
+
+      jn = "jj new";
+      jd = "jj describe";
+      je = "jj edit";
+
       jr = "jj rebase";
       jro = "jj rebase --onto";
-      jd = "jj describe";
       jsq = "jj squash --interactive";
+
       jba = "jj bookmark advance";
       jf = "jj git fetch";
       jp = "jj git push";
-      je = "jj edit";
 
     };
     interactiveShellInit = ''
