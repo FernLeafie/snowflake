@@ -169,7 +169,7 @@
 
       search = {
         force = true;
-        default = "Startpage";
+        default = "ddg"; # as opposed to Startpage prior
         privateDefault = "ddg";
 
         engines = {
@@ -419,6 +419,7 @@
           ecosia.metaData.hidden = true;
           perplexity.metaData.hidden = true;
           ebay.metaData.hidden = true;
+          wikipedia.metaData.alias = "@w";
         };
       };
       userChrome = builtins.readFile ./firefox-userChrome.css;
