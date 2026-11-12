@@ -31,7 +31,7 @@
       # ns = "nix shell";
       nhs = "nh os switch --ask ~/snowflake";
       nhsu = "nh os switch --ask --update ~/snowflake";
-      nrs = "sudo nixos-rebuild <F12>switch --flake ~/snowflake";
+      nrs = "sudo nixos-rebuild switch --flake ~/snowflake";
       nrsu = "sudo nixos-rebuild switch --flake ~/snowflake --upgrade";
 
       # nvimies
