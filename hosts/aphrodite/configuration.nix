@@ -12,12 +12,7 @@
   ];
 
   snow = {
-    gaming = {
-      enable = true;
-      # [NOTE] Disable millennium as the nov 11 steam update broke it
-      # kept until millennium v3.6.3 releases
-      steam.millennium.enable = false;
-    };
+    gaming.enable = true;
     graphical.enable = true;
     writing.enable = true;
     tooling = {
