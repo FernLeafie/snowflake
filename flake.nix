@@ -37,8 +37,6 @@
 
     nixcord.url = "github:4evy/nixcord";
 
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-
     # nix-gaming.url = "github:fufexan/nix-gaming";
     nix-citizen = {
       url = "github:LovingMelody/nix-citizen";
