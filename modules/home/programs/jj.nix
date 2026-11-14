@@ -27,7 +27,7 @@ in
         # don't sign on creation
         behavior = "drop";
         backend = "ssh";
-        key = "~/.ssh/id_ed25519.pub"; # hopefully this is safe :3?
+        key = "${config.home.homeDirectory}/.ssh/id_ed25519.pub"; # hopefully this is safe :3?
       };
       revsets = {
         # sign on push instead
