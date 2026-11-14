@@ -11,6 +11,9 @@
     ./../../modules/shared
   ];
 
+  # Athrodite shouldnt have to suffer.
+  programs.nano.enable = false;
+
   snow = {
     gaming = {
       enable = true;
