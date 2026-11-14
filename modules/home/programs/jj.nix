@@ -3,7 +3,6 @@ let
   gitcfg = config.programs.git;
 in
 {
-
   programs.jujutsu = {
     inherit (gitcfg) enable;
 
@@ -23,6 +22,16 @@ in
           "$left"
           "$right"
         ];
+      };
+      signing = {
+        # don't sign on creation
+        behavior = "drop";
+        backend = "ssh";
+        key = "~/.ssh/id_ed25519.pub"; # hopefully this is safe :3?
+      };
+      revsets = {
+        # sign on push instead
+        git-sign-on-push = "~signed() & mine()";
       };
     };
   };
