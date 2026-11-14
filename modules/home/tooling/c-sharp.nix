@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.c-sharp;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.c-sharp.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       dotnet-sdk_10
     ];

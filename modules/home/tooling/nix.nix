@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.nix;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.nix.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       nixfmt
     ];

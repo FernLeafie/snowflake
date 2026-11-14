@@ -4,11 +4,15 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.options) mkEnableOption;
+  inherit (lib.modules) mkIf;
+in 
 {
   options = {
-    snow.debugging = lib.mkEnableOption "neovim debugging";
+    snow.debugging = mkEnableOption "neovim debugging";
   };
-  config = lib.mkIf config.snow.debugging {
+  config = mkIf config.snow.debugging {
     plugins = {
       dap = {
         enable = true;

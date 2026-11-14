@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.content-creation.audacity;
+in
 {
-  config = lib.mkIf osConfig.snow.content-creation.audacity.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       audacity
     ];

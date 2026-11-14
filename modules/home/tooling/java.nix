@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.java;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.java.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       gradle
       jetbrains.idea

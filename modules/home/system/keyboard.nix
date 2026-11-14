@@ -44,5 +44,5 @@
       };
     };
   };
-  catppuccin.fcitx5.enableRounded = lib.mkIf (config.home.username == "fern-snowleafie") true;
+  catppuccin.fcitx5.enableRounded = lib.modules.mkIf (config.home.username == "fern-snowleafie") true;
 }

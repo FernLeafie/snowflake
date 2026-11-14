@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.gamedev.godot;
+in
 {
-  config = lib.mkIf osConfig.snow.gamedev.godot.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       godot
     ];

@@ -4,8 +4,12 @@
   config,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = config.snow.gaming.emulation.eden;
+in
 {
-  config = lib.mkIf config.snow.gaming.emulation.eden.enable {
+  config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.eden ];
   };
 }

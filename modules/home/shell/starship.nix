@@ -11,7 +11,7 @@
     enableTransience = true;
     presets = [ "nerd-font-symbols" ];
     settings = {
-      format = lib.concatStrings [
+      format = lib.strings.concatStrings [
         "($cmd_duration\n)"
         "([\\[exit: ](bold red)$status[\\]](bold red)\n)"
         "$os"

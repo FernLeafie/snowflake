@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.gamedev.blockbench;
+in
 {
-  config = lib.mkIf osConfig.snow.gamedev.blockbench.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       blockbench
     ];

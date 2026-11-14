@@ -4,8 +4,12 @@
   config,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = config.snow.gaming.emulation.mgba;
+in
 {
-  config = lib.mkIf config.snow.gaming.emulation.mgba.enable {
+  config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.mgba ];
   };
 }

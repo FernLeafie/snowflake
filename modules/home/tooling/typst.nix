@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.typst;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.typst.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       typst
       tinymist

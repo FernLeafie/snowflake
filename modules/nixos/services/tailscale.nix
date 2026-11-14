@@ -6,9 +6,10 @@
 }:
 let
   inherit (lib.modules) mkIf;
+  cfg = config.snow.services.tailscale;
 in
 {
-  config = lib.mkIf config.snow.services.tailscale.enable {
+  config = mkIf cfg.enable {
     # 1. Enable the service and the firewall
     services.tailscale = {
       enable = true;

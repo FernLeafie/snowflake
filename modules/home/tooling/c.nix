@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.c;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.c.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       clang
       man-pages

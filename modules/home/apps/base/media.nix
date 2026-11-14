@@ -68,7 +68,7 @@
 
       infoBarWindowed = true;
 
-      mpvBinary = lib.getExe pkgs.mpv;
+      mpvBinary = lib.meta.getExe pkgs.mpv;
       windowTitleExtendedInfo = false;
 
     };

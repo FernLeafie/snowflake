@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.writing.obsidian;
+in
 {
-  config = lib.mkIf osConfig.snow.writing.obsidian.enable {
+  config = mkIf cfg.enable {
     programs.obsidian = {
       enable = true;
     };

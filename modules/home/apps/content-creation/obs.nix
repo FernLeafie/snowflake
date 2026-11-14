@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.content-creation.obs;
+in
 {
-  config = lib.mkIf osConfig.snow.content-creation.obs.enable {
+  config = mkIf cfg.enable {
     programs.obs-studio.enable = true;
   };
 }

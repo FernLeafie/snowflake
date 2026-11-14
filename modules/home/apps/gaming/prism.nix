@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.gaming.prism;
+in
 {
-  config = lib.mkIf osConfig.snow.gaming.prism.enable {
+  config = mkIf cfg.enable {
     programs.prismlauncher = {
       enable = true;
       settings = {

@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.gamedev.aseprite;
+in
 {
-  config = lib.mkIf osConfig.snow.gamedev.aseprite.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       aseprite
     ];

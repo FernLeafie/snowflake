@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.python;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.python.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       ruff
       uv

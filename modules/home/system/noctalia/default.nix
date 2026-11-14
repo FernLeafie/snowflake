@@ -6,7 +6,7 @@
   ...
 }:
 let
-  inherit (lib.modules) mkIf;
+  inherit (lib.modules) mkMerge mkIf;
 in
 {
   xdg.configFile."noctalia/palettes/catppuccin-mocha-mauve.json".text =
@@ -114,11 +114,11 @@ in
         fill_color = "#000000";
         fill_mode = "fit";
         directory = "${config.xdg.userDirs.pictures}/wallpapers/";
-        default.path = lib.mkMerge [
-          (lib.mkIf (
+        default.path = mkMerge [
+          (mkIf (
             config.home.username == "fern-snowleafie"
           ) "/home/fern-snowleafie/pictures/wallpapers/catppuccin/t-5-arknights-ptilopsis_catppuccin-all.png")
-          (lib.mkIf (
+          (mkIf (
             config.home.username == "lily-snowleafie"
           ) "/home/lily-snowleafie/pictures/wallpapers/Nyx 3_catppuccin-mocha.png")
         ];

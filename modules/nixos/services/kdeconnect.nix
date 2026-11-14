@@ -4,9 +4,12 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = config.snow.user-services.kdeconnect;
+in
 {
-  config = lib.mkIf config.snow.user-services.kdeconnect.enable {
-
+  config = mkIf cfg.enable {
     programs.kdeconnect.enable = true;
   };
 }

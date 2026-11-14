@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.user-services.syncthing;
+in
 {
-  config = lib.mkIf osConfig.snow.user-services.syncthing.enable {
+  config = mkIf cfg.enable {
     services = {
       syncthing = {
         enable = true;

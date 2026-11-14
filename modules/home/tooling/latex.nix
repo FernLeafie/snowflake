@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.latex;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.latex.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       tectonic
     ];

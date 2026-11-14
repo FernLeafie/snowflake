@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.graphical.krita;
+in
 {
-  config = lib.mkIf osConfig.snow.graphical.krita.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       krita
     ];

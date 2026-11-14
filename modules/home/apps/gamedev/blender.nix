@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.gamedev.blender;
+in
 {
-  config = lib.mkIf osConfig.snow.gamedev.blender.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       blender
     ];

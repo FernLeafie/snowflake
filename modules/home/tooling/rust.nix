@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.tooling.rust;
+in
 {
-  config = lib.mkIf osConfig.snow.tooling.rust.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       rust-analyzer
       rustc

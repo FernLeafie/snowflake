@@ -5,13 +5,17 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = config.snow.gaming.star-citizen;
+in
 {
   imports = [
     inputs.nix-citizen.nixosModules.default
   ];
 
   config = {
-    programs.rsi-launcher = lib.mkIf config.snow.gaming.star-citizen.enable {
+    programs.rsi-launcher = mkIf cfg.enable {
       enable = true;
       location = "$XDG_GAMES_DIR/rsi-launcher";
       preCommands = ''

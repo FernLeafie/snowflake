@@ -4,8 +4,12 @@
   osConfig,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfg = osConfig.snow.writing.libreoffice;
+in
 {
-  config = lib.mkIf osConfig.snow.writing.libreoffice.enable {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       libreoffice-qt
     ];
