@@ -9,6 +9,8 @@
     ./fastfetch
     ./hyfetch
     ./nixvim
+    ./git.nix
+    ./jj.nix
   ];
 
   # Cute terminal PDF reader
