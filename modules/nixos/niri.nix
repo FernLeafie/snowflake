@@ -41,6 +41,8 @@
     kdePackages.kservice
     kdePackages.qt6ct
     kdePackages.kde-cli-tools
+    # samba shares
+    kdePackages.kdenetwork-filesharing
   ];
 
   # [NOTE] please find a different location for this
