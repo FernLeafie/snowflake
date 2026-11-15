@@ -201,10 +201,22 @@ color: white !important;
 .tab-group-label {
   #tabbrowser-tabs[orient="vertical"][expanded] & {
     width: 100% !important;
-    /* margin-left: 5px !important;
-/* Left-align the Tab Group Label text */
+    /* margin-left: 5px !important; */
+    /* Left-align the Tab Group Label text */
     text-align: left !important;
     padding-inline: 10px !important;
+  }
+}
+
+/*
+  makes the right margin of the tab groups in the vertical tab bar when expanded,
+  equal to the left hand margin, copies exact selector as of 1.160
+*/
+#tabbrowser-tabs[orient="vertical"][expanded] {
+  & tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+  &[movingtab][movingtab-addToGroup]:not([movingtab-group], [movingtab-ungroup])
+    .tabbrowser-tab:is(:active, [multiselected]) {
+    margin-inline-end: var(--space-medium) !important;
   }
 }
 
