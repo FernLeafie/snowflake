@@ -34,6 +34,9 @@
       dynamic_background_opacity = true;
       background_opacity = 0.9;
       cursor_trail = 1;
+
+      # fixes the little gap between the edge and coloured cells next to it
+      padding_fill_strategy = "neighboring_cell";
     };
     keybindings = {
       "ctrl+c" = "copy_or_interrupt";
