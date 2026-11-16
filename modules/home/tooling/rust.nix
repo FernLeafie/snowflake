@@ -6,6 +6,7 @@
 }:
 let
   inherit (lib.modules) mkIf;
+  inherit (lib.meta) getExe;
   cfg = osConfig.snow.tooling.rust;
 in
 {
@@ -18,6 +19,15 @@ in
     programs.nixvim = {
       snow.debugging = true;
       lsp.servers.rust_analyzer.enable = true;
+      plugins = {
+        code-runner-nvim.settings.filetype.c = [
+          "cd $dir &&"
+          "${getExe pkgs.rustc} $fileName -o /tmp/$fileNameWithoutExt &&"
+          "/tmp/$fileNameWithoutExt"
+          # [NOTE] could just run $dir/$fileNameWithoutExt
+          # but now we don't leave anything in the actual folder
+        ];
+      };
     };
   };
 }

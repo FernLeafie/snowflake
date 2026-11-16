@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    ./custom-plugins
     # completion
     ./pairs.nix
     # LSP
@@ -26,6 +27,7 @@
     ./telescope.nix
     ./themeing.nix
     # utils;
+    ./code-runner.nix
     ./colouriser.nix
     ./folding.nix
     ./harpoon.nix

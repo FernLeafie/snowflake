@@ -6,6 +6,7 @@
 }:
 let
   inherit (lib.modules) mkIf;
+  inherit (lib.meta) getExe;
   cfg = osConfig.snow.tooling.c;
 in
 {
@@ -17,8 +18,13 @@ in
     ];
     programs.nixvim = {
       lsp.servers.clangd.enable = true;
-      plugins.conform-nvim.settings.formatters_by_ft = {
-        c = [
+      plugins = {
+        code-runner-nvim.settings.filetype.c = [
+          "cd $dir &&"
+          "${getExe pkgs.clang} $fileName -o /tmp/$fileNameWithoutExt &&"
+          "/tmp/$fileNameWithoutExt"
+        ];
+        conform-nvim.settings.formatters_by_ft.c = [
           "clang-format"
         ];
       };
