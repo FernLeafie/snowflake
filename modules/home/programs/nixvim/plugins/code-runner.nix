@@ -20,9 +20,8 @@
       float = {
         border = "rounded";
       };
-      filetype = {
-        c = [ "cd $dir && clang $fileName -o /tmp/$fileNameWithoutExt && /tmp/$fileNameWithoutExt" ];
-      };
+      root_markers = [
+      ];
     };
   };
 
