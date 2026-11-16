@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    ./custom-plugins
     # completion
     ./pairs.nix
     # LSP
