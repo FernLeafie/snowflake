@@ -90,6 +90,10 @@
       dates = "weekly";
     };
   };
+  # make nh ask before applying changes
+  environment.variables = {
+    NH_ASK = "true";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
