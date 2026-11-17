@@ -2,9 +2,11 @@
   inputs,
   config,
   pkgs,
+  lib,
   ...
 }:
 let
+  inherit (lib.modules) mkMerge mkIf;
   theme-catppuccin = ./mocha-theme.css;
 in
 {
@@ -26,7 +28,18 @@ in
       settings = {
         mimimizeToTray = true;
         disableMinSize = true;
+        nativeTitleBar = true;
         arRPC = true;
+        spellCheckLanguages = mkMerge [
+          [
+            "en-GB"
+            "en"
+          ]
+          (mkIf (config.home.username == "fern-snowleafie") [ "sv" ])
+        ];
+        # catppuccin loading splash screen
+        splashColor = "rgb(205, 214, 244)";
+        splashBackground = "rgb(17, 17, 27)";
       };
     };
 
