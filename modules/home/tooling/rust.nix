@@ -20,7 +20,7 @@ in
       snow.debugging = true;
       lsp.servers.rust_analyzer.enable = true;
       plugins = {
-        code-runner-nvim.settings.filetype.c = [
+        code-runner-nvim.settings.filetype.rust = [
           "cd $dir &&"
           "${getExe pkgs.rustc} $fileName -o /tmp/$fileNameWithoutExt &&"
           "/tmp/$fileNameWithoutExt"
