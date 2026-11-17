@@ -17,12 +17,37 @@
       };
       extensions.ui-select.enable = true;
     };
-    
+
     tiny-code-action-nvim = {
       enable = true;
       settings = {
         backend = "delta";
-        picker = "telescope";
+        picker = {
+          __unkeyed-1 = "buffer";
+          opts = {
+            hotkeys = true;
+            hotkeys_mode = "text_diff_based";
+            keymaps = {
+              close = [
+                "q"
+                "<Esc>"
+              ];
+              preview_close = [
+                "q"
+                "<Esc>"
+              ];
+            };
+          };
+        };
+        format_title.__raw = ''
+          function(action, client)
+            if action.kind then
+              return string.format("%s (%s)", action.title, client.name)
+            end
+            return action.title
+          end
+        ''; # actually show where the code action came from
+
         backend_opts = {
           delta = {
             header_lines_to_remove = 4;
