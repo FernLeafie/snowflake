@@ -21,8 +21,8 @@ in
       music = "${cfghomedir}/music";
       pictures = "${cfghomedir}/pictures";
       projects = "${cfghomedir}/projects";
-      publicShare = "${cfghomedir}/public";
-      templates = "${cfghomedir}/templates";
+      publicShare = "${cfghomedir}/public/share";
+      templates = "${cfghomedir}/public/templates";
       videos = "${cfghomedir}/videos";
 
       extraConfig = {
