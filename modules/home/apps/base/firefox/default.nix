@@ -33,7 +33,7 @@
         "widget.use-xdg-desktop-portal" = true;
         "extensions.autoDisableScopes" = 0;
 
-        "browser.updensity" = 1;
+        "browser.uidensity" = 1;
         "browser.compactmode.show" = true;
         "browser.tabs.inTitlebar" = 0; # disables window controls
         "sidebar.verticalTabs" = true;
