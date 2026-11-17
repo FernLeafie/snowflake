@@ -5,16 +5,34 @@
   ...
 }:
 {
-  plugins.telescope = {
-    enable = true;
-    settings = {
-      extensions = {
-        "ui-select" = {
-          __unkeyed-1.__raw = ''require("telescope.themes").get_dropdown({})'';
+  plugins = {
+    telescope = {
+      enable = true;
+      settings = {
+        extensions = {
+          "ui-select" = {
+            __unkeyed-1.__raw = ''require("telescope.themes").get_dropdown({})'';
+          };
+        };
+      };
+      extensions.ui-select.enable = true;
+    };
+    
+    tiny-code-action-nvim = {
+      enable = true;
+      settings = {
+        backend = "delta";
+        picker = "telescope";
+        backend_opts = {
+          delta = {
+            header_lines_to_remove = 4;
+            args = [
+              "--line-numbers"
+            ];
+          };
         };
       };
     };
-    extensions.ui-select.enable = true;
   };
 
   keymaps = [
@@ -86,37 +104,4 @@
       options.desc = "Show code actions";
     }
   ];
-
-  extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "tiny-code-action-nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "rachartier";
-        repo = "tiny-code-action.nvim";
-        rev = "0d040ed";
-        hash = "sha256-UF9zeO5Uujdt2MEwy2d2Lhk6JRnEN4vrEvYslv0/zaA=";
-      };
-      nvimSkipModules = [
-        # vim plugin with optional integrations
-        "tiny-code-action.previewers.snacks"
-      ];
-    })
-  ];
-  extraPackages = with pkgs; [
-    delta
-  ];
-  extraConfigLua = ''
-    require('tiny-code-action').setup({
-      backend = 'delta',
-      picker = 'telescope',
-      backend_opts = {
-        delta = {
-          header_lines_to_remove = 4,
-          args = {
-            '--line-numbers',
-          },
-        },
-      },
-    })
-  '';
 }
