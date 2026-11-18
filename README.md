@@ -13,10 +13,21 @@ A somewhat simple Nix Flake using [Niri](https://github.com/niri-wm/niri) and [N
 ### Fern Snowleafie
 - **Aphrodite**: A HP Pro x360
 - **Artemis**: A custom built desktop
+- **Eos**: A Nothing Phone 3a
 
 ### Lily Snowleafie
 - **Athena**: A ThinkPad T440
 - **Apollo**: A FrameWork 16
+- **Nyx**: A Nothing Phone 4a
+
+### Servers
+
+- **Hermes**: Compute Server
+- **Phoebe**: Storage Server
+
+### Misc
+
+- **Dionysus**: Custom build Media Box
 
 ## Credits
 This flake is largely inspired by the lovely works of:
