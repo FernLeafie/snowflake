@@ -38,6 +38,7 @@
     user-services = {
       proton-vpn.enable = true;
     };
+    services.tandoor.enable = true;
   };
 
   # Define your hostname and location

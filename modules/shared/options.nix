@@ -165,6 +165,10 @@ in
       tailscale.enable = mkEnableOption "Enable Tailscale" // {
         default = cfg.services.enable;
       };
+
+      tandoor.enable = mkEnableOption "Enable Tandoor Recipies" // {
+        default = cfg.services.enable;
+      };
     };
 
     user-services = {
