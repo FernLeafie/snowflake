@@ -21,9 +21,6 @@
     gamedev.enable = true;
     gaming = {
       enable = true;
-      # [NOTE] Disable millennium as the nov 11 steam update broke it
-      # kept until millennium v3.6.3 releases
-      steam.millennium.enable = false;
       star-citizen.enable = true;
     };
     graphical.enable = true;
