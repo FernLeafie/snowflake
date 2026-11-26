@@ -12,7 +12,7 @@ in
     desktop.enable = mkEnableOption "Desktop";
     laptop.enable = mkEnableOption "Laptop";
     server.enable = mkEnableOption "Server";
-    entertainment.enable = mkDefault "Media box";
+    entertainment.enable = mkEnableOption "Media box";
 
     # sub profiles
     headless.enable = mkEnableOption "Headless system";
@@ -27,7 +27,7 @@ in
         # If laptop or desktop, normally graphical
         graphical.enable = mkIf (
           cfgprof.laptop.enable == true || cfgprof.desktop.enable == true
-        ) mkDefault true;
+        ) (mkDefault true);
       };
     }
     (mkIf (cfgprof.laptop.enable == true || cfgprof.desktop.enable == true) {

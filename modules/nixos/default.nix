@@ -5,6 +5,10 @@
   pkgs,
   ...
 }:
+let
+  inherit (lib.modules) mkIf;
+  cfgprof = config.snow.profiles;
+in 
 {
   imports = [
     ./boot.nix
@@ -28,7 +32,7 @@
   # services.openssh.enable = true;
 
   # Enable audio
-  services.pipewire = {
+  services.pipewire = mkIf cfgprof.graphical.enable {
     enable = true;
     alsa.enable = true;
     pulse.enable = true;
