@@ -38,6 +38,7 @@
         style = "bordered";
       };
       blink_indent = true;
+      dap = true;
       fidget = true;
       gitsigns = true;
       harpoon = true;
